@@ -1,0 +1,29 @@
+[package]
+name = "outfit-web"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+outfit-core.workspace = true
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen.workspace = true
+wasm-bindgen-futures.workspace = true
+js-sys.workspace = true
+serde_json.workspace = true
+futures-util = { version = "0.3", features = ["std"] }
+web-sys = { workspace = true, features = [
+  "Window", "Document", "Element", "HtmlElement", "Node", "Event", "EventTarget",
+  "HtmlInputElement", "HtmlSelectElement", "HtmlButtonElement", "HtmlTextAreaElement",
+  "HtmlCanvasElement", "CanvasRenderingContext2d", "ImageData", "HtmlAnchorElement",
+  "DragEvent", "DataTransfer", "FileList", "File", "Blob", "BlobPropertyBag",
+  "Url", "Navigator", "ReadableStream"
+] }
+
+[dev-dependencies]
+futures.workspace = true

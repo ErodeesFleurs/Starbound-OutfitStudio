@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="750" viewBox="0 0 990 750"><rect width="100%" height="100%" fill="#111c29"/><g font-family="monospace" fill="#e0edf5" font-size="10"><text x="8" y="16">body: 387 x 258, cells 43 x 43; PNG rows top-down.</text><text x="8" y="32">Paint only named cells. Equal IDs require identical visible RGBA artwork.</text><text x="8" y="48">Original aliases use the named cell; never a separate editable pose.</text>
+<rect x="112" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="78">idle.1</text><text x="117" y="94">ID 1</text><text x="117" y="110">x43 y0</text>
+<rect x="222" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="78">idle.2</text><text x="227" y="94">ID 2</text><text x="227" y="110">x86 y0</text>
+<rect x="332" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="337" y="78">idle.3</text><text x="337" y="94">ID 3</text><text x="337" y="110">x129 y0</text>
+<rect x="442" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="78">idle.4</text><text x="447" y="94">ID 4</text><text x="447" y="110">x172 y0</text>
+<rect x="552" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="78">idle.5</text><text x="557" y="94">ID 5</text><text x="557" y="110">x215 y0</text>
+<rect x="662" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="78">sit.1</text><text x="667" y="94">ID 6</text><text x="667" y="110">x258 y0</text>
+<rect x="882" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="887" y="78">duck.1</text><text x="887" y="94">ID 7</text><text x="887" y="110">x344 y0</text>
+<rect x="112" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="188">walk.1</text><text x="117" y="204">ID 8</text><text x="117" y="220">x43 y43</text>
+<rect x="222" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="188">walk.2</text><text x="227" y="204">ID 9</text><text x="227" y="220">x86 y43</text>
+<rect x="332" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="337" y="188">walk.3</text><text x="337" y="204">ID 10</text><text x="337" y="220">x129 y43</text>
+<rect x="442" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="188">walk.4</text><text x="447" y="204">ID 11</text><text x="447" y="220">x172 y43</text>
+<rect x="552" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="188">walk.5</text><text x="557" y="204">ID 99</text><text x="557" y="220">x215 y43</text>
+<rect x="662" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="188">walk.6</text><text x="667" y="204">ID 100</text><text x="667" y="220">x258 y43</text>
+<rect x="772" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="777" y="188">walk.7</text><text x="777" y="204">ID 101</text><text x="777" y="220">x301 y43</text>
+<rect x="882" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="887" y="188">walk.8</text><text x="887" y="204">ID 12</text><text x="887" y="220">x344 y43</text>
+<rect x="112" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="298">run.1</text><text x="117" y="314">ID 13</text><text x="117" y="330">x43 y86</text>
+<rect x="222" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="298">run.2</text><text x="227" y="314">ID 14</text><text x="227" y="330">x86 y86</text>
+<rect x="332" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="337" y="298">run.3</text><text x="337" y="314">ID 15</text><text x="337" y="330">x129 y86</text>
+<rect x="442" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="298">run.4</text><text x="447" y="314">ID 16</text><text x="447" y="330">x172 y86</text>
+<rect x="552" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="298">run.5</text><text x="557" y="314">ID 17</text><text x="557" y="330">x215 y86</text>
+<rect x="662" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="298">run.6</text><text x="667" y="314">ID 18</text><text x="667" y="330">x258 y86</text>
+<rect x="772" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="777" y="298">run.7</text><text x="777" y="314">ID 102</text><text x="777" y="330">x301 y86</text>
+<rect x="882" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="887" y="298">run.8</text><text x="887" y="314">ID 19</text><text x="887" y="330">x344 y86</text>
+<text x="887" y="345" font-size="8">= lay.1</text>
+<rect x="112" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="408">jump.1</text><text x="117" y="424">ID 20</text><text x="117" y="440">x43 y129</text>
+<rect x="222" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="408">jump.2</text><text x="227" y="424">ID 21</text><text x="227" y="440">x86 y129</text>
+<rect x="332" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="337" y="408">jump.3</text><text x="337" y="424">ID 22</text><text x="337" y="440">x129 y129</text>
+<rect x="442" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="408">jump.4</text><text x="447" y="424">ID 23</text><text x="447" y="440">x172 y129</text>
+<rect x="552" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="408">fall.1</text><text x="557" y="424">ID 103</text><text x="557" y="440">x215 y129</text>
+<rect x="662" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="408">fall.2</text><text x="667" y="424">ID 104</text><text x="667" y="440">x258 y129</text>
+<rect x="772" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="777" y="408">fall.3</text><text x="777" y="424">ID 24</text><text x="777" y="440">x301 y129</text>
+<rect x="882" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="887" y="408">fall.4</text><text x="887" y="424">ID 25</text><text x="887" y="440">x344 y129</text>
+<rect x="112" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="518">climb.1</text><text x="117" y="534">ID 26</text><text x="117" y="550">x43 y172</text>
+<rect x="222" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="518">climb.2</text><text x="227" y="534">ID 27</text><text x="227" y="550">x86 y172</text>
+<rect x="332" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="337" y="518">climb.3</text><text x="337" y="534">ID 28</text><text x="337" y="550">x129 y172</text>
+<rect x="442" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="518">climb.4</text><text x="447" y="534">ID 29</text><text x="447" y="550">x172 y172</text>
+<rect x="552" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="518">climb.5</text><text x="557" y="534">ID 105</text><text x="557" y="550">x215 y172</text>
+<rect x="662" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="518">climb.6</text><text x="667" y="534">ID 106</text><text x="667" y="550">x258 y172</text>
+<rect x="772" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="777" y="518">climb.7</text><text x="777" y="534">ID 107</text><text x="777" y="550">x301 y172</text>
+<rect x="882" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="887" y="518">climb.8</text><text x="887" y="534">ID 30</text><text x="887" y="550">x344 y172</text>
+<rect x="112" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="628">swimIdle.1</text><text x="117" y="644">ID 31</text><text x="117" y="660">x43 y215</text>
+<text x="117" y="675" font-size="8">= swimIdle.2</text>
+<text x="117" y="685" font-size="8">= swim.5</text>
+<text x="117" y="695" font-size="8">= swim.6</text>
+<text x="117" y="705" font-size="8">= swim.7</text>
+<rect x="442" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="628">swim.1</text><text x="447" y="644">ID 32</text><text x="447" y="660">x172 y215</text>
+<rect x="552" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="628">swim.2</text><text x="557" y="644">ID 33</text><text x="557" y="660">x215 y215</text>
+<rect x="662" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="628">swim.3</text><text x="667" y="644">ID 34</text><text x="667" y="660">x258 y215</text>
+<rect x="772" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="777" y="628">swim.4</text><text x="777" y="644">ID 108</text><text x="777" y="660">x301 y215</text>
+</g></svg>

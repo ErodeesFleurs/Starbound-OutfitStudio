@@ -1,0 +1,14 @@
+[package]
+name = "outfit-core"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.90"
+license = "MIT AND CC-BY-3.0"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+indexmap = "2"
+png = "0.18"
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
+ryu-js = "1"

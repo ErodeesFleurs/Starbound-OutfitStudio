@@ -1,0 +1,388 @@
+{
+  "templates": {
+    "chest": [
+      "?scale=0.4?scale=0.7?scale=0.85?scale=0.925?scale=0.9625?scale=0.8?scale=0.8?crop;3;3;4;4?replace;bdcc640b=ffa1ff;bbc9620f=ffa2ff;bdcd620a=ffa3ff;bccb620d=ffa4ff;bccb630d=ffa5ff;aac05e06=ffa6ff;bfc75d1d=ffb1ff;c8d25f11=ffb2ff;c0c85f1c=ffb3ff;cad65f0b=ffb4ff;cbd96008=ffb5ff;9ba75427=ffb6ff;b1a95b48=ffc1ff;bebe5b2f=ffc2ff;c8d16115=ffc3ff;c9d4600e=ffc4ff;c6ce6015=ffc5ff;bec55e1e=ffd1ff;cad5610c=ffd2ff;c9d5600d=ffd3ff;c6d05d11=ffd4ff;c7d25e10=ffd5ff;c9d16112=ffd6ff;c8d45e0d=ffd7ff;9eb05018=ffd8ff;b7b75f33=ffe1ff;bec25e25=ffe2ff;c4c95c1e=ffe3ff;b5b05840=ffe4ff;c2c85f1e=ffe5ff;bcb85f3b=ffe6ff;a0a9562c=ffe7ff;c8d55e0b=fff1ff;a3b9510b=fff2ff;40432222=ff60ff;a2ab501e=ff61ff;979a4d2f=ff62ff;a2ac501c=ff63ff;a0a9501f=ff64ff;9ead4709=ff65ff;c5cb651d=ff66ff;c5cd631a=ff67ff;c1c46524=ff68ff;bdc45c21=ff69ff;c0c46325=ff6aff;b6b46531=ff6bff;c3c7621e=ff6cff;c4ca621c=ff6dff;bdc45c20=ff6eff;c1c8601e=ff6fff;b8bd5b29=ff70ff;55522f23=ff71ff;b4b15f3b=ff72ff;b8be5b29=ff73ff;b3b25e39=ff74ff;a7a85642=ff75ff;a29f544d=ff76ff;a9ab553d=ff77ff;a0a1523a=ff78ff;53522c20=ff79ff;bcc45c20=ff7aff;b8be5b28=ff7bff;c2c7571f=ff7cff;c7cc651b=ff7dff;b9bd5f2c=ff7eff;bcc25f1b=ff7fff;bcc35b21=ff80ff;bfcc5807=ff81ff;2c221d19=fff3ff;9f853e19=fff4ff;8a8d4812=fff5ff;8c954a02=fff7ff;8c8f4a18=fff6ff;8f8f4f1c=fff8ff;46352a36=fff3ff;85703442=fff4ff;8c834737=fff5ff;8c954a05=fff7ff;988e4f3f=fff6ff;8e864d36=fff8ff?scalenearest=1;2?blendmult=/monsters/boss/apeboss/apeboss.png;1263;394?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?multiply=2eff2e00?scale=47?crop;1;1;44;44"
+    ],
+    "pants": [
+      "?scale=0.4?scale=0.7?crop;6;2;7;3?replace;a0b03e=ffa1ff00;7e9b35=ffa2ff00;45483887=ffa3ff00;698635ef=ffa4ff00;405e2fe4=ffa5ff00;51362dc0=ffa6ff00;59353091=ffa7ff00;7c9036=ffb1ff00;6d702af4=ffb2ff00;91a638=ffb3ff00;748e37=ffb4ff00;746f2c=ffb5ff00;7a8a31=ffb6ff00;608333=ffb7ff00;8f953a=ffb8ff00;736f2f=ffc1ff00;41373b5d=ffc2ff00;515f38ab=ffc3ff00;788e35=ffc4ff00;6f602f=ffc5ff00;273430ab=ffc6ff00;617e34=ffc7ff00;829935=ffc8ff00;2d173b2e=ffd1ff00;2b243668=ffd2ff00;725830c0=ffd3ff00;7b4d31ca=ffd4ff00;663c2dab=ffd5ff00;5735376d=ffd6ff00;5d3a3877=ffd7ff00;52403496=ffd8ff00;55662dd5=ffe1ff00;8088318c=ffe2ff00;778c34=ffe3ff00;8c7835a1=ffe4ff00;668c3487=ffe5ff00?scalenearest=1;2?blendmult=/monsters/boss/apeboss/apeboss.png;1263;394?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?multiply=2eff2e?scale=47?crop;1;1;44;44"
+    ],
+    "hidingPants": [
+      "?scale=0.4?scale=0.7?scale=0.85?crop;6;1;7;2?replace;45572af4=ffa1ff00;4e6530f8=ffa2ff00;4f6631f7=ffa3ff00;445729f7=ffa4ff00;4f6531f5=ffa5ff00;487035fc=ffa6ff00;445e2df8=ffa7ff00;556733f4=ffb1ff00;4a4122f6=ffb2ff00;425929f0=ffb3ff00;3e2f1cb7=ffb4ff00;664d39bb=ffb5ff00;425b2df2=ffb6ff00;54201e7f=ffb7ff00;56322780=ffb8ff00;675831bb=ffc1ff00;5916192a=ffc2ff00;463c20c0=ffc3ff00;36311bb7=ffc4ff00;313c1ebb=ffc5ff00;561b1a29=ffc6ff00;38642bf4=ffc7ff00;60493180=ffc8ff00;415128bb=ffd1ff00;47562ab9=ffd2ff00;4939207f=ffd3ff00;4f432681=ffd4ff00;5a1e1b25=ffd5ff00;5a1e1c25=ffd6ff00;571a1a25=ffd7ff00;62212413=ffd8ff00;29452424=ffe1ff00;96918a25=ffe2ff00;4567347f=ffe3ff00;5a755681=ffe4ff00;427235f3=ffe5ff00?scalenearest=1;2?blendmult=/monsters/boss/apeboss/apeboss.png;1263;394?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?multiply=2eff2e?scale=47?crop;1;1;44;44"
+    ],
+    "back": [
+      "?scale=0.4?scale=0.7?scale=0.84?crop;4;2;5;3?replace;aa836459=ffa1ff00;bb885e4e=ffa2ff00;cb926431=ffa3ff00;cb95693b=ffa4ff00;cf91601c=ffa5ff00;ce966b4b=ffa6ff00;e6c2a50c=ffa7ff00;cc93662e=ffb1ff00;cc8c5921=ffb2ff00;c1895c3d=ffb3ff00;bf885c41=ffb4ff00;cb8e5d2d=ffb5ff00;c7895728=ffb6ff00;ac7c5558=ffb7ff00;b8a99d5d=ffb8ff00;d796610f=ffc1ff00;dc955b0a=ffc2ff00;de965b06=ffc3ff00;c3885730=ffc4ff00;d9945b0d=ffc5ff00;dc955b08=ffc6ff00;da945b0a=ffc7ff00;dfbca11e=ffc8ff00;ce8e5b23=ffd1ff00;dc945b06=ffd2ff00;cf8f5b23=ffd3ff00;9d74526f=ffd4ff00;d28f5916=ffd5ff00;de965b02=ffd6ff00;e0975c00=ffd7ff00;ecc3a200=ffd8ff00;d08f5b1e=ffe1ff00;da945b08=ffe2ff00;cd905f2f=ffe3ff00;d8955e14=ffe4ff00;cc8d5920=ffe5ff00;59504932=fff1ff00;655c5509=fff2ff00;7369631b=fff3ff00;756c665a=fff4ff00;62574f32=fff5ff00;877d7782=fff6ff00;63595277=fff7ff00;a19d9959=fff8ff00?scalenearest=1;2?blendmult=/monsters/boss/apeboss/apeboss.png;1263;394?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?multiply=2eff2e?scale=47?crop;1;1;44;44"
+    ]
+  },
+  "layouts": {
+    "pants": [
+      [
+        "",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "",
+        "a7"
+      ],
+      [
+        "",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8"
+      ],
+      [
+        "",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ],
+      [
+        "",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "d8"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "e1",
+        "",
+        "",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        ""
+      ]
+    ],
+    "back": [
+      [
+        "",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "",
+        "a7"
+      ],
+      [
+        "",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8"
+      ],
+      [
+        "",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8"
+      ],
+      [
+        "",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "d8"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "e1",
+        "",
+        "",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        ""
+      ],
+      [
+        "",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8"
+      ]
+    ],
+    "chest": [
+      [
+        "",
+        "f3"
+      ],
+      [
+        "f4",
+        "f5"
+      ],
+      [
+        "",
+        "f6"
+      ],
+      [
+        "",
+        "f7"
+      ],
+      [
+        "",
+        ""
+      ],
+      [
+        "",
+        "f8"
+      ]
+    ],
+    "frontSleeves": [
+      [
+        "",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "",
+        "",
+        "a6"
+      ],
+      [
+        "",
+        "",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "",
+        "b6"
+      ],
+      [
+        "",
+        "",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "",
+        ""
+      ],
+      [
+        "",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "d8"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "e1",
+        "e2",
+        "",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      [
+        "",
+        "",
+        "",
+        "f1",
+        "",
+        "",
+        "",
+        "",
+        "f2"
+      ]
+    ],
+    "backSleeves": [
+      [
+        "",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "",
+        "",
+        "65"
+      ],
+      [
+        "",
+        "",
+        "66",
+        "67",
+        "68",
+        "69",
+        "6a",
+        "",
+        "6b"
+      ],
+      [
+        "",
+        "",
+        "6c",
+        "6d",
+        "6e",
+        "6f",
+        "70",
+        "",
+        ""
+      ],
+      [
+        "",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "77",
+        "78"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "79",
+        "7a",
+        "",
+        "7b",
+        "7c",
+        "7d",
+        "7e",
+        "7f"
+      ],
+      [
+        "",
+        "",
+        "",
+        "80",
+        "",
+        "",
+        "",
+        "",
+        "81"
+      ]
+    ]
+  },
+  "descriptors": {
+    "pants": {
+      "name": "florantier6apants",
+      "count": 1,
+      "parameters": {
+        "shortdescription": "Custom Pants",
+        "description": "Made using the Outfit Generator.",
+        "inventoryIcon": "pants.png:idle.2"
+      }
+    },
+    "hidingPants": {
+      "name": "froggmerchantlegs",
+      "count": 1,
+      "parameters": {
+        "shortdescription": "Custom Pants",
+        "description": "Made using the Outfit Generator.",
+        "inventoryIcon": "pantsm.png:idle.1",
+        "hideBody": true
+      }
+    },
+    "chest": {
+      "name": "aviantier6schest",
+      "count": 1,
+      "parameters": {
+        "shortdescription": "Custom Sleeves",
+        "description": "Made using the Outfit Generator.",
+        "inventoryIcon": "fsleeve.png:idle.1"
+      }
+    },
+    "back": {
+      "name": "tigertailback",
+      "count": 1,
+      "parameters": {
+        "shortdescription": "Custom Back",
+        "description": "Made using the Outfit Generator.",
+        "inventoryIcon": "back.png:idle.1"
+      }
+    }
+  }
+}

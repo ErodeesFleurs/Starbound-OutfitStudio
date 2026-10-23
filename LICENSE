@@ -19,3 +19,90 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Third-party Hatter algorithms
+----------------------------
+
+The hat geometry in crates/outfit-core/src/hat.rs is adapted from
+Starbound Hatter by Silverfeelin:
+https://github.com/Silverfeelin/Starbound-Hatter
+Reference commit: 8a8d47314c639f84c50936bda61dfc198c39e49c
+
+The upstream work is licensed under the Creative Commons Attribution 3.0
+Unported License (CC BY 3.0):
+https://creativecommons.org/licenses/by/3.0/
+Legal code: https://creativecommons.org/licenses/by/3.0/legalcode
+
+Changes include a Rust/WebAssembly port, direct PNG RGBA decoding, preservation
+of alpha=1, shared lossless palette factoring and bounded compression
+candidates, a dyadic coordinate canvas fixing bilinear boundary truncation,
+and local UI/CLI integration. Only the stable, lossless hat pipeline is
+retained; the upstream tiled compatibility mode is not included.
+
+The MIT grant above does not replace the attribution and license notice for
+these Hatter-derived algorithm portions. No upstream JavaScript dependencies
+or example hat gallery images are included.
+
+Third-party pixel display font
+------------------------------
+
+public/assets/fonts/Silkscreen-Regular.ttf is an unmodified copy of Silkscreen.
+Copyright 2001 The Silkscreen Project Authors:
+https://github.com/googlefonts/silkscreen
+Source: https://github.com/google/fonts/tree/main/ofl/silkscreen
+
+The font is licensed under the SIL Open Font License, Version 1.1, not MIT.
+The full copyright and license are included in public/assets/fonts/OFL.txt
+and distributed alongside the font in the static website.
+
+The pixel interface frames and equipment icons are original to this project;
+no Starbound UI artwork or proprietary game fonts are bundled.
+
+Third-party single-frame character preview
+------------------------------------------
+
+crates/outfit-web/assets/hatter-character.png and hatter-hair.png are
+unmodified single-frame preview images from Silverfeelin/Starbound-Hatter:
+https://github.com/Silverfeelin/Starbound-Hatter/tree/8a8d47314c639f84c50936bda61dfc198c39e49c/imgs
+Original filenames: hatterCharacter.png and hatterHair.png.
+
+These Starbound character images remain the property of their original
+rights holders. They are used only as the fixed character/hair preview,
+not as generated equipment assets. This project's MIT license and the
+Hatter algorithm's CC BY 3.0 notice do not relicense the character artwork
+or grant additional rights to it.
+
+Character redraw implementation and generated layouts
+-----------------------------------------------------
+
+public/assets/character contains independently generated blank PNG sheets and
+*-layout.svg label-only references. Separately, body-reference.svg,
+front-arm-reference.svg, back-arm-reference.svg, head-reference.svg and
+hair-reference.svg embed original Starbound pixel artwork with frame names
+and aliases, derived from locally and legally supplied game assets with the
+user's explicit permission to use those assets for these references.
+The embedded game artwork remains the property of Chucklefish and/or its
+original rights holders. Neither this project's MIT grant nor the Hatter
+algorithm's CC BY 3.0 license applies to or relicenses that artwork, and no
+additional rights to use or redistribute it are granted by this project.
+These annotated SVGs are visual references, not directly uploadable editing
+templates. Draw on the corresponding cells of the blank PNG sheets instead;
+do not rasterize the entire reference SVG for upload or bake labels or grid
+lines into encoded pixels. The separate two-image
+Hatter single-frame preview notice above remains applicable and unchanged.
+crates/outfit-core/data/character.json records independently derived frame
+names, rectangles, sampled fingerprints and shared-frame constraints from
+legally supplied game assets. These facts do not grant rights to the game's
+artwork. The single-frame preview images remain subject to the separate
+rights notice above.
+
+The character encoder reuses the stable coordinate-canvas geometry described
+in the Hatter notice; that attribution and CC BY 3.0 notice still apply to
+those algorithm portions. Independently authored integration code and blank
+layout artwork are covered by this project's MIT grant.
+
+The community character-redraw technique was a reference:
+https://github.com/FezzedOne/FezzedOne-Drawable-Generator/tree/fa9c0450b33b5634e53d133a25dc70dfb54e4a41
+https://steamcommunity.com/sharedfiles/filedetails/?id=3071843411
+No clear license was found for that repository. Its source code and character
+templates were not copied or assumed to be MIT-licensed.

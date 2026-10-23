@@ -1,0 +1,2411 @@
+{
+  "garments": [
+    {
+      "garment": "pants",
+      "sampling": "?scale=0.4?scale=0.7?crop;6;2;7;3",
+      "sources": [
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 0,
+          "id": 161
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 0,
+          "id": 162
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 0,
+          "id": 163
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 0,
+          "id": 164
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.5",
+          "sheet": "pants",
+          "column": 5,
+          "row": 0,
+          "id": 165
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:sit.1",
+          "sheet": "pants",
+          "column": 6,
+          "row": 0,
+          "id": 166
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:duck.1",
+          "sheet": "pants",
+          "column": 8,
+          "row": 0,
+          "id": 167
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 1,
+          "id": 177
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 1,
+          "id": 178
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 1,
+          "id": 179
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 1,
+          "id": 180
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.5",
+          "sheet": "pants",
+          "column": 5,
+          "row": 1,
+          "id": 181
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.6",
+          "sheet": "pants",
+          "column": 6,
+          "row": 1,
+          "id": 182
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.7",
+          "sheet": "pants",
+          "column": 7,
+          "row": 1,
+          "id": 183
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.8",
+          "sheet": "pants",
+          "column": 8,
+          "row": 1,
+          "id": 184
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 2,
+          "id": 193
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 2,
+          "id": 194
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 2,
+          "id": 195
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 2,
+          "id": 196
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.5",
+          "sheet": "pants",
+          "column": 5,
+          "row": 2,
+          "id": 197
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.6",
+          "sheet": "pants",
+          "column": 6,
+          "row": 2,
+          "id": 198
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.7",
+          "sheet": "pants",
+          "column": 7,
+          "row": 2,
+          "id": 199
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.8",
+          "sheet": "pants",
+          "column": 8,
+          "row": 2,
+          "id": 200
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 3,
+          "id": 209
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 3,
+          "id": 210
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 3,
+          "id": 211
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 3,
+          "id": 212
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.1",
+          "sheet": "pants",
+          "column": 5,
+          "row": 3,
+          "id": 213
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.2",
+          "sheet": "pants",
+          "column": 6,
+          "row": 3,
+          "id": 214
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.3",
+          "sheet": "pants",
+          "column": 7,
+          "row": 3,
+          "id": 215
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.4",
+          "sheet": "pants",
+          "column": 8,
+          "row": 3,
+          "id": 216
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swimIdle.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 5,
+          "id": 225
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.1",
+          "sheet": "pants",
+          "column": 4,
+          "row": 5,
+          "id": 226
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.2",
+          "sheet": "pants",
+          "column": 5,
+          "row": 5,
+          "id": 227
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.3",
+          "sheet": "pants",
+          "column": 6,
+          "row": 5,
+          "id": 228
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.4",
+          "sheet": "pants",
+          "column": 7,
+          "row": 5,
+          "id": 229
+        }
+      ],
+      "fingerprints": [
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.1",
+          "vanilla": "a0b03eff",
+          "opensb": "a0b03eff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.2",
+          "vanilla": "7e9b35ff",
+          "opensb": "7e9b35ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.3",
+          "vanilla": "45483887",
+          "opensb": "45483887"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.4",
+          "vanilla": "698635ef",
+          "opensb": "698635ef"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:idle.5",
+          "vanilla": "405e2fe4",
+          "opensb": "405e2fe4"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:sit.1",
+          "vanilla": "51362dc0",
+          "opensb": "51362dc0"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:duck.1",
+          "vanilla": "59353091",
+          "opensb": "59353091"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.1",
+          "vanilla": "7c9036ff",
+          "opensb": "7c9036ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.2",
+          "vanilla": "6d702af4",
+          "opensb": "6d702af4"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.3",
+          "vanilla": "91a638ff",
+          "opensb": "91a638ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.4",
+          "vanilla": "748e37ff",
+          "opensb": "748e37ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.5",
+          "vanilla": "746f2cff",
+          "opensb": "746f2cff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.6",
+          "vanilla": "7a8a31ff",
+          "opensb": "7a8a31ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.7",
+          "vanilla": "608333ff",
+          "opensb": "608333ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:walk.8",
+          "vanilla": "8f953aff",
+          "opensb": "8f953aff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.1",
+          "vanilla": "736f2fff",
+          "opensb": "736f2fff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.2",
+          "vanilla": "41373b5d",
+          "opensb": "41373b5d"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.3",
+          "vanilla": "515f38ab",
+          "opensb": "515f38ab"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.4",
+          "vanilla": "788e35ff",
+          "opensb": "788e35ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.5",
+          "vanilla": "6f602fff",
+          "opensb": "6f602fff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.6",
+          "vanilla": "273430ab",
+          "opensb": "273430ab"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.7",
+          "vanilla": "617e34ff",
+          "opensb": "617e34ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:run.8",
+          "vanilla": "829935ff",
+          "opensb": "829935ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.1",
+          "vanilla": "2d173b2e",
+          "opensb": "2d173b2e"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.2",
+          "vanilla": "2b243668",
+          "opensb": "2c243668"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.3",
+          "vanilla": "725830c0",
+          "opensb": "725830c0"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:jump.4",
+          "vanilla": "7b4d31ca",
+          "opensb": "7b4d31ca"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.1",
+          "vanilla": "663c2dab",
+          "opensb": "663c2dab"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.2",
+          "vanilla": "5735376d",
+          "opensb": "5735376d"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.3",
+          "vanilla": "5d3a3877",
+          "opensb": "5d3a3877"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:fall.4",
+          "vanilla": "52403496",
+          "opensb": "52403496"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swimIdle.1",
+          "vanilla": "55662dd5",
+          "opensb": "55662dd5"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.1",
+          "vanilla": "8088318c",
+          "opensb": "8088318c"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.2",
+          "vanilla": "778c34ff",
+          "opensb": "778c34ff"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.3",
+          "vanilla": "8c7835a1",
+          "opensb": "8c7835a1"
+        },
+        {
+          "sourcePath": "/items/armors/floran/floran-tier6accelerator/pants.png:swim.4",
+          "vanilla": "668c3487",
+          "opensb": "668c3487"
+        }
+      ]
+    },
+    {
+      "garment": "hidingPants",
+      "sampling": "?scale=0.4?scale=0.7?scale=0.85?crop;6;1;7;2",
+      "sources": [
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 0,
+          "id": 161
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 0,
+          "id": 162
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 0,
+          "id": 163
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 0,
+          "id": 164
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.5",
+          "sheet": "pants",
+          "column": 5,
+          "row": 0,
+          "id": 165
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:sit.1",
+          "sheet": "pants",
+          "column": 6,
+          "row": 0,
+          "id": 166
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:duck.1",
+          "sheet": "pants",
+          "column": 8,
+          "row": 0,
+          "id": 167
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 1,
+          "id": 177
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 1,
+          "id": 178
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 1,
+          "id": 179
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 1,
+          "id": 180
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.5",
+          "sheet": "pants",
+          "column": 5,
+          "row": 1,
+          "id": 181
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.6",
+          "sheet": "pants",
+          "column": 6,
+          "row": 1,
+          "id": 182
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.7",
+          "sheet": "pants",
+          "column": 7,
+          "row": 1,
+          "id": 183
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.8",
+          "sheet": "pants",
+          "column": 8,
+          "row": 1,
+          "id": 184
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 2,
+          "id": 193
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 2,
+          "id": 194
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 2,
+          "id": 195
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 2,
+          "id": 196
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.5",
+          "sheet": "pants",
+          "column": 5,
+          "row": 2,
+          "id": 197
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.6",
+          "sheet": "pants",
+          "column": 6,
+          "row": 2,
+          "id": 198
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.7",
+          "sheet": "pants",
+          "column": 7,
+          "row": 2,
+          "id": 199
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.8",
+          "sheet": "pants",
+          "column": 8,
+          "row": 2,
+          "id": 200
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 3,
+          "id": 209
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.2",
+          "sheet": "pants",
+          "column": 2,
+          "row": 3,
+          "id": 210
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.3",
+          "sheet": "pants",
+          "column": 3,
+          "row": 3,
+          "id": 211
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.4",
+          "sheet": "pants",
+          "column": 4,
+          "row": 3,
+          "id": 212
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.1",
+          "sheet": "pants",
+          "column": 5,
+          "row": 3,
+          "id": 213
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.2",
+          "sheet": "pants",
+          "column": 6,
+          "row": 3,
+          "id": 214
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.3",
+          "sheet": "pants",
+          "column": 7,
+          "row": 3,
+          "id": 215
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.4",
+          "sheet": "pants",
+          "column": 8,
+          "row": 3,
+          "id": 216
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swimIdle.1",
+          "sheet": "pants",
+          "column": 1,
+          "row": 5,
+          "id": 225
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.1",
+          "sheet": "pants",
+          "column": 4,
+          "row": 5,
+          "id": 226
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.2",
+          "sheet": "pants",
+          "column": 5,
+          "row": 5,
+          "id": 227
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.3",
+          "sheet": "pants",
+          "column": 6,
+          "row": 5,
+          "id": 228
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.4",
+          "sheet": "pants",
+          "column": 7,
+          "row": 5,
+          "id": 229
+        }
+      ],
+      "fingerprints": [
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.1",
+          "vanilla": "45572af4",
+          "opensb": "45572af4"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.2",
+          "vanilla": "4e6530f8",
+          "opensb": "4e6530f8"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.3",
+          "vanilla": "4f6631f7",
+          "opensb": "4f6631f7"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.4",
+          "vanilla": "445729f7",
+          "opensb": "445729f7"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:idle.5",
+          "vanilla": "4f6531f5",
+          "opensb": "4f6531f5"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:sit.1",
+          "vanilla": "487035fc",
+          "opensb": "487035fc"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:duck.1",
+          "vanilla": "445e2df8",
+          "opensb": "445e2df8"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.1",
+          "vanilla": "556733f4",
+          "opensb": "556733f4"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.2",
+          "vanilla": "4a4122f6",
+          "opensb": "4a4122f6"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.3",
+          "vanilla": "425929f0",
+          "opensb": "425929f0"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.4",
+          "vanilla": "3e2f1cb7",
+          "opensb": "3e2f1cb7"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.5",
+          "vanilla": "664d39bb",
+          "opensb": "664d39bb"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.6",
+          "vanilla": "425b2df2",
+          "opensb": "425b2df2"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.7",
+          "vanilla": "54201e7f",
+          "opensb": "54201e7f"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:walk.8",
+          "vanilla": "56322780",
+          "opensb": "56322780"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.1",
+          "vanilla": "675831bb",
+          "opensb": "675831bb"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.2",
+          "vanilla": "5916192a",
+          "opensb": "5916192a"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.3",
+          "vanilla": "463c20c0",
+          "opensb": "463c20c0"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.4",
+          "vanilla": "36311bb7",
+          "opensb": "36311bb7"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.5",
+          "vanilla": "313c1ebb",
+          "opensb": "313c1ebb"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.6",
+          "vanilla": "561b1a29",
+          "opensb": "561b1a29"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.7",
+          "vanilla": "38642bf4",
+          "opensb": "38642bf4"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:run.8",
+          "vanilla": "60493180",
+          "opensb": "60493180"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.1",
+          "vanilla": "415128bb",
+          "opensb": "415028bb"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.2",
+          "vanilla": "47562ab9",
+          "opensb": "47562ab9"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.3",
+          "vanilla": "4939207f",
+          "opensb": "4939207f"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:jump.4",
+          "vanilla": "4f432681",
+          "opensb": "4f432681"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.1",
+          "vanilla": "5a1e1b25",
+          "opensb": "5a1e1b25"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.2",
+          "vanilla": "5a1e1c25",
+          "opensb": "5a1e1c25"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.3",
+          "vanilla": "571a1a25",
+          "opensb": "571a1a25"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:fall.4",
+          "vanilla": "62212413",
+          "opensb": "62212413"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swimIdle.1",
+          "vanilla": "29452424",
+          "opensb": "29452424"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.1",
+          "vanilla": "96918a25",
+          "opensb": "96918a25"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.2",
+          "vanilla": "4567347f",
+          "opensb": "4567347f"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.3",
+          "vanilla": "5a755681",
+          "opensb": "5a755681"
+        },
+        {
+          "sourcePath": "/items/armors/biome/swamp/froggmerchant/pantsM.png:swim.4",
+          "vanilla": "427235f3",
+          "opensb": "427235f3"
+        }
+      ]
+    },
+    {
+      "garment": "chest",
+      "sampling": "?scale=0.4?scale=0.7?scale=0.85?scale=0.925?scale=0.9625?scale=0.8?scale=0.8?crop;3;3;4;4",
+      "sources": [
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:chest.1",
+          "sheet": "chest",
+          "column": 1,
+          "row": 0,
+          "id": 243
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:chest.2",
+          "sheet": "chest",
+          "column": 0,
+          "row": 1,
+          "id": 244
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:chest.3",
+          "sheet": "chest",
+          "column": 1,
+          "row": 1,
+          "id": 245
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:run",
+          "sheet": "chest",
+          "column": 1,
+          "row": 2,
+          "id": 246
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:duck",
+          "sheet": "chest",
+          "column": 1,
+          "row": 3,
+          "id": 247
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:swim",
+          "sheet": "chest",
+          "column": 1,
+          "row": 5,
+          "id": 248
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:chest.1",
+          "sheet": "chest",
+          "column": 1,
+          "row": 0,
+          "id": 243
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:chest.2",
+          "sheet": "chest",
+          "column": 0,
+          "row": 1,
+          "id": 244
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:chest.3",
+          "sheet": "chest",
+          "column": 1,
+          "row": 1,
+          "id": 245
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:run",
+          "sheet": "chest",
+          "column": 1,
+          "row": 2,
+          "id": 246
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:duck",
+          "sheet": "chest",
+          "column": 1,
+          "row": 3,
+          "id": 247
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:swim",
+          "sheet": "chest",
+          "column": 1,
+          "row": 5,
+          "id": 248
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.1",
+          "sheet": "frontSleeves",
+          "column": 1,
+          "row": 0,
+          "id": 161
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.2",
+          "sheet": "frontSleeves",
+          "column": 2,
+          "row": 0,
+          "id": 162
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.3",
+          "sheet": "frontSleeves",
+          "column": 3,
+          "row": 0,
+          "id": 163
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.4",
+          "sheet": "frontSleeves",
+          "column": 4,
+          "row": 0,
+          "id": 164
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.5",
+          "sheet": "frontSleeves",
+          "column": 5,
+          "row": 0,
+          "id": 165
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:duck.1",
+          "sheet": "frontSleeves",
+          "column": 8,
+          "row": 0,
+          "id": 166
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.1",
+          "sheet": "frontSleeves",
+          "column": 2,
+          "row": 1,
+          "id": 177
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.2",
+          "sheet": "frontSleeves",
+          "column": 3,
+          "row": 1,
+          "id": 178
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.3",
+          "sheet": "frontSleeves",
+          "column": 4,
+          "row": 1,
+          "id": 179
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.4",
+          "sheet": "frontSleeves",
+          "column": 5,
+          "row": 1,
+          "id": 180
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.5",
+          "sheet": "frontSleeves",
+          "column": 6,
+          "row": 1,
+          "id": 181
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:rotation",
+          "sheet": "frontSleeves",
+          "column": 8,
+          "row": 1,
+          "id": 182
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.1",
+          "sheet": "frontSleeves",
+          "column": 2,
+          "row": 2,
+          "id": 193
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.2",
+          "sheet": "frontSleeves",
+          "column": 3,
+          "row": 2,
+          "id": 194
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.3",
+          "sheet": "frontSleeves",
+          "column": 4,
+          "row": 2,
+          "id": 195
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.4",
+          "sheet": "frontSleeves",
+          "column": 5,
+          "row": 2,
+          "id": 196
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.5",
+          "sheet": "frontSleeves",
+          "column": 6,
+          "row": 2,
+          "id": 197
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.1",
+          "sheet": "frontSleeves",
+          "column": 1,
+          "row": 3,
+          "id": 209
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.2",
+          "sheet": "frontSleeves",
+          "column": 2,
+          "row": 3,
+          "id": 210
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.3",
+          "sheet": "frontSleeves",
+          "column": 3,
+          "row": 3,
+          "id": 211
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.4",
+          "sheet": "frontSleeves",
+          "column": 4,
+          "row": 3,
+          "id": 212
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.1",
+          "sheet": "frontSleeves",
+          "column": 5,
+          "row": 3,
+          "id": 213
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.2",
+          "sheet": "frontSleeves",
+          "column": 6,
+          "row": 3,
+          "id": 214
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.3",
+          "sheet": "frontSleeves",
+          "column": 7,
+          "row": 3,
+          "id": 215
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.4",
+          "sheet": "frontSleeves",
+          "column": 8,
+          "row": 3,
+          "id": 216
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swimIdle.1",
+          "sheet": "frontSleeves",
+          "column": 1,
+          "row": 5,
+          "id": 225
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swimIdle.2",
+          "sheet": "frontSleeves",
+          "column": 2,
+          "row": 5,
+          "id": 226
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.1",
+          "sheet": "frontSleeves",
+          "column": 4,
+          "row": 5,
+          "id": 227
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.2",
+          "sheet": "frontSleeves",
+          "column": 5,
+          "row": 5,
+          "id": 228
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.3",
+          "sheet": "frontSleeves",
+          "column": 6,
+          "row": 5,
+          "id": 229
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.4",
+          "sheet": "frontSleeves",
+          "column": 7,
+          "row": 5,
+          "id": 230
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.5",
+          "sheet": "frontSleeves",
+          "column": 8,
+          "row": 5,
+          "id": 231
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idleMelee",
+          "sheet": "frontSleeves",
+          "column": 3,
+          "row": 6,
+          "id": 241
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:duckMelee",
+          "sheet": "frontSleeves",
+          "column": 8,
+          "row": 6,
+          "id": 242
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.1",
+          "sheet": "backSleeves",
+          "column": 1,
+          "row": 0,
+          "id": 96
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.2",
+          "sheet": "backSleeves",
+          "column": 2,
+          "row": 0,
+          "id": 97
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.3",
+          "sheet": "backSleeves",
+          "column": 3,
+          "row": 0,
+          "id": 98
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.4",
+          "sheet": "backSleeves",
+          "column": 4,
+          "row": 0,
+          "id": 99
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.5",
+          "sheet": "backSleeves",
+          "column": 5,
+          "row": 0,
+          "id": 100
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:duck.1",
+          "sheet": "backSleeves",
+          "column": 8,
+          "row": 0,
+          "id": 101
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.1",
+          "sheet": "backSleeves",
+          "column": 2,
+          "row": 1,
+          "id": 102
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.2",
+          "sheet": "backSleeves",
+          "column": 3,
+          "row": 1,
+          "id": 103
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.3",
+          "sheet": "backSleeves",
+          "column": 4,
+          "row": 1,
+          "id": 104
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.4",
+          "sheet": "backSleeves",
+          "column": 5,
+          "row": 1,
+          "id": 105
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.5",
+          "sheet": "backSleeves",
+          "column": 6,
+          "row": 1,
+          "id": 106
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:rotation",
+          "sheet": "backSleeves",
+          "column": 8,
+          "row": 1,
+          "id": 107
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.1",
+          "sheet": "backSleeves",
+          "column": 2,
+          "row": 2,
+          "id": 108
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.2",
+          "sheet": "backSleeves",
+          "column": 3,
+          "row": 2,
+          "id": 109
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.3",
+          "sheet": "backSleeves",
+          "column": 4,
+          "row": 2,
+          "id": 110
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.4",
+          "sheet": "backSleeves",
+          "column": 5,
+          "row": 2,
+          "id": 111
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.5",
+          "sheet": "backSleeves",
+          "column": 6,
+          "row": 2,
+          "id": 112
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.1",
+          "sheet": "backSleeves",
+          "column": 1,
+          "row": 3,
+          "id": 113
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.2",
+          "sheet": "backSleeves",
+          "column": 2,
+          "row": 3,
+          "id": 114
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.3",
+          "sheet": "backSleeves",
+          "column": 3,
+          "row": 3,
+          "id": 115
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.4",
+          "sheet": "backSleeves",
+          "column": 4,
+          "row": 3,
+          "id": 116
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.1",
+          "sheet": "backSleeves",
+          "column": 5,
+          "row": 3,
+          "id": 117
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.2",
+          "sheet": "backSleeves",
+          "column": 6,
+          "row": 3,
+          "id": 118
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.3",
+          "sheet": "backSleeves",
+          "column": 7,
+          "row": 3,
+          "id": 119
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.4",
+          "sheet": "backSleeves",
+          "column": 8,
+          "row": 3,
+          "id": 120
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swimIdle.1",
+          "sheet": "backSleeves",
+          "column": 1,
+          "row": 5,
+          "id": 121
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swimIdle.2",
+          "sheet": "backSleeves",
+          "column": 2,
+          "row": 5,
+          "id": 122
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.1",
+          "sheet": "backSleeves",
+          "column": 4,
+          "row": 5,
+          "id": 123
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.2",
+          "sheet": "backSleeves",
+          "column": 5,
+          "row": 5,
+          "id": 124
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.3",
+          "sheet": "backSleeves",
+          "column": 6,
+          "row": 5,
+          "id": 125
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.4",
+          "sheet": "backSleeves",
+          "column": 7,
+          "row": 5,
+          "id": 126
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.5",
+          "sheet": "backSleeves",
+          "column": 8,
+          "row": 5,
+          "id": 127
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idleMelee",
+          "sheet": "backSleeves",
+          "column": 3,
+          "row": 6,
+          "id": 128
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:duckMelee",
+          "sheet": "backSleeves",
+          "column": 8,
+          "row": 6,
+          "id": 129
+        }
+      ],
+      "fingerprints": [
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:chest.1",
+          "vanilla": "46352a36",
+          "opensb": "46352a36"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:chest.2",
+          "vanilla": "85703442",
+          "opensb": "86703442"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:chest.3",
+          "vanilla": "8c834737",
+          "opensb": "8c834737"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:run",
+          "vanilla": "988e4f3f",
+          "opensb": "988e4e3f"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:duck",
+          "vanilla": "8c954a05",
+          "opensb": "8c954a05"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestm.png:swim",
+          "vanilla": "8e864d36",
+          "opensb": "8e874d36"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:chest.1",
+          "vanilla": "2c221d19",
+          "opensb": "2c221e19"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:chest.2",
+          "vanilla": "9f853e19",
+          "opensb": "9f853e19"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:chest.3",
+          "vanilla": "8a8d4812",
+          "opensb": "8a8d4912"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:run",
+          "vanilla": "8c8f4a18",
+          "opensb": "8d8f4a18"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:duck",
+          "vanilla": "8c954a02",
+          "opensb": "8c964a02"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/chestf.png:swim",
+          "vanilla": "8f8f4f1c",
+          "opensb": "8f8f4f1c"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.1",
+          "vanilla": "bdcc640b",
+          "opensb": "bdcc640b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.2",
+          "vanilla": "bbc9620f",
+          "opensb": "bbc9620f"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.3",
+          "vanilla": "bdcd620a",
+          "opensb": "bdcd620a"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.4",
+          "vanilla": "bccb620d",
+          "opensb": "bccb620d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idle.5",
+          "vanilla": "bccb630d",
+          "opensb": "bccb630d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:duck.1",
+          "vanilla": "aac05e06",
+          "opensb": "aac05e06"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.1",
+          "vanilla": "bfc75d1d",
+          "opensb": "bfc75d1d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.2",
+          "vanilla": "c8d25f11",
+          "opensb": "c8d25f11"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.3",
+          "vanilla": "c0c85f1c",
+          "opensb": "c0c85f1c"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.4",
+          "vanilla": "cad65f0b",
+          "opensb": "cad65f0b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:walk.5",
+          "vanilla": "cbd96008",
+          "opensb": "cbd96008"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:rotation",
+          "vanilla": "9ba75427",
+          "opensb": "9ba75427"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.1",
+          "vanilla": "b1a95b48",
+          "opensb": "b1a95b48"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.2",
+          "vanilla": "bebe5b2f",
+          "opensb": "bebe5b2f"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.3",
+          "vanilla": "c8d16115",
+          "opensb": "c8d16115"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.4",
+          "vanilla": "c9d4600e",
+          "opensb": "c9d4600e"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:run.5",
+          "vanilla": "c6ce6015",
+          "opensb": "c6ce6015"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.1",
+          "vanilla": "bec55e1e",
+          "opensb": "bec55e1e"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.2",
+          "vanilla": "cad5610c",
+          "opensb": "cad5610c"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.3",
+          "vanilla": "c9d5600d",
+          "opensb": "c9d5600d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:jump.4",
+          "vanilla": "c6d05d11",
+          "opensb": "c6d05d11"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.1",
+          "vanilla": "c7d25e10",
+          "opensb": "c7d25e10"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.2",
+          "vanilla": "c9d16112",
+          "opensb": "c9d16112"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.3",
+          "vanilla": "c8d45e0d",
+          "opensb": "c8d45e0d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:fall.4",
+          "vanilla": "9eb05018",
+          "opensb": "9eb05018"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swimIdle.1",
+          "vanilla": "b7b75f33",
+          "opensb": "b7b75f33"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swimIdle.2",
+          "vanilla": "bec25e25",
+          "opensb": "bec25e25"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.1",
+          "vanilla": "c4c95c1e",
+          "opensb": "c4c95c1e"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.2",
+          "vanilla": "b5b05840",
+          "opensb": "b5b05840"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.3",
+          "vanilla": "c2c85f1e",
+          "opensb": "c2c85f1e"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.4",
+          "vanilla": "bcb85f3b",
+          "opensb": "bcb85f3b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:swim.5",
+          "vanilla": "a0a9562c",
+          "opensb": "a0a9552c"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:idleMelee",
+          "vanilla": "c8d55e0b",
+          "opensb": "c8d55e0b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/fsleeve.png:duckMelee",
+          "vanilla": "a3b9510b",
+          "opensb": "a3b9510b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.1",
+          "vanilla": "40432222",
+          "opensb": "41432222"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.2",
+          "vanilla": "a2ab501e",
+          "opensb": "a2ab501e"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.3",
+          "vanilla": "979a4d2f",
+          "opensb": "979a4d2f"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.4",
+          "vanilla": "a2ac501c",
+          "opensb": "a2ac501c"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idle.5",
+          "vanilla": "a0a9501f",
+          "opensb": "a0a9501f"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:duck.1",
+          "vanilla": "9ead4709",
+          "opensb": "9ead4709"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.1",
+          "vanilla": "c5cb651d",
+          "opensb": "c5cb651d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.2",
+          "vanilla": "c5cd631a",
+          "opensb": "c5cd631a"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.3",
+          "vanilla": "c1c46524",
+          "opensb": "c1c46524"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.4",
+          "vanilla": "bdc45c21",
+          "opensb": "bdc45c21"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:walk.5",
+          "vanilla": "c0c46325",
+          "opensb": "c0c46325"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:rotation",
+          "vanilla": "b6b46531",
+          "opensb": "b6b46531"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.1",
+          "vanilla": "c3c7621e",
+          "opensb": "c3c7621e"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.2",
+          "vanilla": "c4ca621c",
+          "opensb": "c4ca621c"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.3",
+          "vanilla": "bdc45c20",
+          "opensb": "bdc45c20"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.4",
+          "vanilla": "c1c8601e",
+          "opensb": "c1c8601e"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:run.5",
+          "vanilla": "b8bd5b29",
+          "opensb": "b8bd5b29"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.1",
+          "vanilla": "55522f23",
+          "opensb": "55522f23"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.2",
+          "vanilla": "b4b15f3b",
+          "opensb": "b4b15f3b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.3",
+          "vanilla": "b8be5b29",
+          "opensb": "b8be5b29"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:jump.4",
+          "vanilla": "b3b25e39",
+          "opensb": "b3b25e39"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.1",
+          "vanilla": "a7a85642",
+          "opensb": "a7a85642"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.2",
+          "vanilla": "a29f544d",
+          "opensb": "a29f544d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.3",
+          "vanilla": "a9ab553d",
+          "opensb": "a9ab553d"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:fall.4",
+          "vanilla": "a0a1523a",
+          "opensb": "a0a1523a"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swimIdle.1",
+          "vanilla": "53522c20",
+          "opensb": "54532c20"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swimIdle.2",
+          "vanilla": "bcc45c20",
+          "opensb": "bcc45c20"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.1",
+          "vanilla": "b8be5b28",
+          "opensb": "b8be5b28"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.2",
+          "vanilla": "c2c7571f",
+          "opensb": "c2c7571f"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.3",
+          "vanilla": "c7cc651b",
+          "opensb": "c7cc651b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.4",
+          "vanilla": "b9bd5f2c",
+          "opensb": "b9bd5f2c"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:swim.5",
+          "vanilla": "bcc25f1b",
+          "opensb": "bcc25f1b"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:idleMelee",
+          "vanilla": "bcc35b21",
+          "opensb": "bcc35b21"
+        },
+        {
+          "sourcePath": "/items/armors/avian/avian-tier6separator/bsleeve.png:duckMelee",
+          "vanilla": "bfcc5807",
+          "opensb": "bfcc5807"
+        }
+      ]
+    },
+    {
+      "garment": "back",
+      "sampling": "?scale=0.4?scale=0.7?scale=0.84?crop;4;2;5;3",
+      "sources": [
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.1",
+          "sheet": "back",
+          "column": 1,
+          "row": 0,
+          "id": 161
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.2",
+          "sheet": "back",
+          "column": 2,
+          "row": 0,
+          "id": 162
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.3",
+          "sheet": "back",
+          "column": 3,
+          "row": 0,
+          "id": 163
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.4",
+          "sheet": "back",
+          "column": 4,
+          "row": 0,
+          "id": 164
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.5",
+          "sheet": "back",
+          "column": 5,
+          "row": 0,
+          "id": 165
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:sit.1",
+          "sheet": "back",
+          "column": 6,
+          "row": 0,
+          "id": 166
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:duck.1",
+          "sheet": "back",
+          "column": 8,
+          "row": 0,
+          "id": 167
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.1",
+          "sheet": "back",
+          "column": 1,
+          "row": 1,
+          "id": 177
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.2",
+          "sheet": "back",
+          "column": 2,
+          "row": 1,
+          "id": 178
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.3",
+          "sheet": "back",
+          "column": 3,
+          "row": 1,
+          "id": 179
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.4",
+          "sheet": "back",
+          "column": 4,
+          "row": 1,
+          "id": 180
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.5",
+          "sheet": "back",
+          "column": 5,
+          "row": 1,
+          "id": 181
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.6",
+          "sheet": "back",
+          "column": 6,
+          "row": 1,
+          "id": 182
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.7",
+          "sheet": "back",
+          "column": 7,
+          "row": 1,
+          "id": 183
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.8",
+          "sheet": "back",
+          "column": 8,
+          "row": 1,
+          "id": 184
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.1",
+          "sheet": "back",
+          "column": 1,
+          "row": 2,
+          "id": 193
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.2",
+          "sheet": "back",
+          "column": 2,
+          "row": 2,
+          "id": 194
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.3",
+          "sheet": "back",
+          "column": 3,
+          "row": 2,
+          "id": 195
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.4",
+          "sheet": "back",
+          "column": 4,
+          "row": 2,
+          "id": 196
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.5",
+          "sheet": "back",
+          "column": 5,
+          "row": 2,
+          "id": 197
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.6",
+          "sheet": "back",
+          "column": 6,
+          "row": 2,
+          "id": 198
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.7",
+          "sheet": "back",
+          "column": 7,
+          "row": 2,
+          "id": 199
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.8",
+          "sheet": "back",
+          "column": 8,
+          "row": 2,
+          "id": 200
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.1",
+          "sheet": "back",
+          "column": 1,
+          "row": 3,
+          "id": 209
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.2",
+          "sheet": "back",
+          "column": 2,
+          "row": 3,
+          "id": 210
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.3",
+          "sheet": "back",
+          "column": 3,
+          "row": 3,
+          "id": 211
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.4",
+          "sheet": "back",
+          "column": 4,
+          "row": 3,
+          "id": 212
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.1",
+          "sheet": "back",
+          "column": 5,
+          "row": 3,
+          "id": 213
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.2",
+          "sheet": "back",
+          "column": 6,
+          "row": 3,
+          "id": 214
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.3",
+          "sheet": "back",
+          "column": 7,
+          "row": 3,
+          "id": 215
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.4",
+          "sheet": "back",
+          "column": 8,
+          "row": 3,
+          "id": 216
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swimIdle.1",
+          "sheet": "back",
+          "column": 1,
+          "row": 5,
+          "id": 225
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.1",
+          "sheet": "back",
+          "column": 4,
+          "row": 5,
+          "id": 226
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.2",
+          "sheet": "back",
+          "column": 5,
+          "row": 5,
+          "id": 227
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.3",
+          "sheet": "back",
+          "column": 6,
+          "row": 5,
+          "id": 228
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.4",
+          "sheet": "back",
+          "column": 7,
+          "row": 5,
+          "id": 229
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.1",
+          "sheet": "back",
+          "column": 1,
+          "row": 6,
+          "id": 241
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.2",
+          "sheet": "back",
+          "column": 2,
+          "row": 6,
+          "id": 242
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.3",
+          "sheet": "back",
+          "column": 3,
+          "row": 6,
+          "id": 243
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.4",
+          "sheet": "back",
+          "column": 4,
+          "row": 6,
+          "id": 244
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.5",
+          "sheet": "back",
+          "column": 5,
+          "row": 6,
+          "id": 245
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.6",
+          "sheet": "back",
+          "column": 6,
+          "row": 6,
+          "id": 246
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.7",
+          "sheet": "back",
+          "column": 7,
+          "row": 6,
+          "id": 247
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.8",
+          "sheet": "back",
+          "column": 8,
+          "row": 6,
+          "id": 248
+        }
+      ],
+      "fingerprints": [
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.1",
+          "vanilla": "aa836459",
+          "opensb": "aa836459"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.2",
+          "vanilla": "bb885e4e",
+          "opensb": "bb885e4e"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.3",
+          "vanilla": "cb926431",
+          "opensb": "cb926431"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.4",
+          "vanilla": "cb95693b",
+          "opensb": "cb95693b"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:idle.5",
+          "vanilla": "cf91601c",
+          "opensb": "cf91601c"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:sit.1",
+          "vanilla": "ce966b4b",
+          "opensb": "ce966b4b"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:duck.1",
+          "vanilla": "e6c2a50c",
+          "opensb": "e6c2a50c"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.1",
+          "vanilla": "cc93662e",
+          "opensb": "cc93662e"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.2",
+          "vanilla": "cc8c5921",
+          "opensb": "cc8c5921"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.3",
+          "vanilla": "c1895c3d",
+          "opensb": "c1895c3d"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.4",
+          "vanilla": "bf885c41",
+          "opensb": "bf885c41"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.5",
+          "vanilla": "cb8e5d2d",
+          "opensb": "cb8e5d2d"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.6",
+          "vanilla": "c7895728",
+          "opensb": "c7895728"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.7",
+          "vanilla": "ac7c5558",
+          "opensb": "ac7c5558"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:walk.8",
+          "vanilla": "b8a99d5d",
+          "opensb": "b8a99d5d"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.1",
+          "vanilla": "d796610f",
+          "opensb": "d796610f"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.2",
+          "vanilla": "dc955b0a",
+          "opensb": "dc955b0a"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.3",
+          "vanilla": "de965b06",
+          "opensb": "de965b06"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.4",
+          "vanilla": "c3885730",
+          "opensb": "c3885730"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.5",
+          "vanilla": "d9945b0d",
+          "opensb": "d9945b0d"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.6",
+          "vanilla": "dc955b08",
+          "opensb": "dc955b08"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.7",
+          "vanilla": "da945b0a",
+          "opensb": "da945b0a"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:run.8",
+          "vanilla": "dfbca11e",
+          "opensb": "dfbca11e"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.1",
+          "vanilla": "ce8e5b23",
+          "opensb": "ce8e5b23"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.2",
+          "vanilla": "dc945b06",
+          "opensb": "dc945b06"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.3",
+          "vanilla": "cf8f5b23",
+          "opensb": "cf8f5b23"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:jump.4",
+          "vanilla": "9d74526f",
+          "opensb": "9d74526f"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.1",
+          "vanilla": "d28f5916",
+          "opensb": "d28f5916"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.2",
+          "vanilla": "de965b02",
+          "opensb": "de965b02"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.3",
+          "vanilla": "e0975c00",
+          "opensb": "e0975c00"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:fall.4",
+          "vanilla": "ecc3a200",
+          "opensb": "ecc3a200"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swimIdle.1",
+          "vanilla": "d08f5b1e",
+          "opensb": "d08f5b1e"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.1",
+          "vanilla": "da945b08",
+          "opensb": "da945b08"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.2",
+          "vanilla": "cd905f2f",
+          "opensb": "cd905f2f"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.3",
+          "vanilla": "d8955e14",
+          "opensb": "d8955e14"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:swim.4",
+          "vanilla": "cc8d5920",
+          "opensb": "cc8d5920"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.1",
+          "vanilla": "59504932",
+          "opensb": "59504932"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.2",
+          "vanilla": "655c5509",
+          "opensb": "655c5509"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.3",
+          "vanilla": "7369631b",
+          "opensb": "7369631b"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.4",
+          "vanilla": "756c665a",
+          "opensb": "756c665a"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.5",
+          "vanilla": "62574f32",
+          "opensb": "62574f32"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.6",
+          "vanilla": "877d7782",
+          "opensb": "877d7782"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.7",
+          "vanilla": "63595277",
+          "opensb": "63595277"
+        },
+        {
+          "sourcePath": "/items/armors/backitems/tigertail/back.png:runbackwards.8",
+          "vanilla": "a19d9959",
+          "opensb": "a19d9959"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "vanillaVersion": "1.4.4",
+    "vanillaServerSha256": "b039b576cb8dc67655cd19844d7e2ec68f0cb727e023da738b2176276acc672e",
+    "opensbVersion": "0.1.15.1",
+    "opensbServerSha256": "aa6170e41080fbb590072213c3e0da300627e44d76c56d85aa70133e279a2c90",
+    "opensbPackage": "/nix/store/0lhilvhd84qcyln8q1r70iv1y69nidpy-openstarbound-0.1.15.1",
+    "opensbSourceIdentifier": "moderncleanup-vps",
+    "pakSha256": "325d7d4210667b2a4738d805e858b80d7d55e8f834da773984ca6edb993577fe",
+    "method": "OpenSB assets.image:get(0,0); genuine vanilla binary per-channel binary-partition exact replacement masks, each tuple verified by both exact-to-opaque positive and exact-to-transparent negative probes. No raw occupancy-only color acceptance.",
+    "captureCompletion": "All source RGBA captures completed. Diagnostic RCON connections remained open; the runners reached their 90-second wait timeout and SIGINT then shut down gracefully. This capture is not a completed native acceptance gate.",
+    "sourceIdentity": "Independent native postLoad resolution checked 14 source PNG and frames resources against legal packed.pak bytes. OpenSB's existing pants.frames, pantsf.frames and pantsm.frames patches only add lay.1 as an alias of run.8; mapped named grid frames are unaffected.",
+    "unmappedClimbProbe": {
+      "sourceRecords": 16,
+      "engineSamples": 32,
+      "additionalNewKeyHits": 0,
+      "vanillaExitStatus": 0,
+      "opensbExitStatus": 0
+    },
+    "fixtureMappedFrames": 344,
+    "deduplicatedSources": 196,
+    "unionUniqueKeys": 208,
+    "unionCrossIdCollisions": 0
+  }
+}

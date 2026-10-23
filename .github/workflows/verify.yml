@@ -1,0 +1,17 @@
+name: Verify Rust Outfit Studio
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - run: nix develop path:./nix --command cargo fmt --all -- --check
+      - run: nix develop path:./nix --command cargo test --workspace --all-targets --locked
+      - run: nix develop path:./nix --command cargo clippy --workspace --all-targets --locked -- -D warnings
+      - run: nix develop path:./nix --command cargo clippy --package outfit-web --target wasm32-unknown-unknown --locked -- -D warnings
+      - run: nix develop path:./nix --command cargo xtask build

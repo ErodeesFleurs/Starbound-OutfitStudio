@@ -1,0 +1,2501 @@
+{
+  "layouts": {
+    "body": {
+      "width": 387,
+      "height": 258,
+      "frames": [
+        {
+          "name": "idle.1",
+          "x": 43,
+          "y": 0,
+          "id": 1,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:idle.1",
+            "/humanoid/floran/femalebody.png:idle.1"
+          ]
+        },
+        {
+          "name": "idle.2",
+          "x": 86,
+          "y": 0,
+          "id": 2,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:idle.2",
+            "/humanoid/floran/femalebody.png:idle.2"
+          ]
+        },
+        {
+          "name": "idle.3",
+          "x": 129,
+          "y": 0,
+          "id": 3,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:idle.3",
+            "/humanoid/floran/femalebody.png:idle.3"
+          ]
+        },
+        {
+          "name": "idle.4",
+          "x": 172,
+          "y": 0,
+          "id": 4,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:idle.4",
+            "/humanoid/floran/femalebody.png:idle.4"
+          ]
+        },
+        {
+          "name": "idle.5",
+          "x": 215,
+          "y": 0,
+          "id": 5,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:idle.5",
+            "/humanoid/floran/femalebody.png:idle.5"
+          ]
+        },
+        {
+          "name": "sit.1",
+          "x": 258,
+          "y": 0,
+          "id": 6,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:sit.1",
+            "/humanoid/floran/femalebody.png:sit.1"
+          ]
+        },
+        {
+          "name": "duck.1",
+          "x": 344,
+          "y": 0,
+          "id": 7,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:duck.1",
+            "/humanoid/floran/femalebody.png:duck.1"
+          ]
+        },
+        {
+          "name": "walk.1",
+          "x": 43,
+          "y": 43,
+          "id": 8,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.1",
+            "/humanoid/floran/femalebody.png:walk.1"
+          ]
+        },
+        {
+          "name": "walk.2",
+          "x": 86,
+          "y": 43,
+          "id": 9,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.2",
+            "/humanoid/floran/femalebody.png:walk.2"
+          ]
+        },
+        {
+          "name": "walk.3",
+          "x": 129,
+          "y": 43,
+          "id": 10,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.3",
+            "/humanoid/floran/femalebody.png:walk.3"
+          ]
+        },
+        {
+          "name": "walk.4",
+          "x": 172,
+          "y": 43,
+          "id": 11,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.4",
+            "/humanoid/floran/femalebody.png:walk.4"
+          ]
+        },
+        {
+          "name": "walk.5",
+          "x": 215,
+          "y": 43,
+          "id": 99,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.5",
+            "/humanoid/floran/femalebody.png:walk.5"
+          ]
+        },
+        {
+          "name": "walk.6",
+          "x": 258,
+          "y": 43,
+          "id": 100,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.6",
+            "/humanoid/floran/femalebody.png:walk.6"
+          ]
+        },
+        {
+          "name": "walk.7",
+          "x": 301,
+          "y": 43,
+          "id": 101,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.7",
+            "/humanoid/floran/femalebody.png:walk.7"
+          ]
+        },
+        {
+          "name": "walk.8",
+          "x": 344,
+          "y": 43,
+          "id": 12,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:walk.8",
+            "/humanoid/floran/femalebody.png:walk.8"
+          ]
+        },
+        {
+          "name": "run.1",
+          "x": 43,
+          "y": 86,
+          "id": 13,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.1",
+            "/humanoid/floran/femalebody.png:run.1"
+          ]
+        },
+        {
+          "name": "run.2",
+          "x": 86,
+          "y": 86,
+          "id": 14,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.2",
+            "/humanoid/floran/femalebody.png:run.2"
+          ]
+        },
+        {
+          "name": "run.3",
+          "x": 129,
+          "y": 86,
+          "id": 15,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.3",
+            "/humanoid/floran/femalebody.png:run.3"
+          ]
+        },
+        {
+          "name": "run.4",
+          "x": 172,
+          "y": 86,
+          "id": 16,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.4",
+            "/humanoid/floran/femalebody.png:run.4"
+          ]
+        },
+        {
+          "name": "run.5",
+          "x": 215,
+          "y": 86,
+          "id": 17,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.5",
+            "/humanoid/floran/femalebody.png:run.5"
+          ]
+        },
+        {
+          "name": "run.6",
+          "x": 258,
+          "y": 86,
+          "id": 18,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.6",
+            "/humanoid/floran/femalebody.png:run.6"
+          ]
+        },
+        {
+          "name": "run.7",
+          "x": 301,
+          "y": 86,
+          "id": 102,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.7",
+            "/humanoid/floran/femalebody.png:run.7"
+          ]
+        },
+        {
+          "name": "run.8",
+          "x": 344,
+          "y": 86,
+          "id": 19,
+          "aliases": [
+            "lay.1"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:run.8",
+            "/humanoid/floran/femalebody.png:run.8"
+          ]
+        },
+        {
+          "name": "jump.1",
+          "x": 43,
+          "y": 129,
+          "id": 20,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:jump.1",
+            "/humanoid/floran/femalebody.png:jump.1"
+          ]
+        },
+        {
+          "name": "jump.2",
+          "x": 86,
+          "y": 129,
+          "id": 21,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:jump.2",
+            "/humanoid/floran/femalebody.png:jump.2"
+          ]
+        },
+        {
+          "name": "jump.3",
+          "x": 129,
+          "y": 129,
+          "id": 22,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:jump.3",
+            "/humanoid/floran/femalebody.png:jump.3"
+          ]
+        },
+        {
+          "name": "jump.4",
+          "x": 172,
+          "y": 129,
+          "id": 23,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:jump.4",
+            "/humanoid/floran/femalebody.png:jump.4"
+          ]
+        },
+        {
+          "name": "fall.1",
+          "x": 215,
+          "y": 129,
+          "id": 103,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:fall.1",
+            "/humanoid/floran/femalebody.png:fall.1"
+          ]
+        },
+        {
+          "name": "fall.2",
+          "x": 258,
+          "y": 129,
+          "id": 104,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:fall.2",
+            "/humanoid/floran/femalebody.png:fall.2"
+          ]
+        },
+        {
+          "name": "fall.3",
+          "x": 301,
+          "y": 129,
+          "id": 24,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:fall.3",
+            "/humanoid/floran/femalebody.png:fall.3"
+          ]
+        },
+        {
+          "name": "fall.4",
+          "x": 344,
+          "y": 129,
+          "id": 25,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:fall.4",
+            "/humanoid/floran/femalebody.png:fall.4"
+          ]
+        },
+        {
+          "name": "climb.1",
+          "x": 43,
+          "y": 172,
+          "id": 26,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.1",
+            "/humanoid/floran/femalebody.png:climb.1"
+          ]
+        },
+        {
+          "name": "climb.2",
+          "x": 86,
+          "y": 172,
+          "id": 27,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.2",
+            "/humanoid/floran/femalebody.png:climb.2"
+          ]
+        },
+        {
+          "name": "climb.3",
+          "x": 129,
+          "y": 172,
+          "id": 28,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.3",
+            "/humanoid/floran/femalebody.png:climb.3"
+          ]
+        },
+        {
+          "name": "climb.4",
+          "x": 172,
+          "y": 172,
+          "id": 29,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.4",
+            "/humanoid/floran/femalebody.png:climb.4"
+          ]
+        },
+        {
+          "name": "climb.5",
+          "x": 215,
+          "y": 172,
+          "id": 105,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.5",
+            "/humanoid/floran/femalebody.png:climb.5"
+          ]
+        },
+        {
+          "name": "climb.6",
+          "x": 258,
+          "y": 172,
+          "id": 106,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.6",
+            "/humanoid/floran/femalebody.png:climb.6"
+          ]
+        },
+        {
+          "name": "climb.7",
+          "x": 301,
+          "y": 172,
+          "id": 107,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.7",
+            "/humanoid/floran/femalebody.png:climb.7"
+          ]
+        },
+        {
+          "name": "climb.8",
+          "x": 344,
+          "y": 172,
+          "id": 30,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:climb.8",
+            "/humanoid/floran/femalebody.png:climb.8"
+          ]
+        },
+        {
+          "name": "swimIdle.1",
+          "x": 43,
+          "y": 215,
+          "id": 31,
+          "aliases": [
+            "swimIdle.2",
+            "swim.5",
+            "swim.6",
+            "swim.7"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:swimIdle.1",
+            "/humanoid/floran/femalebody.png:swimIdle.1"
+          ]
+        },
+        {
+          "name": "swim.1",
+          "x": 172,
+          "y": 215,
+          "id": 32,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:swim.1",
+            "/humanoid/floran/femalebody.png:swim.1"
+          ]
+        },
+        {
+          "name": "swim.2",
+          "x": 215,
+          "y": 215,
+          "id": 33,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:swim.2",
+            "/humanoid/floran/femalebody.png:swim.2"
+          ]
+        },
+        {
+          "name": "swim.3",
+          "x": 258,
+          "y": 215,
+          "id": 34,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:swim.3",
+            "/humanoid/floran/femalebody.png:swim.3"
+          ]
+        },
+        {
+          "name": "swim.4",
+          "x": 301,
+          "y": 215,
+          "id": 108,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/malebody.png:swim.4",
+            "/humanoid/floran/femalebody.png:swim.4"
+          ]
+        }
+      ]
+    },
+    "frontArm": {
+      "width": 387,
+      "height": 301,
+      "frames": [
+        {
+          "name": "idle.1",
+          "x": 43,
+          "y": 0,
+          "id": 35,
+          "aliases": [
+            "sit.1",
+            "lay.1"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:idle.1"
+          ]
+        },
+        {
+          "name": "idle.2",
+          "x": 86,
+          "y": 0,
+          "id": 36,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:idle.2"
+          ]
+        },
+        {
+          "name": "idle.3",
+          "x": 129,
+          "y": 0,
+          "id": 37,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:idle.3"
+          ]
+        },
+        {
+          "name": "idle.4",
+          "x": 172,
+          "y": 0,
+          "id": 38,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:idle.4"
+          ]
+        },
+        {
+          "name": "idle.5",
+          "x": 215,
+          "y": 0,
+          "id": 39,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:idle.5"
+          ]
+        },
+        {
+          "name": "duck.1",
+          "x": 344,
+          "y": 0,
+          "id": 40,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:duck.1"
+          ]
+        },
+        {
+          "name": "walk.1",
+          "x": 86,
+          "y": 43,
+          "id": 41,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:walk.1"
+          ]
+        },
+        {
+          "name": "walk.2",
+          "x": 129,
+          "y": 43,
+          "id": 42,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:walk.2"
+          ]
+        },
+        {
+          "name": "walk.3",
+          "x": 172,
+          "y": 43,
+          "id": 43,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:walk.3"
+          ]
+        },
+        {
+          "name": "walk.4",
+          "x": 215,
+          "y": 43,
+          "id": 44,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:walk.4"
+          ]
+        },
+        {
+          "name": "walk.5",
+          "x": 258,
+          "y": 43,
+          "id": 45,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:walk.5"
+          ]
+        },
+        {
+          "name": "rotation",
+          "x": 344,
+          "y": 43,
+          "id": 46,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:rotation"
+          ]
+        },
+        {
+          "name": "run.1",
+          "x": 86,
+          "y": 86,
+          "id": 47,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:run.1"
+          ]
+        },
+        {
+          "name": "run.2",
+          "x": 129,
+          "y": 86,
+          "id": 48,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:run.2"
+          ]
+        },
+        {
+          "name": "run.3",
+          "x": 172,
+          "y": 86,
+          "id": 49,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:run.3"
+          ]
+        },
+        {
+          "name": "run.4",
+          "x": 215,
+          "y": 86,
+          "id": 50,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:run.4"
+          ]
+        },
+        {
+          "name": "run.5",
+          "x": 258,
+          "y": 86,
+          "id": 51,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:run.5"
+          ]
+        },
+        {
+          "name": "jump.1",
+          "x": 43,
+          "y": 129,
+          "id": 52,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:jump.1"
+          ]
+        },
+        {
+          "name": "jump.2",
+          "x": 86,
+          "y": 129,
+          "id": 53,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:jump.2"
+          ]
+        },
+        {
+          "name": "jump.3",
+          "x": 129,
+          "y": 129,
+          "id": 54,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:jump.3"
+          ]
+        },
+        {
+          "name": "jump.4",
+          "x": 172,
+          "y": 129,
+          "id": 109,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:jump.4"
+          ]
+        },
+        {
+          "name": "fall.1",
+          "x": 215,
+          "y": 129,
+          "id": 55,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:fall.1"
+          ]
+        },
+        {
+          "name": "fall.2",
+          "x": 258,
+          "y": 129,
+          "id": 56,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:fall.2"
+          ]
+        },
+        {
+          "name": "fall.3",
+          "x": 301,
+          "y": 129,
+          "id": 57,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:fall.3"
+          ]
+        },
+        {
+          "name": "fall.4",
+          "x": 344,
+          "y": 129,
+          "id": 58,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:fall.4"
+          ]
+        },
+        {
+          "name": "swimIdle.1",
+          "x": 43,
+          "y": 215,
+          "id": 59,
+          "aliases": [
+            "swim.6"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:swimIdle.1"
+          ]
+        },
+        {
+          "name": "swimIdle.2",
+          "x": 86,
+          "y": 215,
+          "id": 60,
+          "aliases": [
+            "swim.7"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:swimIdle.2"
+          ]
+        },
+        {
+          "name": "swim.1",
+          "x": 172,
+          "y": 215,
+          "id": 61,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:swim.1"
+          ]
+        },
+        {
+          "name": "swim.2",
+          "x": 215,
+          "y": 215,
+          "id": 62,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:swim.2"
+          ]
+        },
+        {
+          "name": "swim.3",
+          "x": 258,
+          "y": 215,
+          "id": 63,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:swim.3"
+          ]
+        },
+        {
+          "name": "swim.4",
+          "x": 301,
+          "y": 215,
+          "id": 64,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:swim.4"
+          ]
+        },
+        {
+          "name": "swim.5",
+          "x": 344,
+          "y": 215,
+          "id": 65,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:swim.5"
+          ]
+        },
+        {
+          "name": "idleMelee",
+          "x": 129,
+          "y": 258,
+          "id": 66,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:idleMelee"
+          ]
+        },
+        {
+          "name": "duckMelee",
+          "x": 344,
+          "y": 258,
+          "id": 67,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/frontarm.png:duckMelee"
+          ]
+        }
+      ]
+    },
+    "backArm": {
+      "width": 387,
+      "height": 301,
+      "frames": [
+        {
+          "name": "idle.1",
+          "x": 43,
+          "y": 0,
+          "id": 68,
+          "aliases": [
+            "sit.1"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:idle.1"
+          ]
+        },
+        {
+          "name": "idle.2",
+          "x": 86,
+          "y": 0,
+          "id": 69,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:idle.2"
+          ]
+        },
+        {
+          "name": "idle.3",
+          "x": 129,
+          "y": 0,
+          "id": 70,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:idle.3"
+          ]
+        },
+        {
+          "name": "idle.4",
+          "x": 172,
+          "y": 0,
+          "id": 71,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:idle.4"
+          ]
+        },
+        {
+          "name": "idle.5",
+          "x": 215,
+          "y": 0,
+          "id": 72,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:idle.5"
+          ]
+        },
+        {
+          "name": "duck.1",
+          "x": 344,
+          "y": 0,
+          "id": 73,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:duck.1"
+          ]
+        },
+        {
+          "name": "walk.1",
+          "x": 86,
+          "y": 43,
+          "id": 74,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:walk.1"
+          ]
+        },
+        {
+          "name": "walk.2",
+          "x": 129,
+          "y": 43,
+          "id": 74,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:walk.2"
+          ]
+        },
+        {
+          "name": "walk.3",
+          "x": 172,
+          "y": 43,
+          "id": 74,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:walk.3"
+          ]
+        },
+        {
+          "name": "walk.4",
+          "x": 215,
+          "y": 43,
+          "id": 75,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:walk.4"
+          ]
+        },
+        {
+          "name": "walk.5",
+          "x": 258,
+          "y": 43,
+          "id": 76,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:walk.5"
+          ]
+        },
+        {
+          "name": "rotation",
+          "x": 344,
+          "y": 43,
+          "id": 77,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:rotation"
+          ]
+        },
+        {
+          "name": "run.1",
+          "x": 86,
+          "y": 86,
+          "id": 74,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:run.1"
+          ]
+        },
+        {
+          "name": "run.2",
+          "x": 129,
+          "y": 86,
+          "id": 74,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:run.2"
+          ]
+        },
+        {
+          "name": "run.3",
+          "x": 172,
+          "y": 86,
+          "id": 78,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:run.3"
+          ]
+        },
+        {
+          "name": "run.4",
+          "x": 215,
+          "y": 86,
+          "id": 79,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:run.4"
+          ]
+        },
+        {
+          "name": "run.5",
+          "x": 258,
+          "y": 86,
+          "id": 80,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:run.5"
+          ]
+        },
+        {
+          "name": "hidden.1",
+          "x": 344,
+          "y": 86,
+          "id": 81,
+          "aliases": [
+            "lay.1"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:hidden.1"
+          ]
+        },
+        {
+          "name": "jump.1",
+          "x": 43,
+          "y": 129,
+          "id": 82,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:jump.1"
+          ]
+        },
+        {
+          "name": "jump.2",
+          "x": 86,
+          "y": 129,
+          "id": 83,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:jump.2"
+          ]
+        },
+        {
+          "name": "jump.3",
+          "x": 129,
+          "y": 129,
+          "id": 84,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:jump.3"
+          ]
+        },
+        {
+          "name": "jump.4",
+          "x": 172,
+          "y": 129,
+          "id": 85,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:jump.4"
+          ]
+        },
+        {
+          "name": "fall.1",
+          "x": 215,
+          "y": 129,
+          "id": 86,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:fall.1"
+          ]
+        },
+        {
+          "name": "fall.2",
+          "x": 258,
+          "y": 129,
+          "id": 87,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:fall.2"
+          ]
+        },
+        {
+          "name": "fall.3",
+          "x": 301,
+          "y": 129,
+          "id": 88,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:fall.3"
+          ]
+        },
+        {
+          "name": "fall.4",
+          "x": 344,
+          "y": 129,
+          "id": 89,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:fall.4"
+          ]
+        },
+        {
+          "name": "swimIdle.1",
+          "x": 43,
+          "y": 215,
+          "id": 90,
+          "aliases": [
+            "swim.6"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:swimIdle.1"
+          ]
+        },
+        {
+          "name": "swimIdle.2",
+          "x": 86,
+          "y": 215,
+          "id": 91,
+          "aliases": [
+            "swim.7"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:swimIdle.2"
+          ]
+        },
+        {
+          "name": "swim.1",
+          "x": 172,
+          "y": 215,
+          "id": 92,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:swim.1"
+          ]
+        },
+        {
+          "name": "swim.2",
+          "x": 215,
+          "y": 215,
+          "id": 93,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:swim.2"
+          ]
+        },
+        {
+          "name": "swim.3",
+          "x": 258,
+          "y": 215,
+          "id": 94,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:swim.3"
+          ]
+        },
+        {
+          "name": "swim.4",
+          "x": 301,
+          "y": 215,
+          "id": 95,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:swim.4"
+          ]
+        },
+        {
+          "name": "swim.5",
+          "x": 344,
+          "y": 215,
+          "id": 96,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:swim.5"
+          ]
+        },
+        {
+          "name": "idleMelee",
+          "x": 129,
+          "y": 258,
+          "id": 97,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:idleMelee"
+          ]
+        },
+        {
+          "name": "duckMelee",
+          "x": 344,
+          "y": 258,
+          "id": 98,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/backarm.png:duckMelee"
+          ]
+        }
+      ]
+    },
+    "head": {
+      "width": 387,
+      "height": 344,
+      "frames": [
+        {
+          "name": "blabber.1",
+          "x": 43,
+          "y": 0,
+          "id": 1,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:blabber.1"
+          ]
+        },
+        {
+          "name": "blabber.2",
+          "x": 86,
+          "y": 0,
+          "id": 2,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:blabber.2"
+          ]
+        },
+        {
+          "name": "shout.1",
+          "x": 172,
+          "y": 0,
+          "id": 3,
+          "aliases": [
+            "eat.1"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:shout.1"
+          ]
+        },
+        {
+          "name": "shout.2",
+          "x": 215,
+          "y": 0,
+          "id": 4,
+          "aliases": [
+            "eat.2"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:shout.2"
+          ]
+        },
+        {
+          "name": "happy.1",
+          "x": 43,
+          "y": 43,
+          "id": 5,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:happy.1"
+          ]
+        },
+        {
+          "name": "happy.2",
+          "x": 86,
+          "y": 43,
+          "id": 6,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:happy.2"
+          ]
+        },
+        {
+          "name": "idle.1",
+          "x": 301,
+          "y": 43,
+          "id": 7,
+          "aliases": [
+            "blink.3",
+            "wink.5"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:idle.1"
+          ]
+        },
+        {
+          "name": "sad.1",
+          "x": 43,
+          "y": 86,
+          "id": 8,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:sad.1"
+          ]
+        },
+        {
+          "name": "sad.2",
+          "x": 86,
+          "y": 86,
+          "id": 9,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:sad.2"
+          ]
+        },
+        {
+          "name": "sad.3",
+          "x": 129,
+          "y": 86,
+          "id": 28,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:sad.3"
+          ]
+        },
+        {
+          "name": "sad.4",
+          "x": 172,
+          "y": 86,
+          "id": 10,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:sad.4"
+          ]
+        },
+        {
+          "name": "sad.5",
+          "x": 215,
+          "y": 86,
+          "id": 11,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:sad.5"
+          ]
+        },
+        {
+          "name": "neutral.1",
+          "x": 43,
+          "y": 129,
+          "id": 12,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:neutral.1"
+          ]
+        },
+        {
+          "name": "neutral.2",
+          "x": 86,
+          "y": 129,
+          "id": 13,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:neutral.2"
+          ]
+        },
+        {
+          "name": "laugh.1",
+          "x": 172,
+          "y": 129,
+          "id": 14,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:laugh.1"
+          ]
+        },
+        {
+          "name": "laugh.2",
+          "x": 215,
+          "y": 129,
+          "id": 15,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:laugh.2"
+          ]
+        },
+        {
+          "name": "annoyed.1",
+          "x": 43,
+          "y": 172,
+          "id": 16,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:annoyed.1"
+          ]
+        },
+        {
+          "name": "annoyed.2",
+          "x": 86,
+          "y": 172,
+          "id": 17,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:annoyed.2"
+          ]
+        },
+        {
+          "name": "oh.1",
+          "x": 43,
+          "y": 215,
+          "id": 18,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:oh.1"
+          ]
+        },
+        {
+          "name": "oh.2",
+          "x": 86,
+          "y": 215,
+          "id": 19,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:oh.2"
+          ]
+        },
+        {
+          "name": "oooh.1",
+          "x": 172,
+          "y": 215,
+          "id": 29,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:oooh.1"
+          ]
+        },
+        {
+          "name": "oooh.2",
+          "x": 215,
+          "y": 215,
+          "id": 20,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:oooh.2"
+          ]
+        },
+        {
+          "name": "oooh.3",
+          "x": 258,
+          "y": 215,
+          "id": 21,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:oooh.3"
+          ]
+        },
+        {
+          "name": "blink.1",
+          "x": 43,
+          "y": 301,
+          "id": 22,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:blink.1"
+          ]
+        },
+        {
+          "name": "blink.2",
+          "x": 86,
+          "y": 301,
+          "id": 23,
+          "aliases": [
+            "sleep.1",
+            "sleep.2"
+          ],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:blink.2"
+          ]
+        },
+        {
+          "name": "wink.1",
+          "x": 172,
+          "y": 301,
+          "id": 24,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:wink.1"
+          ]
+        },
+        {
+          "name": "wink.2",
+          "x": 215,
+          "y": 301,
+          "id": 25,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:wink.2"
+          ]
+        },
+        {
+          "name": "wink.3",
+          "x": 258,
+          "y": 301,
+          "id": 26,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:wink.3"
+          ]
+        },
+        {
+          "name": "wink.4",
+          "x": 301,
+          "y": 301,
+          "id": 27,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/emote.png:wink.4"
+          ]
+        }
+      ]
+    },
+    "hair": {
+      "width": 43,
+      "height": 43,
+      "frames": [
+        {
+          "name": "normal",
+          "x": 0,
+          "y": 0,
+          "id": 0,
+          "aliases": [],
+          "sourcePaths": [
+            "/humanoid/floran/hair/1.png:normal",
+            "/humanoid/floran/hair/1.png:climb"
+          ]
+        }
+      ]
+    }
+  },
+  "bodyPrefix": "?scale=0.61;0.42?scale=0.4;0.6?scale=0.75;0.6?scale=0.47;0.77?scale=0.61;0.71?crop;1;1;2;2?replace;bea48763=ff01ff00;bda28564=ff01ff00;d7b79d77=ff02ff00;d5af9078=ff02ff00;ddb5935b=ff03ff00;d49a665b=ff03ff00;d2a8866f=ff04ff00;ce946371=ff04ff00;d7af8e64=ff05ff00;cc926065=ff05ff00;d1a98757=ff06ff00;c5916159=ff06ff00;9f84644d=ff07ff00;9f846550=ff07ff00;b3987662=ff08ff00;b3987664=ff08ff00;94734c60=ff09ff00;94744c5d=ff09ff00;92714a5b=ff0aff00;92714a5d=ff0aff00;8f6e4663=ff0bff00;8e6d4564=ff0bff00;8f714a58=ff63ff00;8f704a5a=ff63ff00;93744d57=ff64ff00;93744d54=ff64ff00;91714a53=ff65ff00;91714a55=ff65ff00;906e4668=ff0cff00;906c4468=ff0cff00;b2957373=ff0dff00;b3957372=ff0dff00;8e6b436f=ff0eff00;8f6c456e=ff0eff00;906e4671=ff0fff00;916f4670=ff0fff00;93724b5f=ff10ff00;92714b5e=ff10ff00;8f6f4769=ff11ff00;906f4769=ff11ff00;8c694170=ff12ff00;8c6a436f=ff12ff00;91714873=ff66ff00;91714872=ff66ff00;95734b65=ff13ff00;94724b64=ff13ff00;aa8e6d5d=ff14ff00;ab8f6e61=ff14ff00;8e6c4369=ff15ff00;8f6d456d=ff15ff00;926f4671=ff16ff00;94704775=ff16ff00;8f6e4573=ff17ff00;906f4677=ff17ff00;92714774=ff67ff00;93714878=ff67ff00;92704676=ff68ff00;9371487a=ff68ff00;91714772=ff18ff00;93724876=ff18ff00;9270466e=ff19ff00;93714872=ff19ff00;b0927066=ff1aff00;b0926f65=ff1aff00;8e6b426b=ff1bff00;8d6b4269=ff1bff00;906e4566=ff1cff00;8f6e4565=ff1cff00;8d6a4264=ff1dff00;8d6a4263=ff1dff00;8d694168=ff69ff00;8c694166=ff69ff00;89653f6c=ff6aff00;88653e6a=ff6aff00;8b6a4269=ff6bff00;8b694267=ff6bff00;8a6b425e=ff1eff00;8a6a425d=ff1eff00;ad93725c=ff1fff00;ac91705d=ff1fff00;896d4555=ff20ff00;896b4456=ff20ff00;906f4960=ff21ff00;91704962=ff21ff00;90724c5f=ff22ff00;90724c60=ff22ff00;92724c5d=ff6cff00;93734c5f=ff6cff00;beaa9b0b=ff23ff00;eccbb205=ff24ff00;e2b49112=ff25ff00;e2b5910f=ff26ff00;eedccf11=ff27ff00;7c64420f=ff28ff00;79613c21=ff29ff00;7b643e23=ff2aff00;765d391e=ff2bff00;745e3a0a=ff2cff00;745e390d=ff2dff00;7a5d3a23=ff2eff00;78603b23=ff2fff00;7b633d21=ff30ff00;755f3b1e=ff31ff00;745d3910=ff32ff00;745e3a06=ff33ff00;8263460e=ff34ff00;735d3907=ff35ff00;745d390b=ff36ff00;735d3a0a=ff6dff00;755e3a10=ff37ff00;735d3902=ff38ff00;735e3a01=ff39ff00;72583601=ff3aff00;f9f4f112=ff3bff00;faf9f609=ff3cff00;f9f6f50a=ff3dff00;f0e9e420=ff3eff00;f5efe921=ff3fff00;f2ebe620=ff40ff00;f3edeb16=ff41ff00;f9f7f50b=ff42ff00;f8f3f10f=ff43ff00;e4dace1f=ff44ff00;eee1da0e=ff45ff00;c797850f=ff46ff00;ca9a8612=ff47ff00;cb9f8b19=ff48ff00;8871500c=ff49ff00;735e3a00=ff4aff00;78603b11=ff4bff00;775f3a10=ff4cff00;785d3914=ff4dff00;765d3910=ff4eff00;745d390c=ff4fff00;77603b0e=ff50ff00;725a3700=ff51ff00;d4c7b70e=ff52ff00;735d3909=ff53ff00;795f3a14=ff54ff00;785f3a12=ff55ff00;77613b11=ff56ff00;745c380e=ff57ff00;745c390e=ff58ff00;745b3704=ff59ff00;fbf8f50c=ff5aff00;faf8f50a=ff5bff00;f9f6f40d=ff5cff00;f8f5f40a=ff5dff00;faf6f40c=ff5eff00;faf7f50b=ff5fff00;f8f4f30d=ff60ff00;f6efe81f=ff61ff00;f6f0ee14=ff62ff00;e2d4c603=ff00ff00;e4dad300=ff00ff00;d7b79d76=ff02ff00;ddb4925b=ff03ff00;d7ae8d64=ff05ff00;d1a98657=ff06ff00;c5916259=ff06ff00;b3977764=ff08ff00;94734c5d=ff09ff00;91714a56=ff65ff00;8f6c4468=ff0cff00;b2957372=ff0dff00;8f6c446e=ff0eff00;906f4670=ff0fff00;92714b5f=ff10ff00;8c694270=ff12ff00;91704873=ff66ff00;95724b65=ff13ff00;92704774=ff67ff00;93714876=ff18ff00;af926f64=ff1aff00;89653f6b=ff6aff00;8b6a4268=ff6bff00;8b6b425e=ff1eff00;ac91705e=ff1fff00;916f4962=ff21ff00;90724b60=ff22ff00;92724c5c=ff6cff00;93734c5e=ff6cff00;bea99b0b=ff23ff00;7c63420f=ff28ff00;78613c21=ff29ff00;7b633e23=ff2aff00;745d390d=ff2dff00;7b623d21=ff30ff00;f2ebe61f=ff40ff00;c797840f=ff46ff00;87714f0c=ff49ff00;77603b11=ff56ff00;fbf8f50b=ff5aff00?scalenearest=1;2?blendmult=/ships/glitch/glitchT5blocks.png;60;38?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?scale=256?crop;1;1;44;44",
+  "headPrefix": "?scale=0.48?scale=0.61?scale=0.56?crop;4;4;5;5?replace;8e3b292f=ff01ff00;83322433=ff02ff00;8132232b=ff03ff00;883a292b=ff04ff00;8733222f=ff05ff00;79271b33=ff06ff00;faf8f700=ff07ff00;873c252d=ff08ff00;6d2b1b03=ff09ff00;6e291900=ff1cff00;6f291900=ff0aff00;65443f2a=ff0bff00;8733222a=ff0cff00;77271a2f=ff0dff00;7a281b61=ff0eff00;8331215c=ff0fff00;87332237=ff10ff00;7a291b48=ff11ff00;87332243=ff12ff00;712b1a19=ff13ff00;7a291b43=ff1dff00;80312143=ff14ff00;83312048=ff15ff00;bd938600=ff16ff00;b089802d=ff17ff00;9f645b2f=ff18ff00;9c5c5337=ff19ff00;a1605637=ff1aff00;ecd5d42f=ff1bff00?scalenearest=1;2?blendmult=/ships/glitch/glitchT5blocks.png;60;38?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?scale=256?crop;1;1;44;44",
+  "suppressedSources": [
+    "/humanoid/floran/malehead.png:normal",
+    "/humanoid/floran/malehead.png:climb",
+    "/humanoid/floran/femalehead.png:normal",
+    "/humanoid/floran/femalehead.png:climb"
+  ],
+  "fingerprints": [
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:idle.1",
+      "vanilla": "bea48763",
+      "opensb": "bea48763"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:idle.1",
+      "vanilla": "bda28564",
+      "opensb": "bda28564"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:idle.2",
+      "vanilla": "d7b79d77",
+      "opensb": "d7b79d76"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:idle.2",
+      "vanilla": "d5af9078",
+      "opensb": "d5af9078"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:idle.3",
+      "vanilla": "ddb5935b",
+      "opensb": "ddb4925b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:idle.3",
+      "vanilla": "d49a665b",
+      "opensb": "d49a665b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:idle.4",
+      "vanilla": "d2a8866f",
+      "opensb": "d2a8866f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:idle.4",
+      "vanilla": "ce946371",
+      "opensb": "ce946371"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:idle.5",
+      "vanilla": "d7af8e64",
+      "opensb": "d7ae8d64"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:idle.5",
+      "vanilla": "cc926065",
+      "opensb": "cc926065"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:sit.1",
+      "vanilla": "d1a98757",
+      "opensb": "d1a98657"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:sit.1",
+      "vanilla": "c5916159",
+      "opensb": "c5916259"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:duck.1",
+      "vanilla": "9f84644d",
+      "opensb": "9f84644d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:duck.1",
+      "vanilla": "9f846550",
+      "opensb": "9f846550"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.1",
+      "vanilla": "b3987662",
+      "opensb": "b3987662"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.1",
+      "vanilla": "b3987664",
+      "opensb": "b3977764"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.2",
+      "vanilla": "94734c60",
+      "opensb": "94734c60"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.2",
+      "vanilla": "94744c5d",
+      "opensb": "94734c5d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.3",
+      "vanilla": "92714a5b",
+      "opensb": "92714a5b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.3",
+      "vanilla": "92714a5d",
+      "opensb": "92714a5d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.4",
+      "vanilla": "8f6e4663",
+      "opensb": "8f6e4663"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.4",
+      "vanilla": "8e6d4564",
+      "opensb": "8e6d4564"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.5",
+      "vanilla": "8f714a58",
+      "opensb": "8f714a58"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.5",
+      "vanilla": "8f704a5a",
+      "opensb": "8f704a5a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.6",
+      "vanilla": "93744d57",
+      "opensb": "93744d57"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.6",
+      "vanilla": "93744d54",
+      "opensb": "93744d54"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.7",
+      "vanilla": "91714a53",
+      "opensb": "91714a53"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.7",
+      "vanilla": "91714a55",
+      "opensb": "91714a56"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:walk.8",
+      "vanilla": "906e4668",
+      "opensb": "906e4668"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:walk.8",
+      "vanilla": "906c4468",
+      "opensb": "8f6c4468"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.1",
+      "vanilla": "b2957373",
+      "opensb": "b2957373"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.1",
+      "vanilla": "b3957372",
+      "opensb": "b2957372"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.2",
+      "vanilla": "8e6b436f",
+      "opensb": "8e6b436f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.2",
+      "vanilla": "8f6c456e",
+      "opensb": "8f6c446e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.3",
+      "vanilla": "906e4671",
+      "opensb": "906e4671"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.3",
+      "vanilla": "916f4670",
+      "opensb": "906f4670"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.4",
+      "vanilla": "93724b5f",
+      "opensb": "93724b5f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.4",
+      "vanilla": "92714b5e",
+      "opensb": "92714b5f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.5",
+      "vanilla": "8f6f4769",
+      "opensb": "8f6f4769"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.5",
+      "vanilla": "906f4769",
+      "opensb": "906f4769"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.6",
+      "vanilla": "8c694170",
+      "opensb": "8c694270"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.6",
+      "vanilla": "8c6a436f",
+      "opensb": "8c6a436f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.7",
+      "vanilla": "91714873",
+      "opensb": "91704873"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.7",
+      "vanilla": "91714872",
+      "opensb": "91714872"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:run.8",
+      "vanilla": "95734b65",
+      "opensb": "95734b65"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:run.8",
+      "vanilla": "94724b64",
+      "opensb": "95724b65"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:jump.1",
+      "vanilla": "aa8e6d5d",
+      "opensb": "aa8e6d5d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:jump.1",
+      "vanilla": "ab8f6e61",
+      "opensb": "ab8f6e61"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:jump.2",
+      "vanilla": "8e6c4369",
+      "opensb": "8e6c4369"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:jump.2",
+      "vanilla": "8f6d456d",
+      "opensb": "8f6d456d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:jump.3",
+      "vanilla": "926f4671",
+      "opensb": "926f4671"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:jump.3",
+      "vanilla": "94704775",
+      "opensb": "94704775"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:jump.4",
+      "vanilla": "8f6e4573",
+      "opensb": "8f6e4573"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:jump.4",
+      "vanilla": "906f4677",
+      "opensb": "906f4677"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:fall.1",
+      "vanilla": "92714774",
+      "opensb": "92704774"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:fall.1",
+      "vanilla": "93714878",
+      "opensb": "93714878"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:fall.2",
+      "vanilla": "92704676",
+      "opensb": "92704676"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:fall.2",
+      "vanilla": "9371487a",
+      "opensb": "9371487a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:fall.3",
+      "vanilla": "91714772",
+      "opensb": "91714772"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:fall.3",
+      "vanilla": "93724876",
+      "opensb": "93714876"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:fall.4",
+      "vanilla": "9270466e",
+      "opensb": "9270466e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:fall.4",
+      "vanilla": "93714872",
+      "opensb": "93714872"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.1",
+      "vanilla": "b0927066",
+      "opensb": "b0927066"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.1",
+      "vanilla": "b0926f65",
+      "opensb": "af926f64"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.2",
+      "vanilla": "8e6b426b",
+      "opensb": "8e6b426b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.2",
+      "vanilla": "8d6b4269",
+      "opensb": "8d6b4269"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.3",
+      "vanilla": "906e4566",
+      "opensb": "906e4566"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.3",
+      "vanilla": "8f6e4565",
+      "opensb": "8f6e4565"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.4",
+      "vanilla": "8d6a4264",
+      "opensb": "8d6a4264"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.4",
+      "vanilla": "8d6a4263",
+      "opensb": "8d6a4263"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.5",
+      "vanilla": "8d694168",
+      "opensb": "8d694168"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.5",
+      "vanilla": "8c694166",
+      "opensb": "8c694166"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.6",
+      "vanilla": "89653f6c",
+      "opensb": "89653f6b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.6",
+      "vanilla": "88653e6a",
+      "opensb": "88653e6a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.7",
+      "vanilla": "8b6a4269",
+      "opensb": "8b6a4268"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.7",
+      "vanilla": "8b694267",
+      "opensb": "8b694267"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:climb.8",
+      "vanilla": "8a6b425e",
+      "opensb": "8b6b425e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:climb.8",
+      "vanilla": "8a6a425d",
+      "opensb": "8a6a425d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:swimIdle.1",
+      "vanilla": "ad93725c",
+      "opensb": "ad93725c"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:swimIdle.1",
+      "vanilla": "ac91705d",
+      "opensb": "ac91705e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:swim.1",
+      "vanilla": "896d4555",
+      "opensb": "896d4555"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:swim.1",
+      "vanilla": "896b4456",
+      "opensb": "896b4456"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:swim.2",
+      "vanilla": "906f4960",
+      "opensb": "906f4960"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:swim.2",
+      "vanilla": "91704962",
+      "opensb": "916f4962"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:swim.3",
+      "vanilla": "90724c5f",
+      "opensb": "90724c5f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:swim.3",
+      "vanilla": "90724c60",
+      "opensb": "90724b60"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malebody.png:swim.4",
+      "vanilla": "92724c5d",
+      "opensb": "92724c5c"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalebody.png:swim.4",
+      "vanilla": "93734c5f",
+      "opensb": "93734c5e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:idle.1",
+      "vanilla": "beaa9b0b",
+      "opensb": "bea99b0b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:idle.2",
+      "vanilla": "eccbb205",
+      "opensb": "eccbb205"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:idle.3",
+      "vanilla": "e2b49112",
+      "opensb": "e2b49112"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:idle.4",
+      "vanilla": "e2b5910f",
+      "opensb": "e2b5910f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:idle.5",
+      "vanilla": "eedccf11",
+      "opensb": "eedccf11"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:duck.1",
+      "vanilla": "7c64420f",
+      "opensb": "7c63420f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:walk.1",
+      "vanilla": "79613c21",
+      "opensb": "78613c21"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:walk.2",
+      "vanilla": "7b643e23",
+      "opensb": "7b633e23"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:walk.3",
+      "vanilla": "765d391e",
+      "opensb": "765d391e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:walk.4",
+      "vanilla": "745e3a0a",
+      "opensb": "745e3a0a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:walk.5",
+      "vanilla": "745e390d",
+      "opensb": "745d390d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:rotation",
+      "vanilla": "7a5d3a23",
+      "opensb": "7a5d3a23"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:run.1",
+      "vanilla": "78603b23",
+      "opensb": "78603b23"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:run.2",
+      "vanilla": "7b633d21",
+      "opensb": "7b623d21"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:run.3",
+      "vanilla": "755f3b1e",
+      "opensb": "755f3b1e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:run.4",
+      "vanilla": "745d3910",
+      "opensb": "745d3910"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:run.5",
+      "vanilla": "745e3a06",
+      "opensb": "745e3a06"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:jump.1",
+      "vanilla": "8263460e",
+      "opensb": "8263460e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:jump.2",
+      "vanilla": "735d3907",
+      "opensb": "735d3907"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:jump.3",
+      "vanilla": "745d390b",
+      "opensb": "745d390b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:jump.4",
+      "vanilla": "735d3a0a",
+      "opensb": "735d3a0a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:fall.1",
+      "vanilla": "755e3a10",
+      "opensb": "755e3a10"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:fall.2",
+      "vanilla": "735d3902",
+      "opensb": "735d3902"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:fall.3",
+      "vanilla": "735e3a01",
+      "opensb": "735e3a01"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:fall.4",
+      "vanilla": "72583601",
+      "opensb": "72583601"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:swimIdle.1",
+      "vanilla": "f9f4f112",
+      "opensb": "f9f4f112"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:swimIdle.2",
+      "vanilla": "faf9f609",
+      "opensb": "faf9f609"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:swim.1",
+      "vanilla": "f9f6f50a",
+      "opensb": "f9f6f50a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:swim.2",
+      "vanilla": "f0e9e420",
+      "opensb": "f0e9e420"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:swim.3",
+      "vanilla": "f5efe921",
+      "opensb": "f5efe921"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:swim.4",
+      "vanilla": "f2ebe620",
+      "opensb": "f2ebe61f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:swim.5",
+      "vanilla": "f3edeb16",
+      "opensb": "f3edeb16"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:idleMelee",
+      "vanilla": "f9f7f50b",
+      "opensb": "f9f7f50b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/frontarm.png:duckMelee",
+      "vanilla": "f8f3f10f",
+      "opensb": "f8f3f10f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:idle.1",
+      "vanilla": "e4dace1f",
+      "opensb": "e4dace1f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:idle.2",
+      "vanilla": "eee1da0e",
+      "opensb": "eee1da0e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:idle.3",
+      "vanilla": "c797850f",
+      "opensb": "c797840f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:idle.4",
+      "vanilla": "ca9a8612",
+      "opensb": "ca9a8612"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:idle.5",
+      "vanilla": "cb9f8b19",
+      "opensb": "cb9f8b19"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:duck.1",
+      "vanilla": "8871500c",
+      "opensb": "87714f0c"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:walk.1",
+      "vanilla": "735e3a00",
+      "opensb": "735e3a00"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:walk.2",
+      "vanilla": "735e3a00",
+      "opensb": "735e3a00"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:walk.3",
+      "vanilla": "735e3a00",
+      "opensb": "735e3a00"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:walk.4",
+      "vanilla": "78603b11",
+      "opensb": "78603b11"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:walk.5",
+      "vanilla": "775f3a10",
+      "opensb": "775f3a10"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:rotation",
+      "vanilla": "785d3914",
+      "opensb": "785d3914"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:run.1",
+      "vanilla": "735e3a00",
+      "opensb": "735e3a00"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:run.2",
+      "vanilla": "735e3a00",
+      "opensb": "735e3a00"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:run.3",
+      "vanilla": "765d3910",
+      "opensb": "765d3910"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:run.4",
+      "vanilla": "745d390c",
+      "opensb": "745d390c"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:run.5",
+      "vanilla": "77603b0e",
+      "opensb": "77603b0e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:hidden.1",
+      "vanilla": "725a3700",
+      "opensb": "725a3700"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:jump.1",
+      "vanilla": "d4c7b70e",
+      "opensb": "d4c7b70e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:jump.2",
+      "vanilla": "735d3909",
+      "opensb": "735d3909"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:jump.3",
+      "vanilla": "795f3a14",
+      "opensb": "795f3a14"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:jump.4",
+      "vanilla": "785f3a12",
+      "opensb": "785f3a12"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:fall.1",
+      "vanilla": "77613b11",
+      "opensb": "77603b11"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:fall.2",
+      "vanilla": "745c380e",
+      "opensb": "745c380e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:fall.3",
+      "vanilla": "745c390e",
+      "opensb": "745c390e"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:fall.4",
+      "vanilla": "745b3704",
+      "opensb": "745b3704"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:swimIdle.1",
+      "vanilla": "fbf8f50c",
+      "opensb": "fbf8f50b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:swimIdle.2",
+      "vanilla": "faf8f50a",
+      "opensb": "faf8f50a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:swim.1",
+      "vanilla": "f9f6f40d",
+      "opensb": "f9f6f40d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:swim.2",
+      "vanilla": "f8f5f40a",
+      "opensb": "f8f5f40a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:swim.3",
+      "vanilla": "faf6f40c",
+      "opensb": "faf6f40c"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:swim.4",
+      "vanilla": "faf7f50b",
+      "opensb": "faf7f50b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:swim.5",
+      "vanilla": "f8f4f30d",
+      "opensb": "f8f4f30d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:idleMelee",
+      "vanilla": "f6efe81f",
+      "opensb": "f6efe81f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/backarm.png:duckMelee",
+      "vanilla": "f6f0ee14",
+      "opensb": "f6f0ee14"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:blabber.1",
+      "vanilla": "8e3b292f",
+      "opensb": "8e3b292f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:blabber.2",
+      "vanilla": "83322433",
+      "opensb": "83322433"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:shout.1",
+      "vanilla": "8132232b",
+      "opensb": "8132232b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:shout.2",
+      "vanilla": "883a292b",
+      "opensb": "883a292b"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:happy.1",
+      "vanilla": "8733222f",
+      "opensb": "8733222f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:happy.2",
+      "vanilla": "79271b33",
+      "opensb": "79271b33"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:idle.1",
+      "vanilla": "faf8f700",
+      "opensb": "faf8f700"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:sad.1",
+      "vanilla": "873c252d",
+      "opensb": "873c252d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:sad.2",
+      "vanilla": "6d2b1b03",
+      "opensb": "6d2b1b03"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:sad.3",
+      "vanilla": "6e291900",
+      "opensb": "6e291900"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:sad.4",
+      "vanilla": "6f291900",
+      "opensb": "6f291900"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:sad.5",
+      "vanilla": "65443f2a",
+      "opensb": "65443f2a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:neutral.1",
+      "vanilla": "8733222a",
+      "opensb": "8733222a"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:neutral.2",
+      "vanilla": "77271a2f",
+      "opensb": "77271a2f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:laugh.1",
+      "vanilla": "7a281b61",
+      "opensb": "7a281b61"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:laugh.2",
+      "vanilla": "8331215c",
+      "opensb": "8331215c"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:annoyed.1",
+      "vanilla": "87332237",
+      "opensb": "87332237"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:annoyed.2",
+      "vanilla": "7a291b48",
+      "opensb": "7a291b48"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:oh.1",
+      "vanilla": "87332243",
+      "opensb": "87332243"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:oh.2",
+      "vanilla": "712b1a19",
+      "opensb": "712b1a19"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:oooh.1",
+      "vanilla": "7a291b43",
+      "opensb": "7a291b43"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:oooh.2",
+      "vanilla": "80312143",
+      "opensb": "80312143"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:oooh.3",
+      "vanilla": "83312048",
+      "opensb": "83312048"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:blink.1",
+      "vanilla": "bd938600",
+      "opensb": "bd938600"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:blink.2",
+      "vanilla": "b089802d",
+      "opensb": "b089802d"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:wink.1",
+      "vanilla": "9f645b2f",
+      "opensb": "9f645b2f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:wink.2",
+      "vanilla": "9c5c5337",
+      "opensb": "9c5c5337"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:wink.3",
+      "vanilla": "a1605637",
+      "opensb": "a1605637"
+    },
+    {
+      "sourcePath": "/humanoid/floran/emote.png:wink.4",
+      "vanilla": "ecd5d42f",
+      "opensb": "ecd5d42f"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malehead.png:normal",
+      "vanilla": "e2d4c603",
+      "opensb": "e2d4c603"
+    },
+    {
+      "sourcePath": "/humanoid/floran/malehead.png:climb",
+      "vanilla": "e4dad300",
+      "opensb": "e4dad300"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalehead.png:normal",
+      "vanilla": "e2d4c603",
+      "opensb": "e2d4c603"
+    },
+    {
+      "sourcePath": "/humanoid/floran/femalehead.png:climb",
+      "vanilla": "e4dad300",
+      "opensb": "e4dad300"
+    }
+  ]
+}

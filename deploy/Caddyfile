@@ -1,0 +1,24 @@
+{
+	admin off
+	default_sni 198.44.178.249
+}
+
+https://198.44.178.249:8443 {
+	tls {
+		issuer acme {
+			dir https://acme-v02.api.letsencrypt.org/directory
+			profile shortlived
+			disable_tlsalpn_challenge
+		}
+	}
+
+	root * /srv/outfit-studio/current
+	encode zstd gzip
+	header {
+		Cache-Control "no-cache"
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy no-referrer
+	}
+	file_server
+}

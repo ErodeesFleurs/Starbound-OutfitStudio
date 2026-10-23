@@ -1,0 +1,430 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1328" height="2480" viewBox="0 0 1328 2480" role="img" aria-labelledby="title description">
+<title id="title">Human male head frame reference — hair male1</title>
+<desc id="description">Original Starbound human male pixels. 29 named target cells, 29 unique frame IDs. Embedded PNGs are reference artwork, not an importable template. Each named cell uses its own source frame; aliases refer to the same target cell. Unused cells contain no image. Game artwork remains property of its original rights holders.</desc>
+<metadata>Source package: /home/fleurs/Code/OpenStarbound/assets/packed.pak. Source image: /humanoid/human/emote.png (387x344). Frame document: /humanoid/emote.frames. Target: core character_layout(head) 387x344, 43x43 top-down cells. Head composition: /humanoid/human/malehead.png:normal at (43, 0) plus human emote at its named frame, straight-alpha source-over. Each named target uses its own canonical source frame. Frame IDs: sad.3 is 28, oooh.1 is 29; existing IDs 1 through 27 are unchanged.</metadata>
+<style>text{font-family:monospace;fill:#e0edf5;font-size:11px}.heading{font-size:17px;font-weight:bold}.note{fill:#b9cbd9}.name{font-size:12px;font-weight:bold}.shared{fill:#ffd49b}.alias{fill:#b4e3cc}image{image-rendering:pixelated;image-rendering:crisp-edges}</style>
+<defs>
+<pattern id="checker" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#263442"/><path d="M0 0h9v9H0zM9 9h9v9H9z" fill="#344555"/></pattern>
+<image id="sprite-1" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAeUlEQVR4nO3SsQmAMBRF0T9MJtAJnMMVXCJ7WLmJhTiAG7hI5BdqImInPuEeeBBIcwkxAwAAeMnSdymNsZgpKkLX6Zxa8N2L5uF+byo85ilYKjaPko/dI/PYumqKs6n41Tdwc2yL4CGEY35naq7BPslQAAAAAAA+swF2fdhCtHB3KAAAAABJRU5ErkJggg=="/>
+<image id="sprite-2" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAfElEQVR4nO3SsQmAQAxA0QxzE+gEFm5g5woucXtYuYmFOoAbuMjJFWoCYidG+A8CB2k+R0QAAABesvZdSmM0Ix6Z0G26xlvw3Y/q8LwXL3LMU7CrWB3lPvaI1LFlUZm3ePGrM8iW2JrgIYRz8k680cFzU/sNBQAAAADgMzu19dYJoWit4gAAAABJRU5ErkJggg=="/>
+<image id="sprite-3" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAgUlEQVR4nO3SsQmAMBBG4RvGCXQC53AFl8geVm5iIQ7gBi4SiRBMjrTiX7wPDgw2j0vMAAAAPnIuc4xbqMYUVaHX/o5acGujZXj6bypSTBncOpuKMqrcaj4fYdLarI8d+rH6NhX+2v1IPYMkXbUPXrvuGalnkLWCJUMBAAAAAPjNDeNW2C+Hg+0oAAAAAElFTkSuQmCC"/>
+<image id="sprite-4" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAh0lEQVR4nO3SsQmAMBBG4RvGCXQCCzewcwWXcA8rN7FQB3ADF1ESCCYhrfgX74MDg83jEjMAAICPnPN43+uUjClKQq/tHbXg0kbjcPffVLiYOLh0NhVxVLzVcD6mQWuzeWxTt8m3qcivPcxSVX6knoHjrjoP3vvOx0o9g6AULBkKAAAAAMBvHttq1fbJEA4mAAAAAElFTkSuQmCC"/>
+<image id="sprite-5" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAeUlEQVR4nO3SsQmAMBRF0T9MJtAJnMMVXCJ7WLmJhTiAG7hI5BdqImInPuEeeBBIcwkxAwAAeMnSdymNsZgpKkLX6Zxa8N2L5uF+byo85ilYKjaPko/dI/PYumqKs6n41Tdwc2yL4CGEY35naq7BPslQAAAAAAA+swF2fdhCtHB3KAAAAABJRU5ErkJggg=="/>
+<image id="sprite-6" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAfElEQVR4nO3SsQmAQAxA0QxzE+gEFm5g5woucXtYuYmFOoAbuMjJFWoCYidG+A8CB2k+R0QAAABesvZdSmM0Ix6Z0G26xlvw3Y/q8LwXL3LMU7CrWB3lPvaI1LFlUZm3ePGrM8iW2JrgIYRz8k680cFzU/sNBQAAAADgMzu19dYJoWit4gAAAABJRU5ErkJggg=="/>
+<image id="sprite-7" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAcklEQVR4nO3SwQmAMAxG4cykEziHK7hE93AZD+IAbuAilRzEBqo38S+8DwKFXB4lZgAAAB/Z5ynnJYUxRSH0WO9RC679aBnue1PhMW/BUrFllHzsFVnG9t0Q3qaiqTNwWxofg31namrBkqEAAAAAAPzmBDF/3EeiFx8kAAAAAElFTkSuQmCC"/>
+<image id="sprite-8" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAcklEQVR4nO3SwQmAMAxG4czlKq7gEt3DZTyIA3QDF4nkUEyhehP/w/sg9NDLI8QMAADgI3Vd3LfSjSnqQs/9HrXg0UZzePybioh5C5aKzVHysS0yvzn8KLP2GUzVNTcbYntPZyC12WYULBkKAAAAAMBvLqkO3d6bfjvUAAAAAElFTkSuQmCC"/>
+<image id="sprite-9" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAdklEQVR4nO3SsQmAQAxG4cyknZ1zuIJLuIfLWIgD3AYucpJCvYjYib/wPggE0jyOMwMAAHhJGvucpyGMKQqh63yOWvDdi5bhfjcVHvMULBVbRsnH7pFlbF21YTcVv/oGbhm6ENykfOx+MzXXYNlQAAAAAAA+swHnCtwSvIdFQQAAAABJRU5ErkJggg=="/>
+<image id="sprite-10" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAd0lEQVR4nO3TsQmAMBBG4ZtJOzvncAWXyB4uYyEOkA1cJJJCzEHUSvIX74ODwDWPkJgBAAD8JC5zSmtwY4pc6LHdoxZcu9EyPO9NRY55C5aKLaPkY6/IMrbvRnc2FV/PYIhJ65PtYXoMzjtTUwuWDAUAAAAAoJkTWM/ceOKnrFwAAAAASUVORK5CYII="/>
+<image id="sprite-11" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAdUlEQVR4nO3UwQmAIBSH8TdT3bo1Ryu0hHu0TIdoADdoEeNBkYJ1C/7C94MHopcPEc0AAAB+Epc5pTUUY4qK0GN7Ri24dqN5uJ+bCo/5CpaKzaPkY+/IPLbvxmJtKpp6Bm4P02vwEJPeF1YL9j0DAAAAAACXE63K3LAfzLvYAAAAAElFTkSuQmCC"/>
+<image id="sprite-12" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAeElEQVR4nO3SwQmAMAxG4QzjBDqBc7iCS3QPT27iQRzADVykEkFssXgTf+F9ECjk8igxAwAAeMk69DFOIRtTlIVu8zVqwaUfTcN9byo85ilYKjaNko89I9PYpm6zt6n41Rm4JXS34LGqjvGdqSkFS4YCAAAAAPCZHboq2ZmqmDiFAAAAAElFTkSuQmCC"/>
+<image id="sprite-13" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAeUlEQVR4nO3SsQmAMBRF0T9MJtAJnMMVXCJ7WLmJhTiAG7hI5BdqImInPuEeeBBIcwkxAwAAeMnSdymNsZgpKkLX6Zxa8N2L5uF+byo85ilYKjaPko/dI/PYumqKs6n41Tdwc2yL4CGEY35naq7BPslQAAAAAAA+swF2fdhCtHB3KAAAAABJRU5ErkJggg=="/>
+<image id="sprite-14" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAd0lEQVR4nO3SsQmAMBBG4Rsmq7iBnSu4RPawchMLdQA3cJFIiugFxEIQ/+J9cKRI8zjODAAA4CPb0Kc0xWpMURW6z9eoBd9t1Ifnf1ORY56CpWJ9lHxsifSvD19jxxm8lrfng8cQzpHabOGDl7bRDQUAAAAA4DcHm8rX1TGvOccAAAAASUVORK5CYII="/>
+<image id="sprite-15" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAfklEQVR4nO3SsQ2AIBBGYYZhFTewcwWXYA8rN7FQB3ADF8Fggh6G2Bn/4n3JhYLm5cA5AACAj2xDH+MUinGKitB9vkctuLZRG57unYoU8xYsFWuj8mnj19BpbdbGSm+29g1G76+Rik3SU9vgpW3OULlvkD2DZUMBAAAAAPjNAbPl19Xa6xWaAAAAAElFTkSuQmCC"/>
+<image id="sprite-16" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAgElEQVR4nO3SywmAMBBF0SnGCrQC67AFm0gfruzEhViAHdhIZIRgErIV3+IeGPCzuQxjBgAA8JFzmWPcQjGmqAi99nfUglsbzcP9v6nwmDw4vadvR5h0YvPI1nblNlvHDv1YPJuK+gykN+v8LuvgteuekbrZpBUsGQoAAAAAwG9ueJDYL6c7gqIAAAAASUVORK5CYII="/>
+<image id="sprite-17" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAfUlEQVR4nO3SwQ1AQBBG4SlGBVSgDi1oQh9OOnEQBehAI2QOy6yIm/gl70smJC7P7pgBAAC8ZOnbbRu7bExRFrpO56gF351oDPfvpsJjnoKlYmNUesYfmLtG62RjrE9V1tm7qfjVGji/6hg8FMUxUmuQXIPl9hUAAAAAgM/tKZTW2I2M7jEAAAAASUVORK5CYII="/>
+<image id="sprite-18" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAf0lEQVR4nO3SsQmAMBBG4RsmE+gEzuEKLpE9rNzEQhzADVwkEkG8hLTiX7wPDiVpHuHMAAAAPnLMU0prLMYUFaHn9o5acOtFfXi+NxU5pg72Z3scdWJ9oP/6c1PRiuy7ofg3Fa01kH3ZLO9lHbyEcI/Uzj5awZKhAAAAAAD85gK9ftgv1b/WYgAAAABJRU5ErkJggg=="/>
+<image id="sprite-19" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAfUlEQVR4nO3SMQ2AMBBG4RNTBaAAHVjARH0w4YSBIAAHGCnpQLiSWwn/8L6kadMuL82ZAQAAfOSYp1LW3CxT1ISe27PUgqMf9eH13VTUmHewv9vzqBPrA/3u701FFNl3Q3M2FdEYyP5sVecyCl5S0prZWxQsGQoAAAAAwG8u+8/Zhm6I/nkAAAAASUVORK5CYII="/>
+<image id="sprite-20" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAh0lEQVR4nO3SsQmFQBBF0SnGCv6vwMAOzGzBJuzDyE4M1ALswEaUEcRZ2VR8wT0wKLvJZRkzAACAl6x9u+9jl4wpSkK36R614NyLxnC/NxUe8wyOZ0vX6MTGwPiN56YiF/n/lcm/qcitgc9QFOdIvazzvXwGz3V1xkrt7CUXLBkKAAAAAMBnDrWS1fZMzrl6AAAAAElFTkSuQmCC"/>
+<image id="sprite-21" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAhklEQVR4nO3SsQmAMBBA0RvGCXQCCzewcwWXcA8rN7FQB3ADF1EuGLyEtMIV/8GhJM0nnAgAAMBPznm873VKRjxKQq/tG2/BpRe14XovXmhMHmzPjmnwE2sD7deeixelyKZuk3/xorQGOktVhXH1skr3Mg+Osa52NsqD974LsQIAAAAAAF4PGtbT5nJ9KSgAAAAASUVORK5CYII="/>
+<image id="sprite-22" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAcklEQVR4nO3SwQmAMAxG4cykEziHK7hE93AZD+IAbuAilRzEBqo38S+8DwKFXB4lZgAAAB/Z5ynnJYUxRSH0WO9RC679aBnue1PhMW/BUrFllHzsFVnG9t0Q3qaiqTNwWxofg31namrBkqEAAAAAAPzmBDF/3EeiFx8kAAAAAElFTkSuQmCC"/>
+<image id="sprite-23" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAbUlEQVR4nO3SsQmAMBBG4dvTFVwie7iMhTiAG7hI5IrgBaJFIOQv3gdHijSP48wAAAAGubY15z1VY4qq0Pt4Ry24tdEY7v+mwmP+gqViY5R8bImMbww/08IZdPPtfQVLbbZoBUuGAgAAAAAwzQMXVN4Tq+R2iAAAAABJRU5ErkJggg=="/>
+<image id="sprite-24" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAd0lEQVR4nO3SsQmAMBBG4RvGCXQC53AFl8geVm5iIQ7gBi4SiSBeMFgI4l+8D44U1zzCmQEAAHxkHfoYp5CNKcpCt/kateDSj/rwtDcVKeYpWCrWR8nHnpH+9eFN3XIGry2huwWPVXVM2pmaUrBkKAAAAAAAv9kBpgraaGXGo0sAAAAASUVORK5CYII="/>
+<image id="sprite-25" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAeklEQVR4nO3SsQmAQAxA0QxzE+gEFm5g5woucXtYuYmFOoAbuMjJFWoCYiGIKf6DcEWazxERAACAj6x9l9IYzYhHJnSbrvEWfPejOjzvxYsc8xTsKlZHuY89IvWrw8ui4gxeW2JrgocQzsk78UYHz03tNxQAAAAAgN/sodXW2LOjeuQAAAAASUVORK5CYII="/>
+<image id="sprite-26" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAeklEQVR4nO3SsQmAQAxA0QxzE+gEFm5g5woucXtYuYmFOoAbuMjJFWoCYiGIKf6DcEWazxERAACAj6x9l9IYzYhHJnSbrvEWfPejOjzvxYsc8xTsKlZHuY89IvWrw8ui4gxeW2JrgocQzsk78UYHz03tNxQAAAAAgN/sodXW2LOjeuQAAAAASUVORK5CYII="/>
+<image id="sprite-27" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAAd0lEQVR4nO3SsQmAMBBG4RvGCXQC53AFl8geVm5iIQ7gBi4SiSBeMFgI4l+8D44U1zzCmQEAAHxkHfoYp5CNKcpCt/kateDSj/rwtDcVKeYpWCrWR8nHnpH+9eFN3XIGry2huwWPVXVM2pmaUrBkKAAAAAAAv9kBpgraaGXGo0sAAAAASUVORK5CYII="/>
+<image id="sprite-28" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAA0klEQVR4nO3UIQ7CQBQE0F/CCUh6gIpVbB2mQYDoQRBVBMMF2CNgGhQC03AHgigOgaMYEKgqRE19USw0aVXHkMxTm27yZ7L5qQgRERHRl4Mcdt0uKq3cesDEwDL6qEG1ol5ov1cnqVCFIUOaXtTyQskOe/GjuHNWr+uAj+zxar54HlERmLJauaKV214YBFK2qeRomdrzbHNDxGDX4HdvL+upPe/mQ0gGpKwfxU6ZF61rUOYFIgb3soFJaoXHg5WIiJzTuwQmgf7PiYiIiIiIiP7XG0Q5OgcNzyWEAAAAAElFTkSuQmCC"/>
+<image id="sprite-29" width="43" height="43" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAA5ElEQVR4nO3UoQ6CUBQG4IMzUggkEoEkNItJA29hcYPkLD4B8wkszGRwu3O+gzNg0mDzWiSYSAQKHRNXEZunuP1fgUs4/9m/O4gAAAAAXjTOYdf1rHIdsxkwjNgyulyDGovavvpeHaniWphlyLdGFdsnud+RF8Y/Z3V+HVCTad46yzQnehyozAqWDJZrULcq05xcx1TPmm4ZHDE8zX626jom9eeJOk9WN44Y3mvw3uZlOVLvm2mPJYNlWS+MtTIrWg2LQJAIBNudZf3PnhbjSreMRsPn5E6DaMuaAwAAAAAAAPC/njRNRKn4ByhiAAAAAElFTkSuQmCC"/>
+</defs>
+<rect width="100%" height="100%" fill="#111c29"/>
+<text x="16" y="27" class="heading">Human male / hair male1 — head reference</text>
+<text x="16" y="49" class="note">Target PNG 387 x 344; cells 43 x 43; 29 named cells / 29 IDs. Coordinates are top-down PNG pixels.</text>
+<text x="16" y="69" class="note">Source: /humanoid/human/emote.png</text>
+<text x="16" y="89" class="note">Complete heads: malehead.png:normal + each human emote (alpha-over), without hair.</text>
+<text x="16" y="109" class="note">Each named head cell has an independent ID and uses its corresponding canonical human emote frame.</text>
+<text x="16" y="129" class="note">Aliases (= names) use their named cell. Empty grid cells are unused; do not paint them.</text>
+<text x="16" y="149" class="shared">REFERENCE ONLY — not a PNG import template. Game pixels: original rights holders; no art relicensing.</text>
+<rect x="16" y="176" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="194" class="note">unused</text>
+<g data-target-frame="blabber.1" data-frame-id="1" data-target-x="43" data-target-y="0" data-source-frame="blabber.1" data-source-x="43" data-source-y="0">
+<title>Target blabber.1 / ID 1 / source /humanoid/human/emote.png:blabber.1 at 43,0; aliases: </title>
+<rect x="160" y="176" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="167" y="194" class="name">blabber.1</text>
+<rect x="165" y="204" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-1" xlink:href="#sprite-1" transform="translate(165 204) scale(3)"/>
+<text x="167" y="350" class="note">ID 1</text>
+<text x="167" y="365" class="note">x43 y0</text>
+<text x="167" y="380" class="note">src blabber.1</text>
+</g>
+<g data-target-frame="blabber.2" data-frame-id="2" data-target-x="86" data-target-y="0" data-source-frame="blabber.2" data-source-x="86" data-source-y="0">
+<title>Target blabber.2 / ID 2 / source /humanoid/human/emote.png:blabber.2 at 86,0; aliases: </title>
+<rect x="304" y="176" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="311" y="194" class="name">blabber.2</text>
+<rect x="309" y="204" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-2" xlink:href="#sprite-2" transform="translate(309 204) scale(3)"/>
+<text x="311" y="350" class="note">ID 2</text>
+<text x="311" y="365" class="note">x86 y0</text>
+<text x="311" y="380" class="note">src blabber.2</text>
+</g>
+<rect x="448" y="176" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="455" y="194" class="note">unused</text>
+<g data-target-frame="shout.1" data-frame-id="3" data-target-x="172" data-target-y="0" data-source-frame="shout.1" data-source-x="172" data-source-y="0">
+<title>Target shout.1 / ID 3 / source /humanoid/human/emote.png:shout.1 at 172,0; aliases: eat.1</title>
+<rect x="592" y="176" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="599" y="194" class="name">shout.1</text>
+<rect x="597" y="204" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-3" xlink:href="#sprite-3" transform="translate(597 204) scale(3)"/>
+<text x="599" y="350" class="note">ID 3</text>
+<text x="599" y="365" class="note">x172 y0</text>
+<text x="599" y="380" class="note">src shout.1</text>
+<text x="599" y="395" class="alias">= eat.1</text>
+</g>
+<g data-target-frame="shout.2" data-frame-id="4" data-target-x="215" data-target-y="0" data-source-frame="shout.2" data-source-x="215" data-source-y="0">
+<title>Target shout.2 / ID 4 / source /humanoid/human/emote.png:shout.2 at 215,0; aliases: eat.2</title>
+<rect x="736" y="176" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="743" y="194" class="name">shout.2</text>
+<rect x="741" y="204" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-4" xlink:href="#sprite-4" transform="translate(741 204) scale(3)"/>
+<text x="743" y="350" class="note">ID 4</text>
+<text x="743" y="365" class="note">x215 y0</text>
+<text x="743" y="380" class="note">src shout.2</text>
+<text x="743" y="395" class="alias">= eat.2</text>
+</g>
+<rect x="880" y="176" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="887" y="194" class="note">unused</text>
+<rect x="1024" y="176" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1031" y="194" class="note">unused</text>
+<rect x="1168" y="176" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="194" class="note">unused</text>
+<rect x="16" y="456" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="474" class="note">unused</text>
+<g data-target-frame="happy.1" data-frame-id="5" data-target-x="43" data-target-y="43" data-source-frame="happy.1" data-source-x="43" data-source-y="43">
+<title>Target happy.1 / ID 5 / source /humanoid/human/emote.png:happy.1 at 43,43; aliases: </title>
+<rect x="160" y="456" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="167" y="474" class="name">happy.1</text>
+<rect x="165" y="484" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-5" xlink:href="#sprite-5" transform="translate(165 484) scale(3)"/>
+<text x="167" y="630" class="note">ID 5</text>
+<text x="167" y="645" class="note">x43 y43</text>
+<text x="167" y="660" class="note">src happy.1</text>
+</g>
+<g data-target-frame="happy.2" data-frame-id="6" data-target-x="86" data-target-y="43" data-source-frame="happy.2" data-source-x="86" data-source-y="43">
+<title>Target happy.2 / ID 6 / source /humanoid/human/emote.png:happy.2 at 86,43; aliases: </title>
+<rect x="304" y="456" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="311" y="474" class="name">happy.2</text>
+<rect x="309" y="484" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-6" xlink:href="#sprite-6" transform="translate(309 484) scale(3)"/>
+<text x="311" y="630" class="note">ID 6</text>
+<text x="311" y="645" class="note">x86 y43</text>
+<text x="311" y="660" class="note">src happy.2</text>
+</g>
+<rect x="448" y="456" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="455" y="474" class="note">unused</text>
+<rect x="592" y="456" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="599" y="474" class="note">unused</text>
+<rect x="736" y="456" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="743" y="474" class="note">unused</text>
+<rect x="880" y="456" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="887" y="474" class="note">unused</text>
+<g data-target-frame="idle.1" data-frame-id="7" data-target-x="301" data-target-y="43" data-source-frame="idle.1" data-source-x="301" data-source-y="43">
+<title>Target idle.1 / ID 7 / source /humanoid/human/emote.png:idle.1 at 301,43; aliases: blink.3, wink.5</title>
+<rect x="1024" y="456" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="1031" y="474" class="name">idle.1</text>
+<rect x="1029" y="484" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-7" xlink:href="#sprite-7" transform="translate(1029 484) scale(3)"/>
+<text x="1031" y="630" class="note">ID 7</text>
+<text x="1031" y="645" class="note">x301 y43</text>
+<text x="1031" y="660" class="note">src idle.1</text>
+<text x="1031" y="675" class="alias">= blink.3</text>
+<text x="1031" y="688" class="alias">= wink.5</text>
+</g>
+<rect x="1168" y="456" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="474" class="note">unused</text>
+<rect x="16" y="736" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="754" class="note">unused</text>
+<g data-target-frame="sad.1" data-frame-id="8" data-target-x="43" data-target-y="86" data-source-frame="sad.1" data-source-x="43" data-source-y="86">
+<title>Target sad.1 / ID 8 / source /humanoid/human/emote.png:sad.1 at 43,86; aliases: </title>
+<rect x="160" y="736" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="167" y="754" class="name">sad.1</text>
+<rect x="165" y="764" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-8" xlink:href="#sprite-8" transform="translate(165 764) scale(3)"/>
+<text x="167" y="910" class="note">ID 8</text>
+<text x="167" y="925" class="note">x43 y86</text>
+<text x="167" y="940" class="note">src sad.1</text>
+</g>
+<g data-target-frame="sad.2" data-frame-id="9" data-target-x="86" data-target-y="86" data-source-frame="sad.2" data-source-x="86" data-source-y="86">
+<title>Target sad.2 / ID 9 / source /humanoid/human/emote.png:sad.2 at 86,86; aliases: </title>
+<rect x="304" y="736" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="311" y="754" class="name">sad.2</text>
+<rect x="309" y="764" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-9" xlink:href="#sprite-9" transform="translate(309 764) scale(3)"/>
+<text x="311" y="910" class="note">ID 9</text>
+<text x="311" y="925" class="note">x86 y86</text>
+<text x="311" y="940" class="note">src sad.2</text>
+</g>
+<g data-target-frame="sad.3" data-frame-id="28" data-target-x="129" data-target-y="86" data-source-frame="sad.3" data-source-x="129" data-source-y="86">
+<title>Target sad.3 / ID 28 / source /humanoid/human/emote.png:sad.3 at 129,86; aliases: </title>
+<rect x="448" y="736" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="455" y="754" class="name">sad.3</text>
+<rect x="453" y="764" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-28" xlink:href="#sprite-28" transform="translate(453 764) scale(3)"/>
+<text x="455" y="910" class="note">ID 28</text>
+<text x="455" y="925" class="note">x129 y86</text>
+<text x="455" y="940" class="note">src sad.3</text>
+</g>
+<g data-target-frame="sad.4" data-frame-id="10" data-target-x="172" data-target-y="86" data-source-frame="sad.4" data-source-x="172" data-source-y="86">
+<title>Target sad.4 / ID 10 / source /humanoid/human/emote.png:sad.4 at 172,86; aliases: </title>
+<rect x="592" y="736" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="599" y="754" class="name">sad.4</text>
+<rect x="597" y="764" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-10" xlink:href="#sprite-10" transform="translate(597 764) scale(3)"/>
+<text x="599" y="910" class="note">ID 10</text>
+<text x="599" y="925" class="note">x172 y86</text>
+<text x="599" y="940" class="note">src sad.4</text>
+</g>
+<g data-target-frame="sad.5" data-frame-id="11" data-target-x="215" data-target-y="86" data-source-frame="sad.5" data-source-x="215" data-source-y="86">
+<title>Target sad.5 / ID 11 / source /humanoid/human/emote.png:sad.5 at 215,86; aliases: </title>
+<rect x="736" y="736" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="743" y="754" class="name">sad.5</text>
+<rect x="741" y="764" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-11" xlink:href="#sprite-11" transform="translate(741 764) scale(3)"/>
+<text x="743" y="910" class="note">ID 11</text>
+<text x="743" y="925" class="note">x215 y86</text>
+<text x="743" y="940" class="note">src sad.5</text>
+</g>
+<rect x="880" y="736" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="887" y="754" class="note">unused</text>
+<rect x="1024" y="736" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1031" y="754" class="note">unused</text>
+<rect x="1168" y="736" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="754" class="note">unused</text>
+<rect x="16" y="1016" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="1034" class="note">unused</text>
+<g data-target-frame="neutral.1" data-frame-id="12" data-target-x="43" data-target-y="129" data-source-frame="neutral.1" data-source-x="43" data-source-y="129">
+<title>Target neutral.1 / ID 12 / source /humanoid/human/emote.png:neutral.1 at 43,129; aliases: </title>
+<rect x="160" y="1016" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="167" y="1034" class="name">neutral.1</text>
+<rect x="165" y="1044" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-12" xlink:href="#sprite-12" transform="translate(165 1044) scale(3)"/>
+<text x="167" y="1190" class="note">ID 12</text>
+<text x="167" y="1205" class="note">x43 y129</text>
+<text x="167" y="1220" class="note">src neutral.1</text>
+</g>
+<g data-target-frame="neutral.2" data-frame-id="13" data-target-x="86" data-target-y="129" data-source-frame="neutral.2" data-source-x="86" data-source-y="129">
+<title>Target neutral.2 / ID 13 / source /humanoid/human/emote.png:neutral.2 at 86,129; aliases: </title>
+<rect x="304" y="1016" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="311" y="1034" class="name">neutral.2</text>
+<rect x="309" y="1044" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-13" xlink:href="#sprite-13" transform="translate(309 1044) scale(3)"/>
+<text x="311" y="1190" class="note">ID 13</text>
+<text x="311" y="1205" class="note">x86 y129</text>
+<text x="311" y="1220" class="note">src neutral.2</text>
+</g>
+<rect x="448" y="1016" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="455" y="1034" class="note">unused</text>
+<g data-target-frame="laugh.1" data-frame-id="14" data-target-x="172" data-target-y="129" data-source-frame="laugh.1" data-source-x="172" data-source-y="129">
+<title>Target laugh.1 / ID 14 / source /humanoid/human/emote.png:laugh.1 at 172,129; aliases: </title>
+<rect x="592" y="1016" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="599" y="1034" class="name">laugh.1</text>
+<rect x="597" y="1044" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-14" xlink:href="#sprite-14" transform="translate(597 1044) scale(3)"/>
+<text x="599" y="1190" class="note">ID 14</text>
+<text x="599" y="1205" class="note">x172 y129</text>
+<text x="599" y="1220" class="note">src laugh.1</text>
+</g>
+<g data-target-frame="laugh.2" data-frame-id="15" data-target-x="215" data-target-y="129" data-source-frame="laugh.2" data-source-x="215" data-source-y="129">
+<title>Target laugh.2 / ID 15 / source /humanoid/human/emote.png:laugh.2 at 215,129; aliases: </title>
+<rect x="736" y="1016" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="743" y="1034" class="name">laugh.2</text>
+<rect x="741" y="1044" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-15" xlink:href="#sprite-15" transform="translate(741 1044) scale(3)"/>
+<text x="743" y="1190" class="note">ID 15</text>
+<text x="743" y="1205" class="note">x215 y129</text>
+<text x="743" y="1220" class="note">src laugh.2</text>
+</g>
+<rect x="880" y="1016" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="887" y="1034" class="note">unused</text>
+<rect x="1024" y="1016" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1031" y="1034" class="note">unused</text>
+<rect x="1168" y="1016" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="1034" class="note">unused</text>
+<rect x="16" y="1296" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="1314" class="note">unused</text>
+<g data-target-frame="annoyed.1" data-frame-id="16" data-target-x="43" data-target-y="172" data-source-frame="annoyed.1" data-source-x="43" data-source-y="172">
+<title>Target annoyed.1 / ID 16 / source /humanoid/human/emote.png:annoyed.1 at 43,172; aliases: </title>
+<rect x="160" y="1296" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="167" y="1314" class="name">annoyed.1</text>
+<rect x="165" y="1324" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-16" xlink:href="#sprite-16" transform="translate(165 1324) scale(3)"/>
+<text x="167" y="1470" class="note">ID 16</text>
+<text x="167" y="1485" class="note">x43 y172</text>
+<text x="167" y="1500" class="note">src annoyed.1</text>
+</g>
+<g data-target-frame="annoyed.2" data-frame-id="17" data-target-x="86" data-target-y="172" data-source-frame="annoyed.2" data-source-x="86" data-source-y="172">
+<title>Target annoyed.2 / ID 17 / source /humanoid/human/emote.png:annoyed.2 at 86,172; aliases: </title>
+<rect x="304" y="1296" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="311" y="1314" class="name">annoyed.2</text>
+<rect x="309" y="1324" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-17" xlink:href="#sprite-17" transform="translate(309 1324) scale(3)"/>
+<text x="311" y="1470" class="note">ID 17</text>
+<text x="311" y="1485" class="note">x86 y172</text>
+<text x="311" y="1500" class="note">src annoyed.2</text>
+</g>
+<rect x="448" y="1296" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="455" y="1314" class="note">unused</text>
+<rect x="592" y="1296" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="599" y="1314" class="note">unused</text>
+<rect x="736" y="1296" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="743" y="1314" class="note">unused</text>
+<rect x="880" y="1296" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="887" y="1314" class="note">unused</text>
+<rect x="1024" y="1296" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1031" y="1314" class="note">unused</text>
+<rect x="1168" y="1296" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="1314" class="note">unused</text>
+<rect x="16" y="1576" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="1594" class="note">unused</text>
+<g data-target-frame="oh.1" data-frame-id="18" data-target-x="43" data-target-y="215" data-source-frame="oh.1" data-source-x="43" data-source-y="215">
+<title>Target oh.1 / ID 18 / source /humanoid/human/emote.png:oh.1 at 43,215; aliases: </title>
+<rect x="160" y="1576" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="167" y="1594" class="name">oh.1</text>
+<rect x="165" y="1604" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-18" xlink:href="#sprite-18" transform="translate(165 1604) scale(3)"/>
+<text x="167" y="1750" class="note">ID 18</text>
+<text x="167" y="1765" class="note">x43 y215</text>
+<text x="167" y="1780" class="note">src oh.1</text>
+</g>
+<g data-target-frame="oh.2" data-frame-id="19" data-target-x="86" data-target-y="215" data-source-frame="oh.2" data-source-x="86" data-source-y="215">
+<title>Target oh.2 / ID 19 / source /humanoid/human/emote.png:oh.2 at 86,215; aliases: </title>
+<rect x="304" y="1576" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="311" y="1594" class="name">oh.2</text>
+<rect x="309" y="1604" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-19" xlink:href="#sprite-19" transform="translate(309 1604) scale(3)"/>
+<text x="311" y="1750" class="note">ID 19</text>
+<text x="311" y="1765" class="note">x86 y215</text>
+<text x="311" y="1780" class="note">src oh.2</text>
+</g>
+<rect x="448" y="1576" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="455" y="1594" class="note">unused</text>
+<g data-target-frame="oooh.1" data-frame-id="29" data-target-x="172" data-target-y="215" data-source-frame="oooh.1" data-source-x="172" data-source-y="215">
+<title>Target oooh.1 / ID 29 / source /humanoid/human/emote.png:oooh.1 at 172,215; aliases: </title>
+<rect x="592" y="1576" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="599" y="1594" class="name">oooh.1</text>
+<rect x="597" y="1604" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-29" xlink:href="#sprite-29" transform="translate(597 1604) scale(3)"/>
+<text x="599" y="1750" class="note">ID 29</text>
+<text x="599" y="1765" class="note">x172 y215</text>
+<text x="599" y="1780" class="note">src oooh.1</text>
+</g>
+<g data-target-frame="oooh.2" data-frame-id="20" data-target-x="215" data-target-y="215" data-source-frame="oooh.2" data-source-x="215" data-source-y="215">
+<title>Target oooh.2 / ID 20 / source /humanoid/human/emote.png:oooh.2 at 215,215; aliases: </title>
+<rect x="736" y="1576" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="743" y="1594" class="name">oooh.2</text>
+<rect x="741" y="1604" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-20" xlink:href="#sprite-20" transform="translate(741 1604) scale(3)"/>
+<text x="743" y="1750" class="note">ID 20</text>
+<text x="743" y="1765" class="note">x215 y215</text>
+<text x="743" y="1780" class="note">src oooh.2</text>
+</g>
+<g data-target-frame="oooh.3" data-frame-id="21" data-target-x="258" data-target-y="215" data-source-frame="oooh.3" data-source-x="258" data-source-y="215">
+<title>Target oooh.3 / ID 21 / source /humanoid/human/emote.png:oooh.3 at 258,215; aliases: </title>
+<rect x="880" y="1576" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="887" y="1594" class="name">oooh.3</text>
+<rect x="885" y="1604" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-21" xlink:href="#sprite-21" transform="translate(885 1604) scale(3)"/>
+<text x="887" y="1750" class="note">ID 21</text>
+<text x="887" y="1765" class="note">x258 y215</text>
+<text x="887" y="1780" class="note">src oooh.3</text>
+</g>
+<rect x="1024" y="1576" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1031" y="1594" class="note">unused</text>
+<rect x="1168" y="1576" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="1594" class="note">unused</text>
+<rect x="16" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="1874" class="note">unused</text>
+<rect x="160" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="167" y="1874" class="note">unused</text>
+<rect x="304" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="311" y="1874" class="note">unused</text>
+<rect x="448" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="455" y="1874" class="note">unused</text>
+<rect x="592" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="599" y="1874" class="note">unused</text>
+<rect x="736" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="743" y="1874" class="note">unused</text>
+<rect x="880" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="887" y="1874" class="note">unused</text>
+<rect x="1024" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1031" y="1874" class="note">unused</text>
+<rect x="1168" y="1856" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="1874" class="note">unused</text>
+<rect x="16" y="2136" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="23" y="2154" class="note">unused</text>
+<g data-target-frame="blink.1" data-frame-id="22" data-target-x="43" data-target-y="301" data-source-frame="blink.1" data-source-x="43" data-source-y="301">
+<title>Target blink.1 / ID 22 / source /humanoid/human/emote.png:blink.1 at 43,301; aliases: </title>
+<rect x="160" y="2136" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="167" y="2154" class="name">blink.1</text>
+<rect x="165" y="2164" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-22" xlink:href="#sprite-22" transform="translate(165 2164) scale(3)"/>
+<text x="167" y="2310" class="note">ID 22</text>
+<text x="167" y="2325" class="note">x43 y301</text>
+<text x="167" y="2340" class="note">src blink.1</text>
+</g>
+<g data-target-frame="blink.2" data-frame-id="23" data-target-x="86" data-target-y="301" data-source-frame="blink.2" data-source-x="86" data-source-y="301">
+<title>Target blink.2 / ID 23 / source /humanoid/human/emote.png:blink.2 at 86,301; aliases: sleep.1, sleep.2</title>
+<rect x="304" y="2136" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="311" y="2154" class="name">blink.2</text>
+<rect x="309" y="2164" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-23" xlink:href="#sprite-23" transform="translate(309 2164) scale(3)"/>
+<text x="311" y="2310" class="note">ID 23</text>
+<text x="311" y="2325" class="note">x86 y301</text>
+<text x="311" y="2340" class="note">src blink.2</text>
+<text x="311" y="2355" class="alias">= sleep.1</text>
+<text x="311" y="2368" class="alias">= sleep.2</text>
+</g>
+<rect x="448" y="2136" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="455" y="2154" class="note">unused</text>
+<g data-target-frame="wink.1" data-frame-id="24" data-target-x="172" data-target-y="301" data-source-frame="wink.1" data-source-x="172" data-source-y="301">
+<title>Target wink.1 / ID 24 / source /humanoid/human/emote.png:wink.1 at 172,301; aliases: </title>
+<rect x="592" y="2136" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="599" y="2154" class="name">wink.1</text>
+<rect x="597" y="2164" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-24" xlink:href="#sprite-24" transform="translate(597 2164) scale(3)"/>
+<text x="599" y="2310" class="note">ID 24</text>
+<text x="599" y="2325" class="note">x172 y301</text>
+<text x="599" y="2340" class="note">src wink.1</text>
+</g>
+<g data-target-frame="wink.2" data-frame-id="25" data-target-x="215" data-target-y="301" data-source-frame="wink.2" data-source-x="215" data-source-y="301">
+<title>Target wink.2 / ID 25 / source /humanoid/human/emote.png:wink.2 at 215,301; aliases: </title>
+<rect x="736" y="2136" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="743" y="2154" class="name">wink.2</text>
+<rect x="741" y="2164" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-25" xlink:href="#sprite-25" transform="translate(741 2164) scale(3)"/>
+<text x="743" y="2310" class="note">ID 25</text>
+<text x="743" y="2325" class="note">x215 y301</text>
+<text x="743" y="2340" class="note">src wink.2</text>
+</g>
+<g data-target-frame="wink.3" data-frame-id="26" data-target-x="258" data-target-y="301" data-source-frame="wink.3" data-source-x="258" data-source-y="301">
+<title>Target wink.3 / ID 26 / source /humanoid/human/emote.png:wink.3 at 258,301; aliases: </title>
+<rect x="880" y="2136" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="887" y="2154" class="name">wink.3</text>
+<rect x="885" y="2164" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-26" xlink:href="#sprite-26" transform="translate(885 2164) scale(3)"/>
+<text x="887" y="2310" class="note">ID 26</text>
+<text x="887" y="2325" class="note">x258 y301</text>
+<text x="887" y="2340" class="note">src wink.3</text>
+</g>
+<g data-target-frame="wink.4" data-frame-id="27" data-target-x="301" data-target-y="301" data-source-frame="wink.4" data-source-x="301" data-source-y="301">
+<title>Target wink.4 / ID 27 / source /humanoid/human/emote.png:wink.4 at 301,301; aliases: </title>
+<rect x="1024" y="2136" width="140" height="276" fill="#1c3040" stroke="#61788b"/>
+<text x="1031" y="2154" class="name">wink.4</text>
+<rect x="1029" y="2164" width="129" height="129" fill="url(#checker)"/>
+<use href="#sprite-27" xlink:href="#sprite-27" transform="translate(1029 2164) scale(3)"/>
+<text x="1031" y="2310" class="note">ID 27</text>
+<text x="1031" y="2325" class="note">x301 y301</text>
+<text x="1031" y="2340" class="note">src wink.4</text>
+</g>
+<rect x="1168" y="2136" width="140" height="276" fill="none" stroke="#253746" stroke-dasharray="3 5"/>
+<text x="1175" y="2154" class="note">unused</text>
+<text x="16" y="2445" class="note">3x nearest-neighbour pixels on a checkerboard. Shared artwork is intentional; aliases do not create new editable cells.</text>
+<text x="16" y="2464" class="note">Use the separate blank PNG for painting and the label-only layout for compact frame lookup.</text>
+</svg>
