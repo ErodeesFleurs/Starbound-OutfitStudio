@@ -39,6 +39,8 @@ PNG layers (all are decoded locally, never uploaded):
   --front-sleeves PATH  Optional chest front sleeves
   --back-sleeves PATH   Optional chest back sleeves
   --back PATH           Explicit back sheet
+  Fixed sheets may include fully transparent right/bottom padding; it is removed
+  without shifting the origin or discarding visible pixels. Hats are unchanged.
 Options:
   --profile auto|original|conservative|compact  Helper selection (default auto)
   --strategy text|compressed|passes         Selection strategy (default text)
@@ -201,9 +203,15 @@ fn encode(args: &[String]) -> Result<()> {
         });
         let images = sheets
             .iter()
-            .map(|(_, path)| -> Result<_> {
-                core::decode_png(&fs::read(path)?)
-                    .map_err(|error| format!("{}: {error}", path.display()).into())
+            .map(|(sheet, path)| -> Result<_> {
+                let mut image = core::decode_png(&fs::read(path)?)
+                    .map_err(|error| format!("{}: {error}", path.display()))?;
+                let layout = core::layout(*sheet);
+                let width = layout.first().map_or(0, |row| row.len()) * 43;
+                let height = layout.len() * 43;
+                core::normalize_sheet(&mut image, width, height)
+                    .map_err(|error| format!("{}: {error}", path.display()))?;
+                Ok(image)
             })
             .collect::<Result<Vec<_>>>()?;
         let layers = images
@@ -493,17 +501,24 @@ mod tests {
                 let offset = ((row * 43) * width + column * 43) * 4;
                 rgba[offset..offset + 4].copy_from_slice(&[0x12, 0x34, 0x56, [255, 128, 1][index]]);
                 let path = directory.join(format!("{}-{index}.png", garment.key()));
+                let source_width = width + 1;
+                let source_height = height + 43;
+                let mut padded = [9, 8, 7, 0].repeat(source_width * source_height);
+                for y in 0..height {
+                    padded[y * source_width * 4..(y * source_width + width) * 4]
+                        .copy_from_slice(&rgba[y * width * 4..(y + 1) * width * 4]);
+                }
                 let mut encoder = png::Encoder::new(
                     fs::File::create(&path).unwrap(),
-                    width as u32,
-                    height as u32,
+                    source_width as u32,
+                    source_height as u32,
                 );
                 encoder.set_color(png::ColorType::Rgba);
                 encoder.set_depth(png::BitDepth::Eight);
                 encoder
                     .write_header()
                     .unwrap()
-                    .write_image_data(&rgba)
+                    .write_image_data(&padded)
                     .unwrap();
                 paths.push(path);
                 images.push(core::RgbaImage {
@@ -561,6 +576,37 @@ mod tests {
                         }
                     }
                 }
+            }
+            for path in &paths {
+                let original = fs::read(path).unwrap();
+                let mut image = core::decode_png(&original).unwrap();
+                let target_width = image.width - 1;
+                image.rgba[target_width * 4 + 3] = 1;
+                let mut encoder = png::Encoder::new(
+                    fs::File::create(path).unwrap(),
+                    image.width as u32,
+                    image.height as u32,
+                );
+                encoder.set_color(png::ColorType::Rgba);
+                encoder.set_depth(png::BitDepth::Eight);
+                encoder
+                    .write_header()
+                    .unwrap()
+                    .write_image_data(&image.rgba)
+                    .unwrap();
+                let out = directory.join("rejected-output");
+                let mut args = vec![
+                    "--garment".into(),
+                    garment.key().into(),
+                    "--out".into(),
+                    out.to_string_lossy().into_owned(),
+                ];
+                for ((_, flag), input) in sheets.iter().zip(&paths) {
+                    args.extend([(*flag).into(), input.to_string_lossy().into_owned()]);
+                }
+                assert!(encode(&args).is_err());
+                assert!(!out.exists());
+                fs::write(path, original).unwrap();
             }
         }
         fs::remove_dir_all(directory).unwrap();

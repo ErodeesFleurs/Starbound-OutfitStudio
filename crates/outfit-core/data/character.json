@@ -1538,7 +1538,7 @@
       ]
     }
   },
-  "bodyPrefix": "?scale=0.61;0.42?scale=0.4;0.6?scale=0.75;0.6?scale=0.47;0.77?scale=0.61;0.71?crop;1;1;2;2?replace;bea48763=ff01ff00;bda28564=ff01ff00;d7b79d77=ff02ff00;d5af9078=ff02ff00;ddb5935b=ff03ff00;d49a665b=ff03ff00;d2a8866f=ff04ff00;ce946371=ff04ff00;d7af8e64=ff05ff00;cc926065=ff05ff00;d1a98757=ff06ff00;c5916159=ff06ff00;9f84644d=ff07ff00;9f846550=ff07ff00;b3987662=ff08ff00;b3987664=ff08ff00;94734c60=ff09ff00;94744c5d=ff09ff00;92714a5b=ff0aff00;92714a5d=ff0aff00;8f6e4663=ff0bff00;8e6d4564=ff0bff00;8f714a58=ff63ff00;8f704a5a=ff63ff00;93744d57=ff64ff00;93744d54=ff64ff00;91714a53=ff65ff00;91714a55=ff65ff00;906e4668=ff0cff00;906c4468=ff0cff00;b2957373=ff0dff00;b3957372=ff0dff00;8e6b436f=ff0eff00;8f6c456e=ff0eff00;906e4671=ff0fff00;916f4670=ff0fff00;93724b5f=ff10ff00;92714b5e=ff10ff00;8f6f4769=ff11ff00;906f4769=ff11ff00;8c694170=ff12ff00;8c6a436f=ff12ff00;91714873=ff66ff00;91714872=ff66ff00;95734b65=ff13ff00;94724b64=ff13ff00;aa8e6d5d=ff14ff00;ab8f6e61=ff14ff00;8e6c4369=ff15ff00;8f6d456d=ff15ff00;926f4671=ff16ff00;94704775=ff16ff00;8f6e4573=ff17ff00;906f4677=ff17ff00;92714774=ff67ff00;93714878=ff67ff00;92704676=ff68ff00;9371487a=ff68ff00;91714772=ff18ff00;93724876=ff18ff00;9270466e=ff19ff00;93714872=ff19ff00;b0927066=ff1aff00;b0926f65=ff1aff00;8e6b426b=ff1bff00;8d6b4269=ff1bff00;906e4566=ff1cff00;8f6e4565=ff1cff00;8d6a4264=ff1dff00;8d6a4263=ff1dff00;8d694168=ff69ff00;8c694166=ff69ff00;89653f6c=ff6aff00;88653e6a=ff6aff00;8b6a4269=ff6bff00;8b694267=ff6bff00;8a6b425e=ff1eff00;8a6a425d=ff1eff00;ad93725c=ff1fff00;ac91705d=ff1fff00;896d4555=ff20ff00;896b4456=ff20ff00;906f4960=ff21ff00;91704962=ff21ff00;90724c5f=ff22ff00;90724c60=ff22ff00;92724c5d=ff6cff00;93734c5f=ff6cff00;beaa9b0b=ff23ff00;eccbb205=ff24ff00;e2b49112=ff25ff00;e2b5910f=ff26ff00;eedccf11=ff27ff00;7c64420f=ff28ff00;79613c21=ff29ff00;7b643e23=ff2aff00;765d391e=ff2bff00;745e3a0a=ff2cff00;745e390d=ff2dff00;7a5d3a23=ff2eff00;78603b23=ff2fff00;7b633d21=ff30ff00;755f3b1e=ff31ff00;745d3910=ff32ff00;745e3a06=ff33ff00;8263460e=ff34ff00;735d3907=ff35ff00;745d390b=ff36ff00;735d3a0a=ff6dff00;755e3a10=ff37ff00;735d3902=ff38ff00;735e3a01=ff39ff00;72583601=ff3aff00;f9f4f112=ff3bff00;faf9f609=ff3cff00;f9f6f50a=ff3dff00;f0e9e420=ff3eff00;f5efe921=ff3fff00;f2ebe620=ff40ff00;f3edeb16=ff41ff00;f9f7f50b=ff42ff00;f8f3f10f=ff43ff00;e4dace1f=ff44ff00;eee1da0e=ff45ff00;c797850f=ff46ff00;ca9a8612=ff47ff00;cb9f8b19=ff48ff00;8871500c=ff49ff00;735e3a00=ff4aff00;78603b11=ff4bff00;775f3a10=ff4cff00;785d3914=ff4dff00;765d3910=ff4eff00;745d390c=ff4fff00;77603b0e=ff50ff00;725a3700=ff51ff00;d4c7b70e=ff52ff00;735d3909=ff53ff00;795f3a14=ff54ff00;785f3a12=ff55ff00;77613b11=ff56ff00;745c380e=ff57ff00;745c390e=ff58ff00;745b3704=ff59ff00;fbf8f50c=ff5aff00;faf8f50a=ff5bff00;f9f6f40d=ff5cff00;f8f5f40a=ff5dff00;faf6f40c=ff5eff00;faf7f50b=ff5fff00;f8f4f30d=ff60ff00;f6efe81f=ff61ff00;f6f0ee14=ff62ff00;e2d4c603=ff00ff00;e4dad300=ff00ff00;d7b79d76=ff02ff00;ddb4925b=ff03ff00;d7ae8d64=ff05ff00;d1a98657=ff06ff00;c5916259=ff06ff00;b3977764=ff08ff00;94734c5d=ff09ff00;91714a56=ff65ff00;8f6c4468=ff0cff00;b2957372=ff0dff00;8f6c446e=ff0eff00;906f4670=ff0fff00;92714b5f=ff10ff00;8c694270=ff12ff00;91704873=ff66ff00;95724b65=ff13ff00;92704774=ff67ff00;93714876=ff18ff00;af926f64=ff1aff00;89653f6b=ff6aff00;8b6a4268=ff6bff00;8b6b425e=ff1eff00;ac91705e=ff1fff00;916f4962=ff21ff00;90724b60=ff22ff00;92724c5c=ff6cff00;93734c5e=ff6cff00;bea99b0b=ff23ff00;7c63420f=ff28ff00;78613c21=ff29ff00;7b633e23=ff2aff00;745d390d=ff2dff00;7b623d21=ff30ff00;f2ebe61f=ff40ff00;c797840f=ff46ff00;87714f0c=ff49ff00;77603b11=ff56ff00;fbf8f50b=ff5aff00?scalenearest=1;2?blendmult=/ships/glitch/glitchT5blocks.png;60;38?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?scale=256?crop;1;1;44;44",
+  "bodyPrefix": "?scale=0.61;0.42?scale=0.4;0.6?scale=0.75;0.6?scale=0.47;0.77?scale=0.61;0.71?crop;1;1;2;2?replace;bea48763=ff01ff00;bda28564=ff01ff00;d7b79d77=ff02ff00;d5af9078=ff02ff00;ddb5935b=ff03ff00;d49a665b=ff03ff00;d2a8866f=ff04ff00;ce946371=ff04ff00;d7af8e64=ff05ff00;cc926065=ff05ff00;d1a98757=ff06ff00;c5916159=ff06ff00;9f84644d=ff07ff00;9f846550=ff07ff00;b3987662=ff08ff00;b3987664=ff08ff00;94734c60=ff09ff00;94744c5d=ff09ff00;92714a5b=ff0aff00;92714a5d=ff0aff00;8f6e4663=ff0bff00;8e6d4564=ff0bff00;8f714a58=ff63ff00;8f704a5a=ff63ff00;93744d57=ff64ff00;93744d54=ff64ff00;91714a53=ff65ff00;91714a55=ff65ff00;906e4668=ff0cff00;906c4468=ff0cff00;b2957373=ff0dff00;b3957372=ff0dff00;8e6b436f=ff0eff00;8f6c456e=ff0eff00;906e4671=ff0fff00;916f4670=ff0fff00;93724b5f=ff10ff00;92714b5e=ff10ff00;8f6f4769=ff11ff00;906f4769=ff11ff00;8c694170=ff12ff00;8c6a436f=ff12ff00;91714873=ff66ff00;91714872=ff66ff00;95734b65=ff13ff00;94724b64=ff13ff00;aa8e6d5d=ff14ff00;ab8f6e61=ff14ff00;8e6c4369=ff15ff00;8f6d456d=ff15ff00;926f4671=ff16ff00;94704775=ff16ff00;8f6e4573=ff17ff00;906f4677=ff17ff00;92714774=ff67ff00;93714878=ff67ff00;92704676=ff68ff00;9371487a=ff68ff00;91714772=ff18ff00;93724876=ff18ff00;9270466e=ff19ff00;93714872=ff19ff00;b0927066=ff1aff00;b0926f65=ff1aff00;8e6b426b=ff1bff00;8d6b4269=ff1bff00;906e4566=ff1cff00;8f6e4565=ff1cff00;8d6a4264=ff1dff00;8d6a4263=ff1dff00;8d694168=ff69ff00;8c694166=ff69ff00;89653f6c=ff6aff00;88653e6a=ff6aff00;8b6a4269=ff6bff00;8b694267=ff6bff00;8a6b425e=ff1eff00;8a6a425d=ff1eff00;ad93725c=ff1fff00;ac91705d=ff1fff00;896d4555=ff20ff00;896b4456=ff20ff00;906f4960=ff21ff00;91704962=ff21ff00;90724c5f=ff22ff00;90724c60=ff22ff00;92724c5d=ff6cff00;93734c5f=ff6cff00;beaa9b0b=ff23ff00;eccbb205=ff24ff00;e2b49112=ff25ff00;e2b5910f=ff26ff00;eedccf11=ff27ff00;7c64420f=ff28ff00;79613c21=ff29ff00;7b643e23=ff2aff00;765d391e=ff2bff00;745e3a0a=ff2cff00;745e390d=ff2dff00;7a5d3a23=ff2eff00;78603b23=ff2fff00;7b633d21=ff30ff00;755f3b1e=ff31ff00;745d3910=ff32ff00;745e3a06=ff33ff00;8263460e=ff34ff00;735d3907=ff35ff00;745d390b=ff36ff00;735d3a0a=ff6dff00;755e3a10=ff37ff00;735d3902=ff38ff00;735e3a01=ff39ff00;72583601=ff3aff00;f9f4f112=ff3bff00;faf9f609=ff3cff00;f9f6f50a=ff3dff00;f0e9e420=ff3eff00;f5efe921=ff3fff00;f2ebe620=ff40ff00;f3edeb16=ff41ff00;f9f7f50b=ff42ff00;f8f3f10f=ff43ff00;e4dace1f=ff44ff00;eee1da0e=ff45ff00;c797850f=ff46ff00;ca9a8612=ff47ff00;cb9f8b19=ff48ff00;8871500c=ff49ff00;735e3a00=ff4aff00;78603b11=ff4bff00;775f3a10=ff4cff00;785d3914=ff4dff00;765d3910=ff4eff00;745d390c=ff4fff00;77603b0e=ff50ff00;725a3700=ff51ff00;d4c7b70e=ff52ff00;735d3909=ff53ff00;795f3a14=ff54ff00;785f3a12=ff55ff00;77613b11=ff56ff00;745c380e=ff57ff00;745c390e=ff58ff00;745b3704=ff59ff00;fbf8f50c=ff5aff00;faf8f50a=ff5bff00;f9f6f40d=ff5cff00;f8f5f40a=ff5dff00;faf6f40c=ff5eff00;faf7f50b=ff5fff00;f8f4f30d=ff60ff00;f6efe81f=ff61ff00;f6f0ee14=ff62ff00;e2d4c603=ff00ff00;e4dad300=ff00ff00;d7b79d76=ff02ff00;ddb4925b=ff03ff00;d7ae8d64=ff05ff00;d1a98657=ff06ff00;c5916259=ff06ff00;b3977764=ff08ff00;94734c5d=ff09ff00;91714a56=ff65ff00;8f6c4468=ff0cff00;b2957372=ff0dff00;8f6c446e=ff0eff00;906f4670=ff0fff00;92714b5f=ff10ff00;8c694270=ff12ff00;91704873=ff66ff00;95724b65=ff13ff00;92704774=ff67ff00;93714876=ff18ff00;af926f64=ff1aff00;89653f6b=ff6aff00;8b6a4268=ff6bff00;8b6b425e=ff1eff00;ac91705e=ff1fff00;916f4962=ff21ff00;90724b60=ff22ff00;92724c5c=ff6cff00;93734c5e=ff6cff00;bea99b0b=ff23ff00;7c63420f=ff28ff00;78613c21=ff29ff00;7b633e23=ff2aff00;745d390d=ff2dff00;7b623d21=ff30ff00;f2ebe61f=ff40ff00;c797840f=ff46ff00;87714f0c=ff49ff00;77603b11=ff56ff00;fbf8f50b=ff5aff00;906e4670=ff0fff00;93704775=ff16ff00;af926f65=ff1aff00;d7af8d64=ff05ff00;91714a5b=ff0aff00?scalenearest=1;2?blendmult=/ships/glitch/glitchT5blocks.png;60;38?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?scale=256?crop;1;1;44;44",
   "headPrefix": "?scale=0.48?scale=0.61?scale=0.56?crop;4;4;5;5?replace;8e3b292f=ff01ff00;83322433=ff02ff00;8132232b=ff03ff00;883a292b=ff04ff00;8733222f=ff05ff00;79271b33=ff06ff00;faf8f700=ff07ff00;873c252d=ff08ff00;6d2b1b03=ff09ff00;6e291900=ff1cff00;6f291900=ff0aff00;65443f2a=ff0bff00;8733222a=ff0cff00;77271a2f=ff0dff00;7a281b61=ff0eff00;8331215c=ff0fff00;87332237=ff10ff00;7a291b48=ff11ff00;87332243=ff12ff00;712b1a19=ff13ff00;7a291b43=ff1dff00;80312143=ff14ff00;83312048=ff15ff00;bd938600=ff16ff00;b089802d=ff17ff00;9f645b2f=ff18ff00;9c5c5337=ff19ff00;a1605637=ff1aff00;ecd5d42f=ff1bff00?scalenearest=1;2?blendmult=/ships/glitch/glitchT5blocks.png;60;38?scalenearest=2;1?blendmult=/dungeons/other/wreck/key.png;755;29?scale=256?crop;1;1;44;44",
   "suppressedSources": [
     "/humanoid/floran/malehead.png:normal",
@@ -1590,7 +1590,13 @@
     {
       "sourcePath": "/humanoid/floran/malebody.png:idle.5",
       "vanilla": "d7af8e64",
-      "opensb": "d7ae8d64"
+      "opensb": "d7ae8d64",
+      "additional": [
+        {
+          "runtime": "OpenStarbound 0.1.15.1 bb6eb63 x86_64-linux",
+          "rgba": "d7af8d64"
+        }
+      ]
     },
     {
       "sourcePath": "/humanoid/floran/femalebody.png:idle.5",
@@ -1640,7 +1646,13 @@
     {
       "sourcePath": "/humanoid/floran/malebody.png:walk.3",
       "vanilla": "92714a5b",
-      "opensb": "92714a5b"
+      "opensb": "92714a5b",
+      "additional": [
+        {
+          "runtime": "OpenStarbound 0.1.15.1 bb6eb63 x86_64-linux",
+          "rgba": "91714a5b"
+        }
+      ]
     },
     {
       "sourcePath": "/humanoid/floran/femalebody.png:walk.3",
@@ -1725,7 +1737,13 @@
     {
       "sourcePath": "/humanoid/floran/femalebody.png:run.3",
       "vanilla": "916f4670",
-      "opensb": "906f4670"
+      "opensb": "906f4670",
+      "additional": [
+        {
+          "runtime": "OpenStarbound 0.1.15.1 bb6eb63 x86_64-linux",
+          "rgba": "906e4670"
+        }
+      ]
     },
     {
       "sourcePath": "/humanoid/floran/malebody.png:run.4",
@@ -1805,7 +1823,13 @@
     {
       "sourcePath": "/humanoid/floran/femalebody.png:jump.3",
       "vanilla": "94704775",
-      "opensb": "94704775"
+      "opensb": "94704775",
+      "additional": [
+        {
+          "runtime": "OpenStarbound 0.1.15.1 bb6eb63 x86_64-linux",
+          "rgba": "93704775"
+        }
+      ]
     },
     {
       "sourcePath": "/humanoid/floran/malebody.png:jump.4",
@@ -1865,7 +1889,13 @@
     {
       "sourcePath": "/humanoid/floran/femalebody.png:climb.1",
       "vanilla": "b0926f65",
-      "opensb": "af926f64"
+      "opensb": "af926f64",
+      "additional": [
+        {
+          "runtime": "OpenStarbound 0.1.15.1 bb6eb63 x86_64-linux",
+          "rgba": "af926f65"
+        }
+      ]
     },
     {
       "sourcePath": "/humanoid/floran/malebody.png:climb.2",

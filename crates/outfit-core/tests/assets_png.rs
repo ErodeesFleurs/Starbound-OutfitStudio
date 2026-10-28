@@ -141,6 +141,121 @@ fn sixteen_bit_samples_use_high_bytes_and_bad_pngs_are_errors() {
 }
 
 #[test]
+fn sheet_normalization_preserves_the_fixed_window_rgba() {
+    let (width, height) = (86, 129);
+    let expected: Vec<u8> = (0..height)
+        .flat_map(|y| {
+            (0..width).flat_map(move |x| {
+                // The empty middle-left cell must not be removed or move later
+                // frames. Hidden RGB is meaningful even in that empty cell.
+                let alpha = if x < 43 && (43..86).contains(&y) {
+                    0
+                } else {
+                    [0, 1, 128, 255][(x + y) % 4]
+                };
+                [x as u8, y as u8, (x + y) as u8, alpha]
+            })
+        })
+        .collect();
+    for (extra_width, extra_height) in [
+        (0, 0),
+        (1, 0),
+        (0, 1),
+        (1, 1),
+        (43, 0),
+        (0, 43),
+        (43, 43),
+        (1, 43),
+        (43, 1),
+    ] {
+        let mut image = RgbaImage {
+            width: width + extra_width,
+            height: height + extra_height,
+            rgba: [201, 202, 203, 0].repeat((width + extra_width) * (height + extra_height)),
+        };
+        for y in 0..height {
+            let offset = y * image.width * 4;
+            image.rgba[offset..offset + width * 4]
+                .copy_from_slice(&expected[y * width * 4..(y + 1) * width * 4]);
+        }
+        normalize_sheet(&mut image, width, height).unwrap();
+        assert_eq!((image.width, image.height), (width, height));
+        assert_eq!(image.rgba, expected);
+    }
+}
+
+#[test]
+fn sheet_normalization_rejects_any_visible_padding_before_mutation() {
+    for (x, y) in [(3, 0), (4, 1), (0, 2), (2, 3), (4, 3)] {
+        for alpha in [1, 128, 255] {
+            let mut image = RgbaImage {
+                width: 5,
+                height: 4,
+                rgba: [11, 22, 33, 0].repeat(20),
+            };
+            image.rgba[3] = 255;
+            image.rgba[(y * image.width + x) * 4 + 3] = alpha;
+            let original = RgbaImage {
+                width: image.width,
+                height: image.height,
+                rgba: image.rgba.clone(),
+            };
+            let error = normalize_sheet(&mut image, 3, 2).unwrap_err().to_string();
+            assert!(error.contains("5 × 4"));
+            assert!(error.contains("3 × 2"));
+            assert!(error.contains(&format!("({x}, {y})")));
+            assert_eq!(image, original);
+        }
+    }
+    let mut image = RgbaImage {
+        width: 5,
+        height: 4,
+        rgba: vec![0; 5 * 4 * 4],
+    };
+    for (x, y) in [(0, 2), (4, 0), (3, 0)] {
+        image.rgba[(y * image.width + x) * 4 + 3] = 1;
+    }
+    assert!(
+        normalize_sheet(&mut image, 3, 2)
+            .unwrap_err()
+            .to_string()
+            .contains("(3, 0)")
+    );
+}
+
+#[test]
+fn sheet_normalization_rejects_small_zero_malformed_and_overflow_inputs_unchanged() {
+    for (source_width, source_height, length, width, height) in [
+        (2, 3, 24, 3, 2),
+        (3, 2, 24, 2, 3),
+        (2, 2, 16, 3, 3),
+        (0, 2, 0, 1, 1),
+        (2, 0, 0, 1, 1),
+        (2, 2, 15, 2, 2),
+        (3, 3, 37, 2, 2),
+        (usize::MAX, 2, 0, 1, 1),
+        (usize::MAX / 4 + 1, 1, 0, 1, 1),
+        (2, 2, 16, 0, 1),
+        (2, 2, 16, 1, 0),
+        (2, 2, 16, usize::MAX, 2),
+        (2, 2, 16, usize::MAX / 4 + 1, 1),
+    ] {
+        let mut image = RgbaImage {
+            width: source_width,
+            height: source_height,
+            rgba: vec![91; length],
+        };
+        let original = RgbaImage {
+            width: image.width,
+            height: image.height,
+            rgba: image.rgba.clone(),
+        };
+        assert!(normalize_sheet(&mut image, width, height).is_err());
+        assert_eq!(image, original);
+    }
+}
+
+#[test]
 fn production_descriptors_keep_shell_paths_flags_and_root_order() {
     for (garment, name, icon, description) in [
         (

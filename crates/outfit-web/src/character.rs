@@ -142,8 +142,14 @@ impl CharacterUi {
     }
 }
 
-pub(super) fn validate_image(index: usize, image: &RgbaImage) -> Result<(), String> {
+pub(super) fn normalize_and_validate_image(
+    index: usize,
+    image: &mut RgbaImage,
+) -> Result<(), String> {
     if index == HEAD_SLOT {
+        outfit_core::normalize_character_head(image).map_err(|error| {
+            format!("基础头 PNG 无法安全去除右侧/底部透明边（不能丢弃可见像素）：{error}")
+        })?;
         return outfit_core::validate_character_head(image)
             .map_err(|error| format!("基础头 PNG：{error}"));
     }
@@ -152,6 +158,10 @@ pub(super) fn validate_image(index: usize, image: &RgbaImage) -> Result<(), Stri
     } else {
         PARTS[index - FIRST_SLOT]
     };
+    let layout = outfit_core::character_layout(part);
+    outfit_core::normalize_sheet(image, layout.width, layout.height).map_err(|error| {
+        format!("人物 PNG 无法安全去除右侧/底部透明边（不能丢弃可见像素）：{error}")
+    })?;
     outfit_core::validate_character_layer(CharacterLayer { part, image })
         .map_err(|error| format!("人物 PNG：{error}"))
 }

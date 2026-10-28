@@ -69,3 +69,67 @@ pub fn decode_png(bytes: &[u8]) -> Result<RgbaImage, Error> {
         rgba,
     })
 }
+
+/// Keep the fixed sheet window at (0, 0), removing only transparent right/bottom
+/// padding. Hidden RGB bytes within the window are preserved exactly. Validation
+/// finishes before mutation, so any error leaves the original image unchanged.
+pub fn normalize_sheet(image: &mut RgbaImage, width: usize, height: usize) -> Result<(), Error> {
+    let source_size = image
+        .width
+        .checked_mul(image.height)
+        .and_then(|n| n.checked_mul(4))
+        .ok_or_else(|| Error::new("Source RGBA dimensions overflow"))?;
+    if image.width == 0 || image.height == 0 || image.rgba.len() != source_size {
+        return Err(Error::new(format!(
+            "Invalid {} × {} RGBA image: buffer length is {}",
+            image.width,
+            image.height,
+            image.rgba.len()
+        )));
+    }
+    let target_size = width
+        .checked_mul(height)
+        .and_then(|n| n.checked_mul(4))
+        .ok_or_else(|| Error::new("Target RGBA dimensions overflow"))?;
+    if width == 0 || height == 0 {
+        return Err(Error::new("Target RGBA dimensions must be nonzero"));
+    }
+    if image.width < width || image.height < height {
+        return Err(Error::new(format!(
+            "Source {} × {} is smaller than target {width} × {height}",
+            image.width, image.height
+        )));
+    }
+    if image.width == width && image.height == height {
+        return Ok(());
+    }
+
+    // Visit only the excluded pixels, in top-down row-major order. Even alpha 1
+    // is artwork; transparent pixels may carry arbitrary RGB.
+    for y in 0..image.height {
+        let first_x = if y < height { width } else { 0 };
+        for x in first_x..image.width {
+            if image.rgba[(y * image.width + x) * 4 + 3] != 0 {
+                return Err(Error::new(format!(
+                    "Cannot normalize {} × {} to {width} × {height}: visible pixel at ({x}, {y}) outside target window",
+                    image.width, image.height
+                )));
+            }
+        }
+    }
+
+    if image.width != width {
+        let source_stride = image.width * 4;
+        let target_stride = width * 4;
+        for y in 1..height {
+            let source = y * source_stride;
+            image
+                .rgba
+                .copy_within(source..source + target_stride, y * target_stride);
+        }
+    }
+    image.rgba.truncate(target_size);
+    image.width = width;
+    image.height = height;
+    Ok(())
+}

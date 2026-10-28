@@ -30,6 +30,9 @@ PNG layers are decoded locally, never uploaded. No new assets are installed:
   omitting a linked input cannot preserve the original shared body layer.
   See the part dimensions/frame names below; aliases share the same source frame
   and cannot have independent images. Transparent/unmapped cells are not art.
+  Fully transparent right/bottom padding is removed from fixed inputs without
+  shifting their origin; visible pixels outside the required window are rejected.
+  Exact vanilla 86x215 heads keep normal-frame behavior. Hair stays at (0,0).
 
 Options:
   --identity PATH   Existing identity JSON OBJECT, not a .player binary/full save.
@@ -202,15 +205,23 @@ pub fn run(args: &[String]) -> Result<()> {
         ("--hair", CharacterPart::Hair),
     ] {
         if let Some(path) = options.get(flag) {
-            let image =
+            let mut image =
                 core::decode_png(&fs::read(path)?).map_err(|error| format!("{path}: {error}"))?;
             let image = if part == CharacterPart::Head {
+                core::normalize_character_head(&mut image)
+                    .map_err(|error| format!("{path}: {error}"))?;
                 let emotes_path = options.get("--emotes").expect("validated linked inputs");
-                let emotes = core::decode_png(&fs::read(emotes_path)?)
+                let mut emotes = core::decode_png(&fs::read(emotes_path)?)
+                    .map_err(|error| format!("{emotes_path}: {error}"))?;
+                let layout = core::character_layout(CharacterPart::Head);
+                core::normalize_sheet(&mut emotes, layout.width, layout.height)
                     .map_err(|error| format!("{emotes_path}: {error}"))?;
                 inputs.push(PathBuf::from(emotes_path));
                 core::compose_character_head(&image, &emotes)?
             } else {
+                let layout = core::character_layout(part);
+                core::normalize_sheet(&mut image, layout.width, layout.height)
+                    .map_err(|error| format!("{path}: {error}"))?;
                 image
             };
             images.push((part, image));
@@ -335,6 +346,7 @@ mod tests {
             CharacterPart::FrontArm,
             CharacterPart::BackArm,
             CharacterPart::Head,
+            CharacterPart::Hair,
         ];
         let mut images: Vec<_> = parts
             .iter()
@@ -357,6 +369,13 @@ mod tests {
             let i = (frame.y * images[3].width + frame.x) * 4;
             images[3].rgba[i..i + 4].copy_from_slice(&[10, 100, 220, 128]);
         }
+        for (part, image) in parts.iter().zip(&mut images) {
+            if *part != CharacterPart::Head {
+                let frame = &core::character_layout(*part).frames[0];
+                let offset = (frame.y * image.width + frame.x) * 4;
+                image.rgba[offset..offset + 4].copy_from_slice(&[80, 20, 210, 1]);
+            }
+        }
         let save_png = |path: &Path, image: &core::RgbaImage| {
             let file = fs::File::create(path).unwrap();
             let mut encoder = png::Encoder::new(file, image.width as u32, image.height as u32);
@@ -378,13 +397,18 @@ mod tests {
             ("--back-arm", &images[2]),
             ("--head", &base),
             ("--emotes", &images[3]),
+            ("--hair", &images[4]),
         ] {
             let path = directory.join(format!("{}.png", &flag[2..]));
             save_png(&path, image);
             args.extend([flag.to_owned(), path.to_str().unwrap().to_owned()]);
         }
         let mut missing_emotes = args.clone();
-        missing_emotes.truncate(missing_emotes.len() - 2);
+        let emotes_index = missing_emotes
+            .iter()
+            .position(|argument| argument == "--emotes")
+            .unwrap();
+        missing_emotes.drain(emotes_index..emotes_index + 2);
         assert!(
             run(&missing_emotes)
                 .unwrap_err()
@@ -411,15 +435,96 @@ mod tests {
             Strategy::Text,
         )
         .unwrap();
+        let hair = core::optimize_character_native(
+            &[CharacterLayer {
+                part: CharacterPart::Hair,
+                image: &images[4],
+            }],
+            true,
+            Strategy::Text,
+        )
+        .unwrap();
         let expected = core::identity_patch(
             &identity,
             Some(&body.encoding.directives),
             Some(&head.encoding.directives),
-            None,
+            Some(&hair.encoding.directives),
         )
         .unwrap();
         let actual: Value = serde_json::from_slice(&fs::read(&output).unwrap()).unwrap();
         assert_eq!(actual, expected);
+        let padded = |image: &core::RgbaImage, extra_width: usize, extra_height: usize| {
+            let width = image.width + extra_width;
+            let height = image.height + extra_height;
+            let mut rgba = [9, 8, 7, 0].repeat(width * height);
+            for y in 0..image.height {
+                rgba[y * width * 4..(y * width + image.width) * 4]
+                    .copy_from_slice(&image.rgba[y * image.width * 4..(y + 1) * image.width * 4]);
+            }
+            core::RgbaImage {
+                width,
+                height,
+                rgba,
+            }
+        };
+        let inputs = [
+            ("body", &images[0]),
+            ("front-arm", &images[1]),
+            ("back-arm", &images[2]),
+            ("head", &base),
+            ("emotes", &images[3]),
+            ("hair", &images[4]),
+        ];
+        for (name, image) in inputs {
+            // A non-native large head containing only the (0,0) single frame must
+            // prefer that window rather than the native normal-frame offset.
+            let image = if name == "head" {
+                padded(image, 44, 173)
+            } else {
+                padded(image, 43, 43)
+            };
+            save_png(&directory.join(format!("{name}.png")), &image);
+        }
+        run(&export).unwrap();
+        let actual: Value = serde_json::from_slice(&fs::read(&output).unwrap()).unwrap();
+        assert_eq!(actual, expected);
+        fs::remove_file(&output).unwrap();
+        let backup = directory.join("rejected-backup.json");
+        let mut rejected_export = export.clone();
+        rejected_export.extend([
+            "--backup-out".to_owned(),
+            backup.to_str().unwrap().to_owned(),
+        ]);
+        for (name, canonical) in inputs {
+            let path = directory.join(format!("{name}.png"));
+            let original = fs::read(&path).unwrap();
+            let mut image = core::decode_png(&original).unwrap();
+            let outside_x = if name == "head" { 86 } else { canonical.width };
+            image.rgba[outside_x * 4 + 3] = 1;
+            save_png(&path, &image);
+            assert!(run(&rejected_export).is_err());
+            assert!(!output.exists());
+            assert!(!backup.exists());
+            fs::write(&path, original).unwrap();
+        }
+        let mut native_head = core::RgbaImage {
+            width: 86,
+            height: 215,
+            rgba: vec![0; 86 * 215 * 4],
+        };
+        native_head.rgba[..4].copy_from_slice(&[1, 2, 3, 255]);
+        for y in 0..base.height {
+            let start = (y * native_head.width + 43) * 4;
+            native_head.rgba[start..start + base.width * 4]
+                .copy_from_slice(&base.rgba[y * base.width * 4..(y + 1) * base.width * 4]);
+        }
+        let padded_native = padded(&native_head, 1, 1);
+        for native in [native_head, padded_native] {
+            save_png(&directory.join("head.png"), &native);
+            run(&export).unwrap();
+            let actual: Value = serde_json::from_slice(&fs::read(&output).unwrap()).unwrap();
+            assert_eq!(actual, expected);
+        }
         for name in ["head.png", "emotes.png"] {
             let input = directory.join(name);
             let before = fs::read(&input).unwrap();

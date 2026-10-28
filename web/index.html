@@ -4,21 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Starbound 原版兼容像素工坊：浏览器本地精确处理 PNG，生成服装、帽子物品与完整动画人物的 identity 重绘补丁，无需新增游戏资产。">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#0b1118">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f3f5f3">
   <title>Starbound Outfit Studio · 服装与人物像素工坊</title>
   <link rel="icon" type="image/svg+xml" sizes="any" href="./assets/favicon.svg">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <a class="skip-link" href="#application">跳到像素编辑器</a>
-  <div class="terminal-strip"><span>~/starbound/outfit-studio</span><span>BROWSER LOCAL</span></div>
   <header class="studio-header">
     <div class="brand">
       <svg class="brand-mark" viewBox="0 0 40 40" width="40" height="40" fill="currentColor" aria-hidden="true"><path d="M8 4h24v4h4v24h-4v4H8v-4H4V8h4zm4 8v4H8v8h4v4h4v4h8v-4h4v-4h4v-8h-4v-4h-4V8h-8v4z"/><path d="M16 16h8v4h4v4h-8v4h-4z"/></svg>
-      <div class="brand-copy"><p class="eyebrow">STARBOUND / PIXEL WORKBENCH</p><h1>OUTFIT STUDIO</h1><p>Starbound 像素工坊 · 服装与人物重绘</p></div>
+      <div class="brand-copy"><h1>OUTFIT STUDIO</h1><p>Starbound 服装与人物重绘</p></div>
     </div>
-    <div class="header-meta"><div class="header-badges"><span>PNG LOCAL</span><span>RUST + WASM</span><span>VANILLA ASSETS</span></div><p>精确 RGBA · PNG 不上传</p><a href="https://github.com/Silverfeelin/Starbound-NgOutfitGenerator" target="_blank" rel="noopener noreferrer">基于 Silverfeelin 的 MIT 开源生成器 ↗</a></div>
+    <p class="header-meta">所有图像仅在此浏览器中处理，不上传。</p>
   </header>
   <main>
     <p id="startup" class="notice" role="status">正在载入本地 Rust / WebAssembly 像素编辑器…</p>
@@ -27,7 +26,7 @@
       <div class="workbench">
         <aside class="console-sidebar" aria-label="装备与编码设置">
           <section class="card equipment-panel" aria-labelledby="equipment-title">
-            <div class="panel-heading"><span class="section-index" aria-hidden="true">01</span><h2 id="equipment-title">模式选择</h2><span class="panel-code" aria-hidden="true">MODE</span></div>
+            <div class="panel-heading"><h2 id="equipment-title">制作类型</h2></div>
             <nav class="modes" aria-label="服装模式">
               <button id="mode-pants" class="mode selected" type="button" aria-pressed="true" aria-controls="pants-panel" aria-label="普通裤装"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M5 3h14v6h-1v12h-5V11h-2v10H6V9H5zm3 3v2h8V6z"/></svg><span class="mode-copy"><span>普通<wbr>裤装</span><small>387 × 258 · 动画精灵表</small></span></button>
               <button id="mode-hidingPants" class="mode" type="button" aria-pressed="false" aria-controls="pants-panel" aria-label="隐藏身体裤装"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M7 3h10v3h3v3h-3V7H7v2H4V6h3zm0 7h10v11h-4v-8h-2v8H7zM2 12h3v2H2zm17 0h3v2h-3z"/></svg><span class="mode-copy"><span>隐藏<wbr>身体<wbr>裤装</span><small>387 × 258 · 隐藏原角色身体</small></span></button>
@@ -39,7 +38,7 @@
             </nav>
           </section>
       <details class="card settings-panel" aria-labelledby="optimization-title">
-        <summary><h2 id="optimization-title">编码设置<span class="panel-code" aria-hidden="true">ENCODING</span></h2></summary>
+        <summary><h2 id="optimization-title">编码设置</h2></summary>
         <div class="settings-grid">
           <div>
             <label for="asset-profile">辅助图模板</label>
@@ -66,15 +65,10 @@
         <details class="technical-notes"><summary>模板、无损编码与估算说明</summary><p class="muted">自动择优比较上游原始、保守小图与双小图的完整衣物指令；明确选择固定模板时不会跨模板。上衣身体与双袖联合计分。保守小图仅替换 RGBA 完全相同的辅助采样；双小图进一步缩小辅助图，但依赖当前模板的透明度处理。</p><p class="muted">服装与帽子保留精确 RGBA，不减色、不合并动画帧。衣物有界搜索调色板分配、子集与安全排序，保留旧候选，不承诺全局最优；无改进时保留原候选。文本目标比较完整原长，最少遍数关闭调色板后比较原长，两者仅压缩最终赢家以显示估算；压缩目标才逐候选比较完整指令 Deflate。调色板可能增加一次 replace。文本或 Deflate 估算缩减不代表相同的网络收益或 FPS 改善。</p><p class="muted">PNG 仅在浏览器本地处理，无需上传游戏资产。</p></details>
         <p class="muted">衣物动画识别使用原版与 OpenSB 的实测指纹。旧导出的衣物需重新生成并替换，保存在物品中的旧指令不会自动更新。</p>
       </details>
-          <ol class="workflow-steps">
-            <li><strong>选择模式</strong><span>服装、帽子、人物或直接改色</span></li>
-            <li><strong>本地输入</strong><span>PNG；直接改色需原图与目标图配对</span></li>
-            <li><strong>导出结果</strong><span>物品、身份补丁或纯颜色指令</span></li>
-          </ol>
         </aside>
         <div class="editor-column">
       <section id="pants-panel" class="editor-panel" aria-labelledby="pants-heading">
-        <div class="panel-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="pants-heading">裤装</h2><span class="panel-code" aria-hidden="true">FILE INPUT</span></div>
+        <div class="panel-heading"><h2 id="pants-heading">裤装</h2></div>
         <p class="panel-description">上传 387 × 258 PNG 精灵表。普通与隐藏身体模式共用同一张图；隐藏身体模式会隐藏原角色身体。</p>
         <div id="pants-upload" class="single-upload"></div>
         <details class="card templates">
@@ -84,17 +78,17 @@
         </details>
       </section>
       <section id="chest-panel" class="editor-panel" aria-labelledby="chest-heading" hidden>
-        <div class="panel-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="chest-heading">上衣与袖子</h2><span class="panel-code" aria-hidden="true">FILE INPUT</span></div>
+        <div class="panel-heading"><h2 id="chest-heading">上衣与袖子</h2></div>
         <p class="panel-description">身体、前袖、后袖均为可选：上传任意一个或多个部位，合成同一件上衣。合成顺序固定为身体 → 前袖 → 后袖。</p>
         <div id="chest-uploads" class="upload-grid"></div>
         <details class="card templates">
           <summary>上衣与袖子模板下载</summary>
-          <p class="muted">身体为 86 × 258，前后袖均为 387 × 301。请勿缩放、裁切或合并动画帧。</p>
+          <p class="muted">身体为 86 × 258，前后袖均为 387 × 301。请勿缩放、移动或合并动画帧。</p>
           <div id="chest-templates" class="template-grid"></div>
         </details>
       </section>
       <section id="back-panel" class="editor-panel" aria-labelledby="back-heading" hidden>
-        <div class="panel-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="back-heading">背饰</h2><span class="panel-code" aria-hidden="true">FILE INPUT</span></div>
+        <div class="panel-heading"><h2 id="back-heading">背饰</h2></div>
         <p class="panel-description">上传 387 × 301 PNG 精灵表；保留透明背景，所有动画帧都保持独立。</p>
         <div id="back-upload" class="single-upload"></div>
         <details class="card templates">
@@ -103,7 +97,7 @@
         </details>
       </section>
       <section id="hat-panel" class="editor-panel" aria-labelledby="hat-heading" hidden>
-        <div class="panel-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="hat-heading">本地帽子 · Hatter</h2><span class="panel-code" aria-hidden="true">FILE INPUT</span></div>
+        <div class="panel-heading"><h2 id="hat-heading">帽子</h2></div>
         <p class="panel-description">选择宽、高各 1–256 像素的 PNG。86 × 215 精灵表会自动裁取右上 43 × 43 帧；其它尺寸使用整张图片并以中心定位。人物单帧预览已内置，无需导入游戏资产包。</p>
         <p class="muted compatibility-note">兼容基准为原版 1.4.4。旧生成器的 256 边界指令需要重新生成；当前使用统一采样链，无需选择引擎。衍生引擎和资源替换包仍以实际验证为准，详见项目说明。</p>
         <div class="hat-editor-grid">
@@ -129,21 +123,25 @@
         </div>
         <div class="hat-previews">
           <section class="card" aria-labelledby="hat-frame-heading">
-            <h3 id="hat-frame-heading">实际编码帧<span class="panel-code" aria-hidden="true">FRAME PREVIEW</span></h3>
+            <h3 id="hat-frame-heading">实际编码帧</h3>
             <p id="hat-geometry" class="muted" role="status">选择 PNG 后显示实际编码帧。</p>
             <div class="preview hat-frame-preview"><canvas id="hat-frame" hidden role="img" aria-label="实际帽子像素预览：86乘215时为右上43乘43帧"></canvas></div>
           </section>
           <section class="card" aria-labelledby="hat-alignment-heading">
-            <h3 id="hat-alignment-heading">单帧试戴 · Hatter<span class="panel-code" aria-hidden="true">PREVIEW</span></h3>
+            <h3 id="hat-alignment-heading">单帧试戴</h3>
             <p class="muted">43 × 43 人物与头发单帧，开关控制示例层。仅供站姿试戴，不模拟种族或动画，也不改变导出物品。<a href="https://github.com/Silverfeelin/Starbound-Hatter/tree/8a8d47314c639f84c50936bda61dfc198c39e49c/imgs" target="_blank" rel="noopener noreferrer">素材来源 Hatter</a>，人物版权归原权利方。</p>
             <div class="preview hat-alignment-preview"><canvas id="hat-alignment" role="img" aria-label="Starbound 人物单帧试戴预览，非游戏运行截图"></canvas></div>
           </section>
         </div>
       </section>
       <section id="character-panel" class="editor-panel" aria-labelledby="character-heading" hidden>
-        <div class="panel-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="character-heading">人物重绘 · Identity</h2><span class="panel-code" aria-hidden="true">FILE INPUT</span></div>
+        <div class="panel-heading"><h2 id="character-heading">人物重绘</h2></div>
         <p class="panel-description">重画身体与腿、独立前后手臂、基础头、表情叠加层，以及头发。基础头只画一次，网页在本地将它与各格表情合成，预览和导出使用同一份合成像素。导出写入角色 identity 的像素指令，不生成装备、不增加游戏资产；其他玩家无需安装这些 PNG。</p>
-        <p class="muted compatibility-note">完整人物需一起提供身体、前臂、后臂、基础头、表情叠加层五张来源图，避免共享 bodyDirectives 清除未编辑部位。也可以仅编辑头发。基础头接受 43 × 43，或原版 86 × 215 头部 PNG（只取 x=43、y=0 的 normal 格）。表情叠加层为 387 × 344，只画眼睛、嘴等变化：透明区域保留基础头，半透明颜色按 RGBA 合成，不需逐格重画完整头。身体 44 格、前臂 34 格、表情 29 格可分别独立绘制；真正的原版帧别名，以及后臂原本完全相同的空帧，仍须使用相同画面。不能新增骨骼或游戏动画状态。预览是像素检查，不是引擎动作证明。</p>
+        <p class="compatibility-note">完整重绘须同时提供身体、前臂、后臂、基础头和表情五张图，避免共享指令清除未编辑部位。也可以仅编辑头发。预览用于像素检查，不代表游戏内所有动作效果。</p>
+        <details class="usage-notes">
+          <summary>输入尺寸、表情合成与共享帧说明</summary>
+          <p class="muted">基础头接受 43 × 43，或原版 86 × 215 头部 PNG（只取 x=43、y=0 的 normal 格）。表情叠加层为 387 × 344，只画眼睛、嘴等变化：透明区域保留基础头，半透明颜色按 RGBA 合成，不需逐格重画完整头。身体 44 格、前臂 34 格、表情 29 格可分别独立绘制；真正的原版帧别名，以及后臂原本完全相同的空帧，仍须使用相同画面。不能新增骨骼或游戏动画状态。</p>
+        </details>
         <div id="character-uploads" class="character-upload-grid"></div>
         <details class="card templates">
           <summary>人物空白 PNG、帧布局与图像参考下载</summary>
@@ -152,7 +150,7 @@
         </details>
         <div class="character-preview-grid">
           <section class="card">
-            <h3>逐帧像素检查<span class="panel-code" aria-hidden="true">FRAME PREVIEW</span></h3>
+            <h3>逐帧像素检查</h3>
             <label for="character-part">预览部位</label>
             <select id="character-part"><option value="0">身体与腿</option><option value="1">前臂</option><option value="2">后臂</option><option value="3">基础头 + 表情（合成结果）</option><option value="4">头发</option></select>
             <label for="character-frame">原版帧 / 共享别名</label>
@@ -162,7 +160,7 @@
             <div class="preview character-frame-preview"><canvas id="character-frame-canvas" width="43" height="43" role="img" aria-label="选中的人物图层43乘43像素，头部使用基础头与表情的本地合成结果"></canvas></div>
           </section>
           <section class="card">
-            <h3>分层站姿组合<span class="panel-code" aria-hidden="true">COMPOSITE</span></h3>
+            <h3>分层站姿组合</h3>
             <p class="muted">固定后臂 → 身体 → 合成头 → 头发 → 前臂顺序；使用各层 idle / neutral 首帧，头部使用基础头与表情叠加层的 RGBA 合成结果。上传卡片各自显示原图。保留透明像素。没有模拟瞄准旋转、帽子遮罩、种族偏移或游戏染色。</p>
             <div class="preview character-frame-preview"><canvas id="character-composite" width="43" height="43" role="img" aria-label="人物固定站姿组合，头部为基础头与表情本地合成结果，非游戏运行截图"></canvas></div>
           </section>
@@ -197,9 +195,11 @@
         </section>
       </section>
       <section id="recolor-panel" class="editor-panel" aria-labelledby="recolor-heading" hidden>
-        <div class="panel-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="recolor-heading">原版直接改色</h2><span class="panel-code" aria-hidden="true">RGBA MAPPING</span></div>
+        <div class="panel-heading"><h2 id="recolor-heading">原版直接改色</h2></div>
         <p class="panel-description">将你提供的原版基底 PNG 与目标 PNG 逐像素配对，联合所有图层生成一段纯 <code>?replace</code> directives。不需要上传整份 PAK；两张 PNG 都只在浏览器本地由 Rust 解码，不经 Canvas 读回像素。</p>
-        <div class="card recolor-guidance">
+        <p class="compatibility-note">请提供所有受影响帧与图层的真实原图。同一源 RGBA 必须始终对应同一目标 RGBA；未提供的帧不会验证，不能用本模式任意新增局部图案。</p>
+        <details class="usage-notes recolor-guidance">
+          <summary>改色前须知：有效帧、隐藏颜色与应用方式</summary>
           <h3>原图必须对应真正应用的基底与有效帧</h3>
           <p>请自行从有权使用的原版资源准备实际将应用指令的图层 / 动画帧；原图必须包含指令执行前的真实 RGBA。若还会先执行染色或其它 directives，必须用该阶段的真实结果作原图。本工具不会根据文件名推断物品或自动选取帧。</p>
           <p>请覆盖所有将应用同一指令的有效帧与图层，包括攀爬 <code>climb</code> 等动作。精灵表的无效空格应从两图同样裁去，或将有效帧分别裁成配对 PNG；也可先将有效帧按相同顺序合并成两张图。上传整表时，表中每个像素都会参与约束，本工具不会识别或忽略无效格。</p>
@@ -207,17 +207,21 @@
           <h3>严格完整 RGBA，不是任意位置自绘</h3>
           <p>同一源 RGBA 必须始终变成同一目标 RGBA，包括保持不变的位置、跨图层重复色、<code>alpha=1</code> 和完全透明像素的隐藏 RGB。若一个源色需要分裂成多个目标色，将显示冲突层与坐标并拒绝生成，<strong>不自动 fallback</strong> 到其它模式。</p>
           <p><code>alpha=0</code> 的 RGB 虽然预览不可见，仍属于严格匹配条件；不要使用会清零透明 RGB 的编辑器重存原图。本模式使用原图隐藏 RGB，不生成通用自绘模式的透明地址画布，两者不是逐 RGBA 可互换的编码。可以映射 alpha，但将透明色改为可见色可能同时显露所有同源透明像素。</p>
-        </div>
+        </details>
         <div class="actions recolor-add-actions"><button id="recolor-add" class="secondary" type="button">增加原图 / 目标图配对</button></div>
         <div id="recolor-pairs" class="recolor-pairs"></div>
         <p id="recolor-validation" class="file-status" role="status" aria-live="polite">请添加并载入至少一组 PNG；生成时联合检查全部配对。</p>
       </section>
+      <details class="input-guide">
+        <summary>PNG 尺寸与透明余边</summary>
+        <p class="input-note">服装和人物 PNG 右侧、底部的全透明余边会自动去除，并显示处理后的尺寸；不缩放、不移动帧、不删除内部空白格。多余区域有可见像素时会拒绝处理。帽子与直接改色按各自规则读取。</p>
+      </details>
       <section id="export-section" class="card export-panel" aria-labelledby="export-heading">
-        <div class="panel-heading"><span class="section-index" aria-hidden="true">03</span><h2 id="export-heading">导出：<span id="garment-name">普通裤装</span></h2><span class="panel-code" aria-hidden="true">EXPORT</span></div>
+        <div class="panel-heading"><h2 id="export-heading">导出：<span id="garment-name">普通裤装</span></h2></div>
         <div class="actions">
           <button id="download-json" type="button" disabled>下载 JSON</button>
           <button id="copy-json" class="secondary" type="button" disabled>复制 JSON</button>
-          <button id="download-command" type="button" disabled>下载命令</button>
+          <button id="download-command" class="secondary" type="button" disabled>下载命令</button>
           <button id="copy-command" class="secondary" type="button" disabled>复制命令</button>
         </div>
         <div id="recolor-export-help" hidden>
@@ -233,7 +237,7 @@
       </section>
       <p id="notice" class="notice" role="status" aria-live="polite" aria-atomic="true" hidden></p>
       <section id="result" class="card result-panel" aria-labelledby="result-heading" hidden>
-        <div class="panel-heading"><h2 id="result-heading">本次生成结果</h2><span class="panel-code" aria-hidden="true">OUTPUT</span></div>
+        <div class="panel-heading"><h2 id="result-heading">生成结果</h2></div>
         <dl id="stats" class="result-grid"></dl>
         <details class="technical-notes"><summary>统计口径：文本字节与压缩估算</summary><p class="muted">完整导出文本为实际 UTF-8 字节。服装、帽子与人物的像素指令使用各自处理链作为基线；若显示 Deflate，则为浏览器 CompressionStream 对完整 directives 的独立压缩估算，不含物品 JSON、协议或其他装备数据，不是实际网络包大小或 FPS 测量。原版直接改色只统计实际输出的纯 directives，不使用辅助图或压缩候选估算；零字节表示无需改色。</p></details>
         <label for="output">生成结果（只读，可手动选择复制）</label>
@@ -247,7 +251,15 @@
       </div>
     </div>
   </main>
-  <footer class="studio-footer"><p>本地 Rust / WebAssembly 编码 · 无外部脚本 · 不上传 PNG 或游戏资产</p><p><a href="https://github.com/Silverfeelin/Starbound-NgOutfitGenerator/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">服装：MIT / Silverfeelin</a> · <a href="https://github.com/Silverfeelin/Starbound-Hatter" target="_blank" rel="noopener noreferrer">帽子算法改编自 Hatter / Silverfeelin</a>（<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>，Rust 移植与无损编码改进）</p><p>非官方像素工坊 · 界面边框与装备图标为原创；人物试戴单帧来自 Hatter，版权归原权利方。像素字体：<a href="./assets/fonts/OFL.txt" target="_blank" rel="noopener noreferrer">Silkscreen / OFL 1.1</a>。</p></footer>
+  <footer class="studio-footer">
+    <p>为 Starbound 像素创作而做 · 非官方工具</p>
+    <details class="credits">
+      <summary>开源许可与素材来源</summary>
+      <p>本地 Rust / WebAssembly 编码 · 无外部脚本 · 不上传 PNG 或游戏资产</p>
+      <p><a href="https://github.com/Silverfeelin/Starbound-NgOutfitGenerator/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">服装：MIT / Silverfeelin</a> · <a href="https://github.com/Silverfeelin/Starbound-Hatter" target="_blank" rel="noopener noreferrer">帽子算法改编自 Hatter / Silverfeelin</a>（<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>，Rust 移植与无损编码改进）</p>
+      <p>装备图标为原创；人物试戴单帧来自 Hatter，版权归原权利方。像素字体：<a href="./assets/fonts/OFL.txt" target="_blank" rel="noopener noreferrer">Silkscreen / OFL 1.1</a>。</p>
+    </details>
+  </footer>
   <script type="module">
     import init from './pkg/outfit_web.js';
     init().catch(error => {

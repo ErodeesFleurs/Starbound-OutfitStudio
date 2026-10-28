@@ -20,8 +20,8 @@ pub use assets::{descriptor, hat_descriptor, layout, spawn_command, template};
 pub use character::{
     CharacterFrame, CharacterLayer, CharacterLayout, CharacterPart, apply_identity_patch,
     character_candidates, character_layout, character_prefix, character_suppressed_sources,
-    compose_character_head, identity_command, identity_patch, optimize_character_native,
-    validate_character_head, validate_character_layer,
+    compose_character_head, identity_command, identity_patch, normalize_character_head,
+    optimize_character_native, validate_character_head, validate_character_layer,
 };
 pub use encoder::encode;
 pub use garment::{
@@ -30,7 +30,7 @@ pub use garment::{
 };
 pub use hat::{hat_candidates, hat_geometry, optimize_hat_native};
 pub use optimizer::{candidates, optimize_native, select};
-pub use png_decode::decode_png;
+pub use png_decode::{decode_png, normalize_sheet};
 pub use recolor::{RecolorLayer, recolor_directives};
 
 #[derive(Debug, Clone, PartialEq, Eq)]

@@ -89,6 +89,12 @@ struct Upload {
     image: Rc<RgbaImage>,
 }
 
+struct ReadPng {
+    image: RgbaImage,
+    source_width: usize,
+    source_height: usize,
+}
+
 struct Slot {
     input: HtmlInputElement,
     clear: HtmlButtonElement,
@@ -751,7 +757,12 @@ fn upload(app: &Application, index: usize, file: File) {
             return;
         }
         match result {
-            Ok(Some(image)) => {
+            Ok(Some(read)) => {
+                let ReadPng {
+                    image,
+                    source_width,
+                    source_height,
+                } = read;
                 if let Err(error) = draw_preview(&app.slots[index].canvas, &image) {
                     app.slots[index].status.set_class_name("file-status error");
                     app.slots[index].status.set_text_content(Some(&error));
@@ -761,12 +772,24 @@ fn upload(app: &Application, index: usize, file: File) {
                 let id = app.next_image_id;
                 let slot = &mut app.slots[index];
                 slot.status.set_class_name("file-status");
-                slot.status.set_text_content(Some(&format!(
-                    "{} · {} × {} · 本地已载入",
-                    file.name(),
-                    image.width,
-                    image.height
-                )));
+                let status = if (source_width, source_height) == (image.width, image.height) {
+                    format!(
+                        "{} · {} × {} · 本地已载入",
+                        file.name(),
+                        image.width,
+                        image.height
+                    )
+                } else {
+                    format!(
+                        "{} · {} × {} → {} × {}，已自动去除右侧/底部透明边 · 本地已载入",
+                        file.name(),
+                        source_width,
+                        source_height,
+                        image.width,
+                        image.height
+                    )
+                };
+                slot.status.set_text_content(Some(&status));
                 slot.upload = Some(Upload {
                     id,
                     image: Rc::new(image),
@@ -788,7 +811,7 @@ async fn read_png(
     app: &Application,
     index: usize,
     ticket: u64,
-) -> Result<Option<RgbaImage>, String> {
+) -> Result<Option<ReadPng>, String> {
     let buffer = JsFuture::from(file.array_buffer())
         .await
         .map_err(|error| format!("无法读取 PNG：{}", js_error(error)))?;
@@ -798,24 +821,27 @@ async fn read_png(
         return Ok(None);
     }
     let bytes = Uint8Array::new(&buffer).to_vec();
-    let image =
+    let mut image =
         outfit_core::decode_png(&bytes).map_err(|error| format!("无法解码 PNG：{error}"))?;
+    let source_width = image.width;
+    let source_height = image.height;
     if index == HAT_SLOT {
         outfit_core::hat_geometry(&image).map_err(|error| format!("帽子 PNG：{error}"))?;
     } else if index >= character::FIRST_SLOT {
-        character::validate_image(index, &image)?;
+        character::normalize_and_validate_image(index, &mut image)?;
     } else {
         let frames = outfit_core::layout(SHEETS[index]);
         let width = frames.first().map_or(0, |row| row.len()) * 43;
         let height = frames.len() * 43;
-        if image.width != width || image.height != height {
-            return Err(format!(
-                "PNG 尺寸应为 {width} × {height}，实际为 {} × {}。请使用下方对应的精灵表模板。",
-                image.width, image.height
-            ));
-        }
+        outfit_core::normalize_sheet(&mut image, width, height).map_err(|error| {
+            format!("PNG 无法安全去除右侧/底部透明边（不能丢弃可见像素）：{error}")
+        })?;
     }
-    Ok(Some(image))
+    Ok(Some(ReadPng {
+        image,
+        source_width,
+        source_height,
+    }))
 }
 
 fn canvas_context(canvas: &HtmlCanvasElement) -> Result<CanvasRenderingContext2d, JsValue> {

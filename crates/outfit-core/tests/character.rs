@@ -48,6 +48,81 @@ fn render_suffix(encoding: &Encoding, part: CharacterPart, rgba: [u8; 4]) -> [u8
             stage.get(&rgba).copied().unwrap_or(rgba)
         })
 }
+
+#[test]
+fn captured_build_fingerprints_render_art_without_a_visible_address_canvas() {
+    let part = CharacterPart::Body;
+    let mut body = blank(part);
+    let front = blank(CharacterPart::FrontArm);
+    let back = blank(CharacterPart::BackArm);
+    let samples = [
+        ("/humanoid/floran/femalebody.png:run.3", "906e4670"),
+        ("/humanoid/floran/femalebody.png:jump.3", "93704775"),
+        ("/humanoid/floran/femalebody.png:climb.1", "af926f65"),
+        ("/humanoid/floran/malebody.png:idle.5", "d7af8d64"),
+        ("/humanoid/floran/malebody.png:walk.3", "91714a5b"),
+    ];
+    let points = [(0, 0, [31, 91, 177, 255]), (17, 19, [23, 45, 67, 1])];
+    for (source, _) in samples {
+        let frame = character_layout(part)
+            .frames
+            .iter()
+            .find(|frame| frame.source_paths.iter().any(|path| path == source))
+            .unwrap();
+        for (x, y, rgba) in points {
+            paint(&mut body, frame.x + x, frame.y + 42 - y, rgba);
+        }
+    }
+    let recognition: HashMap<_, _> = character_prefix(part)
+        .split('?')
+        .find_map(|stage| stage.strip_prefix("replace;"))
+        .unwrap()
+        .split(';')
+        .map(|pair| {
+            let (from, to) = pair.split_once('=').unwrap();
+            (color(from), color(to))
+        })
+        .collect();
+    let layers = [
+        CharacterLayer { part, image: &body },
+        CharacterLayer {
+            part: CharacterPart::FrontArm,
+            image: &front,
+        },
+        CharacterLayer {
+            part: CharacterPart::BackArm,
+            image: &back,
+        },
+    ];
+    for (palette, strategy) in [
+        (false, Strategy::Text),
+        (true, Strategy::Text),
+        (true, Strategy::Compressed),
+        (false, Strategy::Passes),
+    ] {
+        for encoding in character_candidates(&layers, palette, strategy).unwrap() {
+            for (source, sample) in samples {
+                let frame = character_layout(part)
+                    .frames
+                    .iter()
+                    .find(|frame| frame.source_paths.iter().any(|path| path == source))
+                    .unwrap();
+                let sample = color(sample);
+                let seed = recognition.get(&sample).copied().unwrap_or(sample);
+                // Native helper endpoints preserve G/A and ramp R/B over 256.
+                for (x, y, wanted) in points.into_iter().chain([(42, 42, [42, frame.id, 42, 0])]) {
+                    let address = [
+                        ((u32::from(seed[0]) * (x + 1) as u32) / 256) as u8,
+                        seed[1],
+                        ((u32::from(seed[2]) * (y + 1) as u32) / 256) as u8,
+                        seed[3],
+                    ];
+                    assert_eq!(render_suffix(&encoding, part, address), wanted, "{source}");
+                }
+            }
+        }
+    }
+}
 fn baseline() -> Value {
     json!({"name":"Original 雪", "species":"human", "gender":"female", "personality":{"idle":"idle.4","headOffset":[1,2]}, "hairGroup":"hair", "hairType":"male1", "hairDirectives":"?replace;fff=12345680", "facialHairGroup":"", "facialHairType":"", "facialHairDirectives":"", "facialMaskGroup":"", "facialMaskType":"", "facialMaskDirectives":"", "bodyDirectives":"?replace;fff=000", "emoteDirectives":"", "color":[12,23,34,255]})
 }
@@ -543,6 +618,205 @@ fn transparent_emotes_copy_head_and_vanilla_normal_crop_is_identical() {
                 &head.rgba[y * 43 * 4..(y + 1) * 43 * 4]
             );
         }
+    }
+}
+
+fn pad_character_input(image: &RgbaImage, width: usize, height: usize) -> RgbaImage {
+    let mut padded = RgbaImage {
+        width,
+        height,
+        rgba: [201, 202, 203, 0].repeat(width * height),
+    };
+    for y in 0..image.height {
+        let source = y * image.width * 4;
+        let target = y * width * 4;
+        padded.rgba[target..target + image.width * 4]
+            .copy_from_slice(&image.rgba[source..source + image.width * 4]);
+    }
+    padded
+}
+
+#[test]
+fn normalized_character_sheets_keep_frame_addresses_and_unused_art() {
+    let part = CharacterPart::Head;
+    let layout = character_layout(part);
+    let mut original = blank(part);
+    for (index, frame) in layout.frames.iter().enumerate() {
+        paint(
+            &mut original,
+            frame.x + 17,
+            frame.y + 19,
+            [index as u8, 211, 255, [1, 128, 255][index % 3]],
+        );
+    }
+    let mut padded = pad_character_input(&original, layout.width + 43, layout.height + 1);
+    assert!(
+        character_candidates(
+            &[CharacterLayer {
+                part,
+                image: &padded,
+            }],
+            false,
+            Strategy::Text,
+        )
+        .is_err()
+    );
+    normalize_sheet(&mut padded, layout.width, layout.height).unwrap();
+    assert_eq!(padded, original);
+    for encoding in character_candidates(
+        &[CharacterLayer {
+            part,
+            image: &padded,
+        }],
+        false,
+        Strategy::Text,
+    )
+    .unwrap()
+    {
+        for (index, frame) in layout.frames.iter().enumerate() {
+            assert_eq!(
+                render_suffix(&encoding, part, [17, frame.id, 23, 0]),
+                [index as u8, 211, 255, [1, 128, 255][index % 3]],
+                "{}",
+                frame.name
+            );
+            let empty = [18, frame.id, 23, 0];
+            assert_eq!(render_suffix(&encoding, part, empty), empty);
+        }
+    }
+
+    let (x, y) = (0..layout.height)
+        .flat_map(|y| (0..layout.width).map(move |x| (x, y)))
+        .find(|&(x, y)| {
+            !layout
+                .frames
+                .iter()
+                .any(|frame| x >= frame.x && x < frame.x + 43 && y >= frame.y && y < frame.y + 43)
+        })
+        .unwrap();
+    paint(&mut original, x, y, [91, 92, 93, 1]);
+    let mut padded = pad_character_input(&original, layout.width + 1, layout.height + 43);
+    normalize_sheet(&mut padded, layout.width, layout.height).unwrap();
+    assert_eq!(padded, original);
+    assert!(
+        validate_character_layer(CharacterLayer {
+            part,
+            image: &padded,
+        })
+        .is_err()
+    );
+}
+
+#[test]
+fn exact_native_head_has_priority_even_when_single_frame_would_fit() {
+    let emotes = blank(CharacterPart::Head);
+    for extra_native_art in [false, true] {
+        let mut native = RgbaImage {
+            width: 86,
+            height: 215,
+            rgba: [91, 92, 93, 0].repeat(86 * 215),
+        };
+        paint(&mut native, 0, 0, [255, 0, 0, 255]);
+        if extra_native_art {
+            paint(&mut native, 85, 214, [4, 5, 6, 1]);
+        }
+        let original = native.rgba.clone();
+        normalize_character_head(&mut native).unwrap();
+        assert_eq!((native.width, native.height), (86, 215));
+        assert_eq!(native.rgba, original);
+        let expected = RgbaImage {
+            width: 43,
+            height: 43,
+            rgba: [91, 92, 93, 0].repeat(43 * 43),
+        };
+        assert_eq!(
+            compose_character_head(&native, &emotes).unwrap(),
+            compose_character_head(&expected, &emotes).unwrap()
+        );
+    }
+}
+
+#[test]
+fn padded_head_chooses_single_frame_before_native_and_preserves_composition() {
+    let mut head = base_head();
+    for (index, pixel) in head.rgba.as_chunks_mut::<4>().0.iter_mut().enumerate() {
+        pixel.copy_from_slice(&[
+            index as u8,
+            (index / 43) as u8,
+            99,
+            [0, 1, 128, 255][index % 4],
+        ]);
+    }
+    let emotes = blank(CharacterPart::Head);
+    let composed = compose_character_head(&head, &emotes).unwrap();
+    for (width, height) in [
+        (43, 43),
+        (44, 43),
+        (43, 44),
+        (44, 44),
+        (86, 86),
+        (87, 216),
+        (129, 258),
+    ] {
+        let mut padded = pad_character_input(&head, width, height);
+        if width != 43 || height != 43 {
+            assert!(validate_character_head(&padded).is_err());
+            assert!(compose_character_head(&padded, &emotes).is_err());
+        }
+        normalize_character_head(&mut padded).unwrap();
+        assert_eq!(padded, head);
+        assert_eq!(compose_character_head(&padded, &emotes).unwrap(), composed);
+    }
+
+    // Other native poses remain byte-for-byte present; the composer alone
+    // selects normal at (43, 0), just as it does for an unpadded native input.
+    let mut native = RgbaImage {
+        width: 86,
+        height: 215,
+        rgba: vec![231; 86 * 215 * 4],
+    };
+    for y in 0..43 {
+        let offset = (y * 86 + 43) * 4;
+        native.rgba[offset..offset + 43 * 4]
+            .copy_from_slice(&head.rgba[y * 43 * 4..(y + 1) * 43 * 4]);
+    }
+    for (width, height) in [(87, 215), (86, 216), (87, 216), (129, 258)] {
+        let mut padded = pad_character_input(&native, width, height);
+        normalize_character_head(&mut padded).unwrap();
+        assert_eq!(padded, native);
+        assert_eq!(compose_character_head(&padded, &emotes).unwrap(), composed);
+    }
+}
+
+#[test]
+fn rejected_head_normalization_preserves_source_after_both_candidate_attempts() {
+    for (width, height, length, visible) in [
+        (42, 43, 42 * 43 * 4, None),
+        (43, 42, 43 * 42 * 4, None),
+        (44, 43, 44 * 43 * 4, Some((43, 0))),
+        (86, 214, 86 * 214 * 4, Some((85, 213))),
+        (87, 216, 87 * 216 * 4, Some((86, 215))),
+        (43, 43, 43 * 43 * 4 - 1, None),
+        (86, 215, 86 * 215 * 4 + 1, None),
+        (87, 216, 0, None),
+        (0, 43, 0, None),
+        (usize::MAX, usize::MAX, 0, None),
+    ] {
+        let mut image = RgbaImage {
+            width,
+            height,
+            rgba: vec![0; length],
+        };
+        if let Some((x, y)) = visible {
+            paint(&mut image, x, y, [22, 33, 44, 1]);
+        }
+        let original = RgbaImage {
+            width,
+            height,
+            rgba: image.rgba.clone(),
+        };
+        assert!(normalize_character_head(&mut image).is_err());
+        assert_eq!(image, original);
     }
 }
 

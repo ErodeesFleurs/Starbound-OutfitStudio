@@ -69,6 +69,13 @@ struct CharacterFingerprint {
     source_path: String,
     vanilla: String,
     opensb: String,
+    #[serde(default)]
+    additional: Vec<CharacterObservation>,
+}
+#[derive(Deserialize)]
+struct CharacterObservation {
+    runtime: String,
+    rgba: String,
 }
 #[derive(Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -89,7 +96,7 @@ static DATA: LazyLock<CharacterData> = LazyLock::new(|| {
 });
 
 // A shared directive cannot distinguish two sources with the same fingerprint.
-// Check BOTH engines in one namespace before trusting any replacement table:
+// Check all measured builds in one namespace before trusting any replacement:
 // HashMap::insert alone would silently turn a collision into the wrong pose.
 fn validate_fingerprints(data: &CharacterData) -> Result<(), Error> {
     let mut sources = HashMap::new();
@@ -140,19 +147,29 @@ fn validate_fingerprints(data: &CharacterData) -> Result<(), Error> {
             .ok_or_else(|| {
                 Error::new("Unknown or duplicate native character fingerprint source")
             })?;
-        for color in [&fingerprint.vanilla, &fingerprint.opensb] {
+        for (color, runtime) in [
+            (fingerprint.vanilla.as_str(), "vanilla"),
+            (fingerprint.opensb.as_str(), "opensb"),
+        ]
+        .into_iter()
+        .chain(
+            fingerprint
+                .additional
+                .iter()
+                .map(|sample| (sample.rgba.as_str(), sample.runtime.as_str())),
+        ) {
             let key = (head, fingerprint_color(color)?);
             if let Some(previous) = observed.insert(key, id)
                 && previous != id
             {
                 return Err(Error::new(format!(
-                    "Cross-engine character fingerprint collision at {}: IDs {previous} and {id}",
+                    "Cross-engine character fingerprint collision at {} ({runtime}): IDs {previous} and {id}",
                     fingerprint.source_path
                 )));
             }
             if prefixes.get(&key) != Some(&id) {
                 return Err(Error::new(format!(
-                    "Character prefix does not map native fingerprint {color} to ID {id} at {}",
+                    "Character prefix does not map native fingerprint {color} ({runtime}) to ID {id} at {}",
                     fingerprint.source_path
                 )));
             }
@@ -203,6 +220,23 @@ fn equal_art(image: &RgbaImage, a: &CharacterFrame, b: &CharacterFrame) -> bool 
         })
     })
 }
+/// Normalize explicit base-head input without changing native normal-frame
+/// extraction. Exact vanilla sheets take priority; otherwise prefer a safely
+/// padded single frame, falling back to the vanilla window only when needed.
+/// Both candidate windows use the original (0, 0), and failure leaves it intact.
+pub fn normalize_character_head(image: &mut RgbaImage) -> Result<(), Error> {
+    if (image.width, image.height) == (86, 215) {
+        return crate::normalize_sheet(image, 86, 215);
+    }
+    match crate::normalize_sheet(image, 43, 43) {
+        Ok(()) => Ok(()),
+        Err(_) if image.width >= 86 && image.height >= 215 => {
+            crate::normalize_sheet(image, 86, 215)
+        }
+        Err(error) => Err(error),
+    }
+}
+
 /// Validate a single 43 × 43 head or a vanilla 86 × 215 head sheet.
 /// Vanilla sheets contribute only their normal frame at (43, 0).
 pub fn validate_character_head(image: &RgbaImage) -> Result<(), Error> {
@@ -654,6 +688,38 @@ mod fingerprint_tests {
                 .unwrap_err()
                 .to_string()
                 .contains("duplicate native character fingerprint source")
+        );
+    }
+
+    #[test]
+    fn supplemental_build_samples_cannot_collide_or_escape_prefix_validation() {
+        let mut data = table();
+        let other_pose = data.fingerprints[0].vanilla.clone();
+        let sample = data
+            .fingerprints
+            .iter_mut()
+            .find_map(|fingerprint| fingerprint.additional.first_mut())
+            .unwrap();
+        sample.rgba = other_pose;
+        assert!(
+            validate_fingerprints(&data)
+                .unwrap_err()
+                .to_string()
+                .contains("Cross-engine character fingerprint collision")
+        );
+
+        let mut data = table();
+        let sample = data
+            .fingerprints
+            .iter_mut()
+            .find_map(|fingerprint| fingerprint.additional.first_mut())
+            .unwrap();
+        sample.rgba = "01020304".into();
+        assert!(
+            validate_fingerprints(&data)
+                .unwrap_err()
+                .to_string()
+                .contains("does not map native fingerprint")
         );
     }
 }
