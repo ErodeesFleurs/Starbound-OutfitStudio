@@ -52,6 +52,8 @@ cargo xtask serve --no-build --port 4201 # 不重复构建
 
 网页采用浅色工作区与深色模式栏。桌面并排显示输入和预览，窄屏改为单列；主要按钮为下载 JSON，其余导出方式仍可直接使用。编码设置、模板、透明余边说明和页脚许可按需展开，人物存档安全及改色约束保持可见。支持键盘操作、200% 字号、强制高对比度和减少动态效果。
 
+装备图标采用原创 16 × 16 像素 SVG，以深色轮廓和有限色阶表现衣物、头盔、背包与人物，界面按整数倍显示。下载、复制、清除、配对增删、翻帧和折叠箭头使用同网格的功能图标，仍保留完整中文标签；页眉与页签共用原创行星标记。资源位于 [public/assets/icons](public/assets/icons) 和 [favicon.svg](public/assets/favicon.svg)，采用本项目 MIT 许可，不是从游戏提取的贴图。
+
 ### 服装
 
 1. 在对应模式下载 PNG／PDN 模板，按原帧位置绘制，保持透明背景、43 × 43 帧格和左上原点不变。
@@ -215,7 +217,7 @@ cargo run -p outfit-cli -- native-verify --help
 | [crates/outfit-web](crates/outfit-web) | Rust DOM 交互、上传、预览、剪贴板和下载 |
 | [crates/outfit-cli](crates/outfit-cli) | 原生命令行、只读资产解析和游戏引擎验证 |
 | [web](web) | HTML 和 CSS |
-| [public/assets](public/assets) | 模板、布局、参考图和字体 |
+| [public/assets](public/assets) | 原创像素图标、模板、布局、参考图和字体 |
 | [xtask](xtask) | WASM 构建、静态打包与本地服务器 |
 | [tools](tools) | 游戏 Lua 环境中使用的原生图像探针 |
 | [deploy](deploy) | Caddy 与 systemd 部署示例 |

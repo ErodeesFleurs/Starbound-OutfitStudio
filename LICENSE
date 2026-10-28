@@ -55,7 +55,9 @@ The font is licensed under the SIL Open Font License, Version 1.1, not MIT.
 The full copyright and license are included in public/assets/fonts/OFL.txt
 and distributed alongside the font in the static website.
 
-The pixel interface frames and equipment icons are original to this project;
+The pixel interface frames, brand mark, equipment icons and action glyphs are
+original to this project and covered by the MIT grant above. The artwork in
+public/assets/icons and public/assets/favicon.svg uses original pixel grids;
 no Starbound UI artwork or proprietary game fonts are bundled.
 
 Third-party single-frame character preview

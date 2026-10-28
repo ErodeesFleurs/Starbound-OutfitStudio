@@ -14,7 +14,7 @@
   <a class="skip-link" href="#application">跳到像素编辑器</a>
   <header class="studio-header">
     <div class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" width="40" height="40" fill="currentColor" aria-hidden="true"><path d="M8 4h24v4h4v24h-4v4H8v-4H4V8h4zm4 8v4H8v8h4v4h4v4h8v-4h4v-4h4v-8h-4v-4h-4V8h-8v4z"/><path d="M16 16h8v4h4v4h-8v4h-4z"/></svg>
+      <img class="brand-mark" src="./assets/favicon.svg" width="48" height="48" alt="" aria-hidden="true">
       <div class="brand-copy"><h1>OUTFIT STUDIO</h1><p>Starbound 服装与人物重绘</p></div>
     </div>
     <p class="header-meta">所有图像仅在此浏览器中处理，不上传。</p>
@@ -28,13 +28,13 @@
           <section class="card equipment-panel" aria-labelledby="equipment-title">
             <div class="panel-heading"><h2 id="equipment-title">制作类型</h2></div>
             <nav class="modes" aria-label="服装模式">
-              <button id="mode-pants" class="mode selected" type="button" aria-pressed="true" aria-controls="pants-panel" aria-label="普通裤装"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M5 3h14v6h-1v12h-5V11h-2v10H6V9H5zm3 3v2h8V6z"/></svg><span class="mode-copy"><span>普通<wbr>裤装</span><small>387 × 258 · 动画精灵表</small></span></button>
-              <button id="mode-hidingPants" class="mode" type="button" aria-pressed="false" aria-controls="pants-panel" aria-label="隐藏身体裤装"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M7 3h10v3h3v3h-3V7H7v2H4V6h3zm0 7h10v11h-4v-8h-2v8H7zM2 12h3v2H2zm17 0h3v2h-3z"/></svg><span class="mode-copy"><span>隐藏<wbr>身体<wbr>裤装</span><small>387 × 258 · 隐藏原角色身体</small></span></button>
-              <button id="mode-chest" class="mode" type="button" aria-pressed="false" aria-controls="chest-panel" aria-label="上衣与袖子"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M7 4h3v3h4V4h3v2h3v3h2v5h-5v7H7v-7H2V9h2V6h3zm3 7v6h4v-6z"/></svg><span class="mode-copy"><span>上衣<wbr>与袖子</span><small>身体 / 前袖 / 后袖 · 可独立选取</small></span></button>
-              <button id="mode-back" class="mode" type="button" aria-pressed="false" aria-controls="back-panel" aria-label="背饰"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M9 2h6v3h4v3h2v11h-3v3H6v-3H3V8h2V5h4zm2 2v3h2V4zM7 11v2h10v-2zm2 5v3h6v-3z"/></svg><span class="mode-copy"><span>背饰</span><small>387 × 301 · 独立动画帧</small></span></button>
-              <button id="mode-hat" class="mode" type="button" aria-pressed="false" aria-controls="hat-panel" aria-label="帽子"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M8 3h8v3h3v9h3v4H2v-4h3V6h3zm0 8v3h8v-3z"/></svg><span class="mode-copy"><span>帽子</span><small>1–256 px · 本地 Hatter</small></span></button>
-              <button id="mode-character" class="mode" type="button" aria-pressed="false" aria-controls="character-panel" aria-label="人物重绘"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M8 2h8v8h-2v2h4v3h3v6h-4v-5h-2v6h-4v-6H9v6H5v-6H3v5H0v-6h3v-3h5v-2H6V4h2z"/></svg><span class="mode-copy"><span>人物<wbr>重绘</span><small>身体 / 双臂 / 基础头 + 表情 / 头发</small></span></button>
-              <button id="mode-recolor" class="mode" type="button" aria-pressed="false" aria-controls="recolor-panel" aria-label="原版直接改色"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg><span class="mode-copy"><span>原版<wbr>直接改色</span><small>原图 / 目标图配对 · 联合 RGBA 约束</small></span></button>
+              <button id="mode-pants" class="mode selected" type="button" aria-pressed="true" aria-controls="pants-panel" aria-label="普通裤装"><img class="pixel-icon" src="./assets/icons/pants.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>普通<wbr>裤装</span><small>387 × 258 · 动画精灵表</small></span></button>
+              <button id="mode-hidingPants" class="mode" type="button" aria-pressed="false" aria-controls="pants-panel" aria-label="隐藏身体裤装"><img class="pixel-icon" src="./assets/icons/hiding-pants.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>隐藏<wbr>身体<wbr>裤装</span><small>387 × 258 · 隐藏原角色身体</small></span></button>
+              <button id="mode-chest" class="mode" type="button" aria-pressed="false" aria-controls="chest-panel" aria-label="上衣与袖子"><img class="pixel-icon" src="./assets/icons/chest.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>上衣<wbr>与袖子</span><small>身体 / 前袖 / 后袖 · 可独立选取</small></span></button>
+              <button id="mode-back" class="mode" type="button" aria-pressed="false" aria-controls="back-panel" aria-label="背饰"><img class="pixel-icon" src="./assets/icons/back.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>背饰</span><small>387 × 301 · 独立动画帧</small></span></button>
+              <button id="mode-hat" class="mode" type="button" aria-pressed="false" aria-controls="hat-panel" aria-label="帽子"><img class="pixel-icon" src="./assets/icons/hat.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>帽子</span><small>1–256 px · 本地 Hatter</small></span></button>
+              <button id="mode-character" class="mode" type="button" aria-pressed="false" aria-controls="character-panel" aria-label="人物重绘"><img class="pixel-icon" src="./assets/icons/character.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>人物<wbr>重绘</span><small>身体 / 双臂 / 基础头 + 表情 / 头发</small></span></button>
+              <button id="mode-recolor" class="mode" type="button" aria-pressed="false" aria-controls="recolor-panel" aria-label="原版直接改色"><img class="pixel-icon" src="./assets/icons/recolor.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>原版<wbr>直接改色</span><small>原图 / 目标图配对 · 联合 RGBA 约束</small></span></button>
             </nav>
           </section>
       <details class="card settings-panel" aria-labelledby="optimization-title">
@@ -257,7 +257,7 @@
       <summary>开源许可与素材来源</summary>
       <p>本地 Rust / WebAssembly 编码 · 无外部脚本 · 不上传 PNG 或游戏资产</p>
       <p><a href="https://github.com/Silverfeelin/Starbound-NgOutfitGenerator/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">服装：MIT / Silverfeelin</a> · <a href="https://github.com/Silverfeelin/Starbound-Hatter" target="_blank" rel="noopener noreferrer">帽子算法改编自 Hatter / Silverfeelin</a>（<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>，Rust 移植与无损编码改进）</p>
-      <p>装备图标为原创；人物试戴单帧来自 Hatter，版权归原权利方。像素字体：<a href="./assets/fonts/OFL.txt" target="_blank" rel="noopener noreferrer">Silkscreen / OFL 1.1</a>。</p>
+      <p>品牌、装备与操作图标为原创像素图，不含游戏界面贴图；人物试戴单帧来自 Hatter，版权归原权利方。像素字体：<a href="./assets/fonts/OFL.txt" target="_blank" rel="noopener noreferrer">Silkscreen / OFL 1.1</a>。</p>
     </details>
   </footer>
   <script type="module">
