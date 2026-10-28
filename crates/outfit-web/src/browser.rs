@@ -60,7 +60,7 @@ const SHEETS: [Sheet; 5] = [
     Sheet::Back,
 ];
 const HAT_SLOT: usize = 5;
-const SLOT_IDS: [&str; 11] = [
+const SLOT_IDS: [&str; 12] = [
     "pants",
     "body",
     "front",
@@ -72,6 +72,7 @@ const SLOT_IDS: [&str; 11] = [
     "character-rear",
     "character-head",
     "character-hair",
+    "character-emotes",
 ];
 const MODES: [(&str, EditorMode); 7] = [
     ("pants", EditorMode::Outfit(Garment::Pants)),
@@ -167,6 +168,7 @@ struct App {
     next_image_id: u64,
     cache: Latest<EncodingFuture>,
     character_cache: Latest<character::CharacterFuture>,
+    character_head: Option<character::DerivedHead>,
     recolor_cache: Latest<recolor::RecolorFuture>,
     recolor_pairs: Vec<recolor::Pair>,
     next_pair_id: u64,
@@ -270,6 +272,7 @@ pub(crate) fn start() -> Result<(), JsValue> {
         next_image_id: 0,
         cache: Latest::new(),
         character_cache: Latest::new(),
+        character_head: None,
         recolor_cache: Latest::new(),
         recolor_pairs: Vec::new(),
         next_pair_id: 0,
@@ -458,6 +461,7 @@ impl App {
         self.character_cache.clear();
         self.recolor_cache.clear();
         self.reset_result();
+        self.refresh_character_head();
         self.refresh_actions();
         self.ui
             .recolor
@@ -499,7 +503,7 @@ impl App {
             EditorMode::Outfit(Garment::Chest) => &[1, 2, 3],
             EditorMode::Outfit(Garment::Back) => &[4],
             EditorMode::Hat => &[HAT_SLOT],
-            EditorMode::Character => &[6, 7, 8, 9, 10],
+            EditorMode::Character => &[6, 7, 8, 9, 10, 11],
             EditorMode::Recolor => &[],
         }
     }
@@ -566,6 +570,11 @@ impl App {
             .recolor
             .help
             .set_hidden(self.mode != EditorMode::Recolor);
+        if self.mode == EditorMode::Character
+            && let Err(error) = self.draw_character_preview()
+        {
+            self.show_notice(&error, true);
+        }
     }
 
     fn input(&self) -> Option<EncodingInput> {
@@ -1313,7 +1322,18 @@ fn populate_slots(document: &Document) -> Result<(), JsValue> {
         (6, "身体与腿", "387 × 258", "character-uploads"),
         (7, "前臂", "387 × 301", "character-uploads"),
         (8, "后臂", "387 × 301", "character-uploads"),
-        (9, "头部与表情", "387 × 344", "character-uploads"),
+        (
+            9,
+            "基础头",
+            "43 × 43，或原版 86 × 215（取 normal 格）",
+            "character-uploads",
+        ),
+        (
+            11,
+            "表情叠加层",
+            "387 × 344 · 仅绘制表情差异",
+            "character-uploads",
+        ),
         (10, "头发", "43 × 43", "character-uploads"),
         (0, "裤装精灵表", "387 × 258", "pants-upload"),
         (2, "前袖", "387 × 301", "chest-uploads"),

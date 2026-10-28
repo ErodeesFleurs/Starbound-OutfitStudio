@@ -12,17 +12,18 @@ const HELP: &str = "Outfit Studio — character identity redraw (not equipment)
 
 Usage:
   outfit character-encode --identity IDENTITY.json --body BODY.png \\
-    --front-arm FRONT.png --back-arm BACK.png --head EMOTES.png [--hair HAIR.png] [options]
+    --front-arm FRONT.png --back-arm BACK.png --head HEAD.png --emotes EMOTES.png [--hair HAIR.png] [options]
   outfit character-encode --identity IDENTITY.json --hair HAIR.png [options]
 
 PNG layers are decoded locally, never uploaded. No new assets are installed:
   --body PATH       Body/legs animation sheet
   --front-arm PATH  Front arm animation sheet
   --back-arm PATH   Back arm animation sheet
-  --head PATH       Head/emotes animation sheet (not a single head portrait)
+  --head PATH       Base head: 43x43, or vanilla 86x215 (normal at 43,0)
+  --emotes PATH     387x344 expression overlay sheet, composited above base head
   --hair PATH       Independent hair layer
-  Body/legs, both arms and head/emotes form one linked redraw: provide all four.
-  They share bodyDirectives and the original head must be replaced in emotes.
+  Body/legs, both arms, base head and emotes form one linked redraw: provide all five.
+  The base head is repeated below every expression locally, without resampling.
   Hair may be changed independently or included with the linked group.
   Hair-only redraw preserves the baseline hair style, which must be nonempty.
   To hide one linked part, provide a transparent PNG at its required dimensions;
@@ -66,6 +67,7 @@ Safety and application:
 fn print_help() {
     print!("{HELP}");
     println!("\nRequired PNG dimensions and frames (x,y are top-down pixel origins):");
+    println!("  head: 43x43 or 86x215 (normal frame at 43,0)");
     for part in [
         CharacterPart::Body,
         CharacterPart::FrontArm,
@@ -74,7 +76,12 @@ fn print_help() {
         CharacterPart::Hair,
     ] {
         let layout = core::character_layout(part);
-        println!("  {}: {}x{}", part.key(), layout.width, layout.height);
+        let name = if part == CharacterPart::Head {
+            "emotes"
+        } else {
+            part.key()
+        };
+        println!("  {name}: {}x{}", layout.width, layout.height);
         for frame in &layout.frames {
             println!(
                 "    {} at ({},{}) [id {}]",
@@ -145,6 +152,7 @@ pub fn run(args: &[String]) -> Result<()> {
             "--front-arm",
             "--back-arm",
             "--head",
+            "--emotes",
             "--hair",
             "--identity",
             "--strategy",
@@ -167,16 +175,16 @@ pub fn run(args: &[String]) -> Result<()> {
             "Invalid character output format {format}; use --help"
         ));
     }
-    let body_flags = ["--body", "--front-arm", "--back-arm", "--head"];
+    let body_flags = ["--body", "--front-arm", "--back-arm", "--head", "--emotes"];
     let full = body_flags.iter().any(|flag| options.contains_key(*flag));
     if full && body_flags.iter().any(|flag| !options.contains_key(*flag)) {
         return fail(
-            "Body/legs, front arm, back arm and head/emotes are linked: provide --body, --front-arm, --back-arm and --head together; use character-encode --help",
+            "Body/legs, front arm, back arm, base head and emotes are linked: provide --body, --front-arm, --back-arm, --head and --emotes together; use character-encode --help",
         );
     }
     if !full && !options.contains_key("--hair") {
         return fail(
-            "Provide the four linked character layers or independent --hair; use character-encode --help",
+            "Provide the five linked character inputs or independent --hair; use character-encode --help",
         );
     }
     let identity_path = options
@@ -196,6 +204,15 @@ pub fn run(args: &[String]) -> Result<()> {
         if let Some(path) = options.get(flag) {
             let image =
                 core::decode_png(&fs::read(path)?).map_err(|error| format!("{path}: {error}"))?;
+            let image = if part == CharacterPart::Head {
+                let emotes_path = options.get("--emotes").expect("validated linked inputs");
+                let emotes = core::decode_png(&fs::read(emotes_path)?)
+                    .map_err(|error| format!("{emotes_path}: {error}"))?;
+                inputs.push(PathBuf::from(emotes_path));
+                core::compose_character_head(&image, &emotes)?
+            } else {
+                image
+            };
             images.push((part, image));
             inputs.push(PathBuf::from(path));
         }
@@ -274,7 +291,7 @@ mod tests {
 
     #[test]
     fn rejects_partial_linked_layers_and_missing_identity_before_reading_pngs() {
-        for flag in ["--body", "--front-arm", "--back-arm", "--head"] {
+        for flag in ["--body", "--front-arm", "--back-arm", "--head", "--emotes"] {
             let error = run(&arguments(&[flag, "not-read.png"]))
                 .unwrap_err()
                 .to_string();
@@ -289,6 +306,8 @@ mod tests {
             "not-read.png",
             "--head",
             "not-read.png",
+            "--emotes",
+            "not-read.png",
         ]))
         .unwrap_err()
         .to_string();
@@ -297,6 +316,130 @@ mod tests {
             .unwrap_err()
             .to_string();
         assert!(error.contains("--identity"), "{error}");
+    }
+
+    #[test]
+    fn separate_head_and_emotes_export_the_existing_composed_encoding_and_protect_inputs() {
+        let directory =
+            std::env::temp_dir().join(format!("outfit-character-compose-{}", std::process::id()));
+        fs::create_dir(&directory).unwrap();
+        let identity = json!({
+            "species": "human", "gender": "male",
+            "hairGroup": "hair", "hairType": "male1", "hairDirectives": "",
+            "facialHairType": "", "facialMaskType": ""
+        });
+        let identity_path = directory.join("identity.json");
+        fs::write(&identity_path, serde_json::to_vec(&identity).unwrap()).unwrap();
+        let parts = [
+            CharacterPart::Body,
+            CharacterPart::FrontArm,
+            CharacterPart::BackArm,
+            CharacterPart::Head,
+        ];
+        let mut images: Vec<_> = parts
+            .iter()
+            .map(|&part| {
+                let layout = core::character_layout(part);
+                core::RgbaImage {
+                    width: layout.width,
+                    height: layout.height,
+                    rgba: vec![0; layout.width * layout.height * 4],
+                }
+            })
+            .collect();
+        let mut base = core::RgbaImage {
+            width: 43,
+            height: 43,
+            rgba: vec![0; 43 * 43 * 4],
+        };
+        base.rgba[..4].copy_from_slice(&[210, 30, 80, 128]);
+        for frame in &core::character_layout(CharacterPart::Head).frames {
+            let i = (frame.y * images[3].width + frame.x) * 4;
+            images[3].rgba[i..i + 4].copy_from_slice(&[10, 100, 220, 128]);
+        }
+        let save_png = |path: &Path, image: &core::RgbaImage| {
+            let file = fs::File::create(path).unwrap();
+            let mut encoder = png::Encoder::new(file, image.width as u32, image.height as u32);
+            encoder.set_color(png::ColorType::Rgba);
+            encoder.set_depth(png::BitDepth::Eight);
+            encoder
+                .write_header()
+                .unwrap()
+                .write_image_data(&image.rgba)
+                .unwrap();
+        };
+        let mut args = vec![
+            "--identity".to_owned(),
+            identity_path.to_str().unwrap().to_owned(),
+        ];
+        for (flag, image) in [
+            ("--body", &images[0]),
+            ("--front-arm", &images[1]),
+            ("--back-arm", &images[2]),
+            ("--head", &base),
+            ("--emotes", &images[3]),
+        ] {
+            let path = directory.join(format!("{}.png", &flag[2..]));
+            save_png(&path, image);
+            args.extend([flag.to_owned(), path.to_str().unwrap().to_owned()]);
+        }
+        let mut missing_emotes = args.clone();
+        missing_emotes.truncate(missing_emotes.len() - 2);
+        assert!(
+            run(&missing_emotes)
+                .unwrap_err()
+                .to_string()
+                .contains("linked")
+        );
+        let output = directory.join("patch.json");
+        let mut export = args.clone();
+        export.extend(["--out".to_owned(), output.to_str().unwrap().to_owned()]);
+        run(&export).unwrap();
+        let body_layers: Vec<_> = parts[..3]
+            .iter()
+            .zip(&images[..3])
+            .map(|(&part, image)| CharacterLayer { part, image })
+            .collect();
+        let body = core::optimize_character_native(&body_layers, true, Strategy::Text).unwrap();
+        let composed = core::compose_character_head(&base, &images[3]).unwrap();
+        let head = core::optimize_character_native(
+            &[CharacterLayer {
+                part: CharacterPart::Head,
+                image: &composed,
+            }],
+            true,
+            Strategy::Text,
+        )
+        .unwrap();
+        let expected = core::identity_patch(
+            &identity,
+            Some(&body.encoding.directives),
+            Some(&head.encoding.directives),
+            None,
+        )
+        .unwrap();
+        let actual: Value = serde_json::from_slice(&fs::read(&output).unwrap()).unwrap();
+        assert_eq!(actual, expected);
+        for name in ["head.png", "emotes.png"] {
+            let input = directory.join(name);
+            let before = fs::read(&input).unwrap();
+            for flag in ["--out", "--backup-out"] {
+                let mut unsafe_args = args.clone();
+                unsafe_args.extend([flag.to_owned(), input.to_str().unwrap().to_owned()]);
+                assert!(run(&unsafe_args).is_err());
+                assert_eq!(fs::read(&input).unwrap(), before);
+            }
+            #[cfg(unix)]
+            {
+                let alias = directory.join(format!("{name}.alias"));
+                std::os::unix::fs::symlink(&input, &alias).unwrap();
+                let mut unsafe_args = args.clone();
+                unsafe_args.extend(["--out".to_owned(), alias.to_str().unwrap().to_owned()]);
+                assert!(run(&unsafe_args).is_err());
+                assert_eq!(fs::read(&input).unwrap(), before);
+            }
+        }
+        fs::remove_dir_all(directory).unwrap();
     }
 
     #[test]

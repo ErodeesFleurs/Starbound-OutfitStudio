@@ -12,6 +12,7 @@ pub(crate) enum InputSource {
     },
     Character {
         layers: Vec<(u64, CharacterPart)>,
+        head_sources: Option<(u64, u64)>,
     },
     Recolor {
         pairs: Vec<(u64, u64)>,
@@ -238,6 +239,7 @@ mod tests {
         let character = InputKey {
             source: InputSource::Character {
                 layers: vec![(7, CharacterPart::Body), (8, CharacterPart::Head)],
+                head_sources: Some((8, 10)),
             },
             palette: true,
             strategy: Strategy::Text,
@@ -249,12 +251,19 @@ mod tests {
             InputSource::Hat { image: 7 },
             InputSource::Character {
                 layers: vec![(7, CharacterPart::Head), (8, CharacterPart::Body)],
+                head_sources: Some((7, 10)),
             },
             InputSource::Character {
                 layers: vec![(7, CharacterPart::Body), (9, CharacterPart::Head)],
+                head_sources: Some((9, 10)),
             },
             InputSource::Character {
                 layers: vec![(7, CharacterPart::Body)],
+                head_sources: None,
+            },
+            InputSource::Character {
+                layers: vec![(7, CharacterPart::Body), (8, CharacterPart::Head)],
+                head_sources: Some((8, 11)),
             },
         ] {
             let mut changed = character.clone();

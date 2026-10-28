@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="970" viewBox="0 0 990 970"><rect width="100%" height="100%" fill="#111c29"/><g font-family="monospace" fill="#e0edf5" font-size="10"><text x="8" y="16">emotes: 387 x 344, cells 43 x 43; PNG rows top-down.</text><text x="8" y="32">Paint expression pixels only. The separate base head is composited beneath every named cell.</text><text x="8" y="48">Original aliases use the named cell; never a separate editable pose.</text>
+<rect x="112" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="78">blabber.1</text><text x="117" y="94">ID 1</text><text x="117" y="110">x43 y0</text>
+<rect x="222" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="78">blabber.2</text><text x="227" y="94">ID 2</text><text x="227" y="110">x86 y0</text>
+<rect x="442" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="78">shout.1</text><text x="447" y="94">ID 3</text><text x="447" y="110">x172 y0</text>
+<text x="447" y="125" font-size="8">= eat.1</text>
+<rect x="552" y="62" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="78">shout.2</text><text x="557" y="94">ID 4</text><text x="557" y="110">x215 y0</text>
+<text x="557" y="125" font-size="8">= eat.2</text>
+<rect x="112" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="188">happy.1</text><text x="117" y="204">ID 5</text><text x="117" y="220">x43 y43</text>
+<rect x="222" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="188">happy.2</text><text x="227" y="204">ID 6</text><text x="227" y="220">x86 y43</text>
+<rect x="772" y="172" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="777" y="188">idle.1</text><text x="777" y="204">ID 7</text><text x="777" y="220">x301 y43</text>
+<text x="777" y="235" font-size="8">= blink.3</text>
+<text x="777" y="245" font-size="8">= wink.5</text>
+<rect x="112" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="298">sad.1</text><text x="117" y="314">ID 8</text><text x="117" y="330">x43 y86</text>
+<rect x="222" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="298">sad.2</text><text x="227" y="314">ID 9</text><text x="227" y="330">x86 y86</text>
+<rect x="332" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="337" y="298">sad.3</text><text x="337" y="314">ID 28</text><text x="337" y="330">x129 y86</text>
+<rect x="442" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="298">sad.4</text><text x="447" y="314">ID 10</text><text x="447" y="330">x172 y86</text>
+<rect x="552" y="282" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="298">sad.5</text><text x="557" y="314">ID 11</text><text x="557" y="330">x215 y86</text>
+<rect x="112" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="408">neutral.1</text><text x="117" y="424">ID 12</text><text x="117" y="440">x43 y129</text>
+<rect x="222" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="408">neutral.2</text><text x="227" y="424">ID 13</text><text x="227" y="440">x86 y129</text>
+<rect x="442" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="408">laugh.1</text><text x="447" y="424">ID 14</text><text x="447" y="440">x172 y129</text>
+<rect x="552" y="392" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="408">laugh.2</text><text x="557" y="424">ID 15</text><text x="557" y="440">x215 y129</text>
+<rect x="112" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="518">annoyed.1</text><text x="117" y="534">ID 16</text><text x="117" y="550">x43 y172</text>
+<rect x="222" y="502" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="518">annoyed.2</text><text x="227" y="534">ID 17</text><text x="227" y="550">x86 y172</text>
+<rect x="112" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="628">oh.1</text><text x="117" y="644">ID 18</text><text x="117" y="660">x43 y215</text>
+<rect x="222" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="628">oh.2</text><text x="227" y="644">ID 19</text><text x="227" y="660">x86 y215</text>
+<rect x="442" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="628">oooh.1</text><text x="447" y="644">ID 29</text><text x="447" y="660">x172 y215</text>
+<rect x="552" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="628">oooh.2</text><text x="557" y="644">ID 20</text><text x="557" y="660">x215 y215</text>
+<rect x="662" y="612" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="628">oooh.3</text><text x="667" y="644">ID 21</text><text x="667" y="660">x258 y215</text>
+<rect x="112" y="832" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="117" y="848">blink.1</text><text x="117" y="864">ID 22</text><text x="117" y="880">x43 y301</text>
+<rect x="222" y="832" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="227" y="848">blink.2</text><text x="227" y="864">ID 23</text><text x="227" y="880">x86 y301</text>
+<text x="227" y="895" font-size="8">= sleep.1</text>
+<text x="227" y="905" font-size="8">= sleep.2</text>
+<rect x="442" y="832" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="447" y="848">wink.1</text><text x="447" y="864">ID 24</text><text x="447" y="880">x172 y301</text>
+<rect x="552" y="832" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="557" y="848">wink.2</text><text x="557" y="864">ID 25</text><text x="557" y="880">x215 y301</text>
+<rect x="662" y="832" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="667" y="848">wink.3</text><text x="667" y="864">ID 26</text><text x="667" y="880">x258 y301</text>
+<rect x="772" y="832" width="106" height="106" fill="#1c3040" stroke="#61788b"/><text x="777" y="848">wink.4</text><text x="777" y="864">ID 27</text><text x="777" y="880">x301 y301</text>
+</g></svg>

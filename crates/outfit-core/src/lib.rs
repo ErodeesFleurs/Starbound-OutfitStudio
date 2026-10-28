@@ -20,7 +20,8 @@ pub use assets::{descriptor, hat_descriptor, layout, spawn_command, template};
 pub use character::{
     CharacterFrame, CharacterLayer, CharacterLayout, CharacterPart, apply_identity_patch,
     character_candidates, character_layout, character_prefix, character_suppressed_sources,
-    identity_command, identity_patch, optimize_character_native, validate_character_layer,
+    compose_character_head, identity_command, identity_patch, optimize_character_native,
+    validate_character_head, validate_character_layer,
 };
 pub use encoder::encode;
 pub use garment::{

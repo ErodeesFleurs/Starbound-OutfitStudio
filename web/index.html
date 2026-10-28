@@ -34,7 +34,7 @@
               <button id="mode-chest" class="mode" type="button" aria-pressed="false" aria-controls="chest-panel" aria-label="上衣与袖子"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M7 4h3v3h4V4h3v2h3v3h2v5h-5v7H7v-7H2V9h2V6h3zm3 7v6h4v-6z"/></svg><span class="mode-copy"><span>上衣<wbr>与袖子</span><small>身体 / 前袖 / 后袖 · 可独立选取</small></span></button>
               <button id="mode-back" class="mode" type="button" aria-pressed="false" aria-controls="back-panel" aria-label="背饰"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M9 2h6v3h4v3h2v11h-3v3H6v-3H3V8h2V5h4zm2 2v3h2V4zM7 11v2h10v-2zm2 5v3h6v-3z"/></svg><span class="mode-copy"><span>背饰</span><small>387 × 301 · 独立动画帧</small></span></button>
               <button id="mode-hat" class="mode" type="button" aria-pressed="false" aria-controls="hat-panel" aria-label="帽子"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M8 3h8v3h3v9h3v4H2v-4h3V6h3zm0 8v3h8v-3z"/></svg><span class="mode-copy"><span>帽子</span><small>1–256 px · 本地 Hatter</small></span></button>
-              <button id="mode-character" class="mode" type="button" aria-pressed="false" aria-controls="character-panel" aria-label="人物重绘"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M8 2h8v8h-2v2h4v3h3v6h-4v-5h-2v6h-4v-6H9v6H5v-6H3v5H0v-6h3v-3h5v-2H6V4h2z"/></svg><span class="mode-copy"><span>人物<wbr>重绘</span><small>身体 / 双臂 / 头与表情 / 头发</small></span></button>
+              <button id="mode-character" class="mode" type="button" aria-pressed="false" aria-controls="character-panel" aria-label="人物重绘"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M8 2h8v8h-2v2h4v3h3v6h-4v-5h-2v6h-4v-6H9v6H5v-6H3v5H0v-6h3v-3h5v-2H6V4h2z"/></svg><span class="mode-copy"><span>人物<wbr>重绘</span><small>身体 / 双臂 / 基础头 + 表情 / 头发</small></span></button>
               <button id="mode-recolor" class="mode" type="button" aria-pressed="false" aria-controls="recolor-panel" aria-label="原版直接改色"><svg class="pixel-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg><span class="mode-copy"><span>原版<wbr>直接改色</span><small>原图 / 目标图配对 · 联合 RGBA 约束</small></span></button>
             </nav>
           </section>
@@ -142,29 +142,29 @@
       </section>
       <section id="character-panel" class="editor-panel" aria-labelledby="character-heading" hidden>
         <div class="panel-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="character-heading">人物重绘 · Identity</h2><span class="panel-code" aria-hidden="true">FILE INPUT</span></div>
-        <p class="panel-description">重画身体与腿、独立前后手臂、头部与全部表情，以及头发。导出写入角色 identity 的像素指令，不生成装备、不增加游戏资产；其他玩家无需安装这些 PNG。</p>
-        <p class="muted compatibility-note">身体、前臂、后臂、头部四张图必须一起提供，避免共享 bodyDirectives 清除未编辑部位。也可以仅编辑头发。身体 44 格、前臂 34 格、头部 29 格可分别独立绘制；真正的原版帧别名，以及后臂原本完全相同的空帧，仍须使用相同画面。不能新增骨骼或游戏动画状态。预览是上传图层的像素检查，不是引擎动作证明。</p>
+        <p class="panel-description">重画身体与腿、独立前后手臂、基础头、表情叠加层，以及头发。基础头只画一次，网页在本地将它与各格表情合成，预览和导出使用同一份合成像素。导出写入角色 identity 的像素指令，不生成装备、不增加游戏资产；其他玩家无需安装这些 PNG。</p>
+        <p class="muted compatibility-note">完整人物需一起提供身体、前臂、后臂、基础头、表情叠加层五张来源图，避免共享 bodyDirectives 清除未编辑部位。也可以仅编辑头发。基础头接受 43 × 43，或原版 86 × 215 头部 PNG（只取 x=43、y=0 的 normal 格）。表情叠加层为 387 × 344，只画眼睛、嘴等变化：透明区域保留基础头，半透明颜色按 RGBA 合成，不需逐格重画完整头。身体 44 格、前臂 34 格、表情 29 格可分别独立绘制；真正的原版帧别名，以及后臂原本完全相同的空帧，仍须使用相同画面。不能新增骨骼或游戏动画状态。预览是像素检查，不是引擎动作证明。</p>
         <div id="character-uploads" class="character-upload-grid"></div>
         <details class="card templates">
           <summary>人物空白 PNG、帧布局与图像参考下载</summary>
-          <p class="muted">空白 PNG 与纯标签布局独立生成；新增图像参考含原版人物像素与帧名／别名，可逐部分展开并滚动查看。原版美术归 Chucklefish／原权利方，不适用本站 MIT 或 Hatter 算法 CC BY 3.0 许可。示例为人类男性；共享 ID 复用首个 canonical 姿势，不是原版精灵表的逐格复刻，empty 表示真实空帧。参考 SVG 不是可直接上传的模板：请在空白 PNG 对应有效格绘画，保持原始大小。别名对应同一个格子；相同 ID 的不同格子须绘制一致。不要将整张参考 SVG 转成 PNG 上传，标签与网格不能进入绘画像素层。</p>
+          <p class="muted">基础头 head.png 为 43 × 43 单格；表情 emotes.png 为 387 × 344 透明叠加层，配合 emotes-layout.svg 只画表情差异，基础头由网页自动铺到有效格。空白 PNG 与纯标签布局独立生成；图像参考含原版人物像素与帧名／别名，可逐部分展开并滚动查看。head-reference.svg 展示完整头与表情，仅供合成结果对照，不可直接导入为表情。原版美术归 Chucklefish／原权利方，不适用本站 MIT 或 Hatter 算法 CC BY 3.0 许可。示例为人类男性；共享 ID 复用首个 canonical 姿势，不是原版精灵表的逐格复刻，empty 表示真实空帧。参考 SVG 不是可直接上传的模板；不要将整张参考 SVG 转成 PNG 上传，标签与网格不能进入绘画像素层。别名对应同一个格子；相同 ID 的不同格子须绘制一致。</p>
           <div id="character-templates" class="template-grid"></div>
         </details>
         <div class="character-preview-grid">
           <section class="card">
             <h3>逐帧像素检查<span class="panel-code" aria-hidden="true">FRAME PREVIEW</span></h3>
             <label for="character-part">预览部位</label>
-            <select id="character-part"><option value="0">身体与腿</option><option value="1">前臂</option><option value="2">后臂</option><option value="3">头部与表情</option><option value="4">头发</option></select>
+            <select id="character-part"><option value="0">身体与腿</option><option value="1">前臂</option><option value="2">后臂</option><option value="3">基础头 + 表情（合成结果）</option><option value="4">头发</option></select>
             <label for="character-frame">原版帧 / 共享别名</label>
             <select id="character-frame"></select>
             <div class="actions"><button id="character-previous" class="secondary" type="button">上一帧</button><button id="character-next" class="secondary" type="button">下一帧</button></div>
             <p id="character-frame-info" class="muted" role="status"></p>
-            <div class="preview character-frame-preview"><canvas id="character-frame-canvas" width="43" height="43" role="img" aria-label="选中的人物图层原始43乘43像素"></canvas></div>
+            <div class="preview character-frame-preview"><canvas id="character-frame-canvas" width="43" height="43" role="img" aria-label="选中的人物图层43乘43像素，头部使用基础头与表情的本地合成结果"></canvas></div>
           </section>
           <section class="card">
             <h3>分层站姿组合<span class="panel-code" aria-hidden="true">COMPOSITE</span></h3>
-            <p class="muted">固定后臂 → 身体 → 头 → 头发 → 前臂顺序；使用各层 idle / neutral 首帧。保留透明像素。没有模拟瞄准旋转、帽子遮罩、种族偏移或游戏染色。</p>
-            <div class="preview character-frame-preview"><canvas id="character-composite" width="43" height="43" role="img" aria-label="上传人物图层的固定站姿组合，非游戏运行截图"></canvas></div>
+            <p class="muted">固定后臂 → 身体 → 合成头 → 头发 → 前臂顺序；使用各层 idle / neutral 首帧，头部使用基础头与表情叠加层的 RGBA 合成结果。上传卡片各自显示原图。保留透明像素。没有模拟瞄准旋转、帽子遮罩、种族偏移或游戏染色。</p>
+            <div class="preview character-frame-preview"><canvas id="character-composite" width="43" height="43" role="img" aria-label="人物固定站姿组合，头部为基础头与表情本地合成结果，非游戏运行截图"></canvas></div>
           </section>
         </div>
         <section class="card character-identity">

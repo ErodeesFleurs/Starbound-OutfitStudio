@@ -203,6 +203,64 @@ fn equal_art(image: &RgbaImage, a: &CharacterFrame, b: &CharacterFrame) -> bool 
         })
     })
 }
+/// Validate a single 43 × 43 head or a vanilla 86 × 215 head sheet.
+/// Vanilla sheets contribute only their normal frame at (43, 0).
+pub fn validate_character_head(image: &RgbaImage) -> Result<(), Error> {
+    if !matches!((image.width, image.height), (43, 43) | (86, 215))
+        || image.rgba.len() != image.width * image.height * 4
+    {
+        return Err(Error::new(
+            "Base head must be exactly 43 × 43 or 86 × 215 RGBA pixels",
+        ));
+    }
+    Ok(())
+}
+
+/// Compose the base head below each valid emote using straight-alpha source-over.
+/// All arithmetic rounds to the nearest integer; unused sheet cells stay clear.
+pub fn compose_character_head(head: &RgbaImage, emotes: &RgbaImage) -> Result<RgbaImage, Error> {
+    validate_character_head(head)?;
+    validate_character_layer(CharacterLayer {
+        part: CharacterPart::Head,
+        image: emotes,
+    })?;
+    let layout = character_layout(CharacterPart::Head);
+    let mut output = RgbaImage {
+        width: layout.width,
+        height: layout.height,
+        rgba: vec![0; layout.width * layout.height * 4],
+    };
+    let head_x = if head.width == 86 { 43 } else { 0 };
+    for frame in &layout.frames {
+        for y in 0..43 {
+            for x in 0..43 {
+                let destination = ((frame.y + y) * layout.width + frame.x + x) * 4;
+                let source = (y * head.width + head_x + x) * 4;
+                let below = &head.rgba[source..source + 4];
+                let above = &emotes.rgba[destination..destination + 4];
+                let result = &mut output.rgba[destination..destination + 4];
+                match above[3] {
+                    0 => result.copy_from_slice(below),
+                    255 => result.copy_from_slice(above),
+                    alpha => {
+                        let sa = u32::from(alpha);
+                        let da = u32::from(below[3]);
+                        let inverse = 255 - sa;
+                        let numerator = sa * 255 + da * inverse;
+                        for channel in 0..3 {
+                            let color = u32::from(above[channel]) * sa * 255
+                                + u32::from(below[channel]) * da * inverse;
+                            result[channel] = ((color + numerator / 2) / numerator) as u8;
+                        }
+                        result[3] = ((numerator + 127) / 255) as u8;
+                    }
+                }
+            }
+        }
+    }
+    Ok(output)
+}
+
 /// Reject painted cells that cannot be rendered, and conflicting shared poses.
 /// Transparent RGB is not scrubbed; the encoder deliberately leaves unpainted
 /// pixels as their hidden address RGBA, just like the outfit/hat encoders.

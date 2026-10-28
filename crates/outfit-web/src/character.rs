@@ -3,6 +3,8 @@ use outfit_core::{CharacterLayer, CharacterPart};
 use serde_json::Value;
 
 pub(super) const FIRST_SLOT: usize = 6;
+pub(super) const HEAD_SLOT: usize = 9;
+pub(super) const EMOTES_SLOT: usize = 11;
 const PARTS: [CharacterPart; 5] = [
     CharacterPart::Body,
     CharacterPart::FrontArm,
@@ -15,6 +17,16 @@ pub(super) type CharacterFuture =
 
 pub(super) struct CharacterEncoding {
     groups: Vec<(CharacterPart, OptimizedEncoding)>,
+}
+
+pub(super) struct DerivedHead {
+    sources: (u64, u64),
+    result: Result<HeadImage, String>,
+}
+
+struct HeadImage {
+    image: Rc<RgbaImage>,
+    canvas: HtmlCanvasElement,
 }
 
 pub(super) struct CharacterUi {
@@ -45,17 +57,52 @@ impl CharacterUi {
             gear_help: element(document, "gear-export-help")?,
         };
         ui.populate_frames(document)?;
-        for (file, label) in [
-            ("body", "身体与腿"),
-            ("front-arm", "前臂"),
-            ("back-arm", "后臂"),
-            ("head", "头部与表情"),
-            ("hair", "头发"),
+        for (file, label, description, reference) in [
+            (
+                "body",
+                "身体与腿",
+                "空白 PNG 用于绘制；纯标签布局与原版人物图像参考用于对照。",
+                Some("body"),
+            ),
+            (
+                "front-arm",
+                "前臂",
+                "空白 PNG 用于绘制；纯标签布局与原版人物图像参考用于对照。",
+                Some("front-arm"),
+            ),
+            (
+                "back-arm",
+                "后臂",
+                "空白 PNG 用于绘制；纯标签布局与原版人物图像参考用于对照。",
+                Some("back-arm"),
+            ),
+            (
+                "head",
+                "基础头",
+                "43 × 43 单格，只需绘制一次。也可上传原版 86 × 215 头部 PNG，网页只取 normal 格（x=43，y=0）。下方原版完整头参考仅用于对照最终合成效果，不是表情叠加层输入。",
+                Some("head"),
+            ),
+            (
+                "emotes",
+                "表情叠加层",
+                "387 × 344，只在有效格绘制眼睛、嘴等表情差异；透明处自动保留基础头，无需每格重复画头。使用帧布局核对位置，不要把完整头参考当作表情输入。",
+                None,
+            ),
+            (
+                "hair",
+                "头发",
+                "空白 PNG 用于绘制；纯标签布局与原版人物图像参考用于对照。",
+                Some("hair"),
+            ),
         ] {
             let card = document.create_element("article")?;
             card.set_class_name("template-card");
+            let reference = reference.map(|reference| {
+                let reference_label = if file == "head" { "头部合成结果" } else { label };
+                format!("<details class=\"character-reference\"><summary>展开{reference_label}图像参考</summary><p class=\"muted\">可横向滚动查看帧名与别名。参考 SVG 不可直接上传，也不可转成表情叠加层；不要将网格或标注带入编码。</p><div class=\"character-reference-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"{reference_label}图像参考，可横向滚动\"><img src=\"assets/character/{reference}-reference.svg\" alt=\"{reference_label}原版像素图与帧名、别名参考，不是上传模板\" loading=\"lazy\" decoding=\"async\"></div><p><a href=\"assets/character/{reference}-reference.svg\" target=\"_blank\" rel=\"noopener noreferrer\">在新标签页查看参考 ↗</a> · <a href=\"assets/character/{reference}-reference.svg\" download=\"{reference}-reference.svg\">下载图像参考 SVG</a></p></details>")
+            }).unwrap_or_default();
             card.set_inner_html(&format!(
-                "<h4>{label}</h4><p class=\"muted\">空白 PNG 用于绘制；纯标签布局与原版人物图像参考用于对照。</p><details class=\"character-reference\"><summary>展开{label}图像参考</summary><p class=\"muted\">可横向滚动查看帧名与别名。参考 SVG 不可直接上传；请在空白 PNG 的对应有效格绘制，不要将网格或标注带入编码。</p><div class=\"character-reference-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"{label}图像参考，可横向滚动\"><img src=\"assets/character/{file}-reference.svg\" alt=\"{label}原版像素图与帧名、别名布局参考\" loading=\"lazy\" decoding=\"async\"></div><p><a href=\"assets/character/{file}-reference.svg\" target=\"_blank\" rel=\"noopener noreferrer\">在新标签页查看原图 ↗</a></p></details><div class=\"actions\"><a class=\"button\" href=\"assets/character/{file}.png\" download=\"character-{file}.png\">下载空白 PNG</a><a class=\"button secondary\" href=\"assets/character/{file}-layout.svg\" download=\"character-{file}-layout.svg\">下载帧布局 SVG</a><a class=\"button secondary\" href=\"assets/character/{file}-reference.svg\" download=\"{file}-reference.svg\">下载图像参考 SVG</a></div>"
+                "<h4>{label}</h4><p class=\"muted\">{description}</p>{reference}<div class=\"actions\"><a class=\"button\" href=\"assets/character/{file}.png\" download=\"character-{file}.png\">下载{label}空白 PNG</a><a class=\"button secondary\" href=\"assets/character/{file}-layout.svg\" download=\"character-{file}-layout.svg\">下载{label}布局 SVG</a></div>"
             ));
             element::<HtmlElement>(document, "character-templates")?.append_child(&card)?;
         }
@@ -96,11 +143,17 @@ impl CharacterUi {
 }
 
 pub(super) fn validate_image(index: usize, image: &RgbaImage) -> Result<(), String> {
-    outfit_core::validate_character_layer(CharacterLayer {
-        part: PARTS[index - FIRST_SLOT],
-        image,
-    })
-    .map_err(|error| format!("人物 PNG：{error}"))
+    if index == HEAD_SLOT {
+        return outfit_core::validate_character_head(image)
+            .map_err(|error| format!("基础头 PNG：{error}"));
+    }
+    let part = if index == EMOTES_SLOT {
+        CharacterPart::Head
+    } else {
+        PARTS[index - FIRST_SLOT]
+    };
+    outfit_core::validate_character_layer(CharacterLayer { part, image })
+        .map_err(|error| format!("人物 PNG：{error}"))
 }
 
 pub(super) fn attach_events(app: &Application) -> Result<(), JsValue> {
@@ -179,30 +232,90 @@ pub(super) fn attach_events(app: &Application) -> Result<(), JsValue> {
 }
 
 impl App {
+    pub(super) fn refresh_character_head(&mut self) {
+        let sources = self.slots[HEAD_SLOT]
+            .upload
+            .as_ref()
+            .zip(self.slots[EMOTES_SLOT].upload.as_ref());
+        let Some((head, emotes)) = sources else {
+            self.character_head = None;
+            return;
+        };
+        let sources = (head.id, emotes.id);
+        if self
+            .character_head
+            .as_ref()
+            .is_some_and(|cached| cached.sources == sources)
+        {
+            return;
+        }
+        let result = (|| {
+            let image = outfit_core::compose_character_head(&head.image, &emotes.image)
+                .map_err(|error| format!("无法合成基础头与表情：{error}"))?;
+            let canvas = self
+                .ui
+                .document
+                .create_element("canvas")
+                .and_then(|element| {
+                    element
+                        .dyn_into::<HtmlCanvasElement>()
+                        .map_err(JsValue::from)
+                })
+                .map_err(|error| format!("无法创建头部合成预览：{}", js_error(error)))?;
+            draw_preview(&canvas, &image)?;
+            Ok(HeadImage {
+                image: Rc::new(image),
+                canvas,
+            })
+        })();
+        self.character_head = Some(DerivedHead { sources, result });
+    }
+
+    fn character_canvas(&self, part_index: usize) -> Option<&HtmlCanvasElement> {
+        if PARTS[part_index] == CharacterPart::Head {
+            self.character_head
+                .as_ref()?
+                .result
+                .as_ref()
+                .ok()
+                .map(|head| &head.canvas)
+        } else {
+            let slot = &self.slots[FIRST_SLOT + part_index];
+            slot.upload.as_ref().map(|_| &slot.canvas)
+        }
+    }
+
     pub(super) fn character_ready(&self) -> bool {
-        let count = (FIRST_SLOT..FIRST_SLOT + 4)
-            .filter(|&index| self.slots[index].upload.is_some())
+        let count = [6, 7, 8, HEAD_SLOT, EMOTES_SLOT]
+            .iter()
+            .filter(|&&index| self.slots[index].upload.is_some())
             .count();
         let hair = self.slots[FIRST_SLOT + 4].upload.is_some();
-        let ready = (count == 0 || count == 4) && (count == 4 || hair);
-        self.ui
-            .character
-            .validation
-            .set_class_name(if count > 0 && count < 4 {
+        let derived = self.character_head.as_ref().map(|head| &head.result);
+        let complete = count == 5 && matches!(derived, Some(Ok(_)));
+        let ready = complete || (count == 0 && hair);
+        let error = match derived {
+            Some(Err(error)) => Some(error.as_str()),
+            _ => None,
+        };
+        self.ui.character.validation.set_class_name(
+            if (count > 0 && !complete) || error.is_some() {
                 "file-status error"
             } else {
                 "file-status"
-            });
-        self.ui
-            .character
-            .validation
-            .set_text_content(Some(if count > 0 && count < 4 {
-                "身体 / 前臂 / 后臂 / 头部必须全部上传；不会自动清空缺失部位。"
+            },
+        );
+        self.ui.character.validation.set_text_content(Some(
+            if let Some(error) = error {
+                error
+            } else if count > 0 && !complete {
+                "身体 / 前臂 / 后臂 / 基础头 / 表情叠加层必须全部上传并成功合成；不会自动清空缺失部位。"
             } else if ready {
-                "像素输入已齐全。所有人物导出均需原 identity；请先备份，再选择导出方式。"
+                "像素输入已齐全。头部预览与导出共用本地合成像素。所有人物导出均需原 identity；请先备份，再选择导出方式。"
             } else {
-                "上传四张完整人物图层，或只上传头发。服装与帽子输入不会被改动。"
-            }));
+                "上传身体、双臂、基础头与表情叠加层五张来源图，或只上传头发。基础头只画一次，网页自动合成表情。"
+            },
+        ));
         ready
     }
 
@@ -219,13 +332,8 @@ impl App {
             let context = canvas_context(&ui.frame_canvas)?;
             context.clear_rect(0.0, 0.0, 43.0, 43.0);
             context.set_image_smoothing_enabled(false);
-            if self.slots[FIRST_SLOT + part_index].upload.is_some() {
-                draw_frame(
-                    &context,
-                    &self.slots[FIRST_SLOT + part_index].canvas,
-                    frame.x,
-                    frame.y,
-                )?;
+            if let Some(source) = self.character_canvas(part_index) {
+                draw_frame(&context, source, frame.x, frame.y)?;
             }
             ui.info.set_text_content(Some(&format!(
                 "{} · 格子原点 ({}, {}) · ID {:02x}{}{}",
@@ -244,9 +352,9 @@ impl App {
             context.clear_rect(0.0, 0.0, 43.0, 43.0);
             context.set_image_smoothing_enabled(false);
             for part_index in [2, 0, 3, 4, 1] {
-                if self.slots[FIRST_SLOT + part_index].upload.is_none() {
+                let Some(source) = self.character_canvas(part_index) else {
                     continue;
-                }
+                };
                 let layout = outfit_core::character_layout(PARTS[part_index]);
                 let frame = layout
                     .frames
@@ -258,12 +366,7 @@ impl App {
                     })
                     .or_else(|| layout.frames.first())
                     .ok_or_else(|| JsValue::from_str("人物帧布局为空。"))?;
-                draw_frame(
-                    &context,
-                    &self.slots[FIRST_SLOT + part_index].canvas,
-                    frame.x,
-                    frame.y,
-                )?;
+                draw_frame(&context, source, frame.x, frame.y)?;
             }
             Ok(())
         };
@@ -316,11 +419,23 @@ pub(super) fn export(app: &Application, command: bool, copy: bool) {
         for (index, part) in PARTS.iter().enumerate() {
             if let Some(upload) = &state.slots[FIRST_SLOT + index].upload {
                 identities.push((upload.id, *part));
-                images.push((*part, Rc::clone(&upload.image)));
+                let image = if *part == CharacterPart::Head {
+                    let head = state
+                        .character_head
+                        .as_ref()
+                        .ok_or("基础头与表情尚未合成，请重新上传。")?;
+                    &head.result.as_ref().map_err(|error| error.clone())?.image
+                } else {
+                    &upload.image
+                };
+                images.push((*part, Rc::clone(image)));
             }
         }
         let key = InputKey {
-            source: InputSource::Character { layers: identities },
+            source: InputSource::Character {
+                layers: identities,
+                head_sources: state.character_head.as_ref().map(|head| head.sources),
+            },
             palette: state.palette,
             strategy: state.strategy,
         };

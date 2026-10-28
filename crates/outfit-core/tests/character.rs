@@ -425,3 +425,162 @@ fn distinct_body_and_arm_poses_keep_independent_visible_artwork() {
         }
     }
 }
+
+fn base_head() -> RgbaImage {
+    RgbaImage {
+        width: 43,
+        height: 43,
+        rgba: vec![0; 43 * 43 * 4],
+    }
+}
+
+#[test]
+fn head_composition_covers_every_emote_and_preserves_straight_alpha_in_encoding() {
+    let mut head = base_head();
+    let mut emotes = blank(CharacterPart::Head);
+    let frames = &character_layout(CharacterPart::Head).frames;
+    assert_eq!(frames.len(), 29);
+    let below = [
+        [4, 5, 6, 255],
+        [255, 0, 0, 128],
+        [19, 29, 39, 0],
+        [9, 8, 7, 0],
+    ];
+    for (x, rgba) in below.into_iter().enumerate() {
+        paint(&mut head, x, 0, rgba);
+    }
+    for (index, frame) in frames.iter().enumerate() {
+        paint(&mut emotes, frame.x, frame.y, [index as u8, 20, 30, 255]);
+        paint(&mut emotes, frame.x + 1, frame.y, [0, 0, 255, 128]);
+        paint(&mut emotes, frame.x + 2, frame.y, [100, 110, 120, 1]);
+        paint(&mut emotes, frame.x + 3, frame.y, [200, 210, 220, 0]);
+    }
+    let output = compose_character_head(&head, &emotes).unwrap();
+    validate_character_layer(CharacterLayer {
+        part: CharacterPart::Head,
+        image: &output,
+    })
+    .unwrap();
+    let expected = |index: usize| {
+        [
+            [index as u8, 20, 30, 255],
+            [85, 0, 170, 192],
+            [100, 110, 120, 1],
+            [9, 8, 7, 0],
+        ]
+    };
+    let mut used = vec![false; output.width * output.height];
+    for (index, frame) in frames.iter().enumerate() {
+        for y in 0..43 {
+            for x in 0..43 {
+                let pixel = (frame.y + y) * output.width + frame.x + x;
+                used[pixel] = true;
+                let wanted = if y == 0 && x < 4 {
+                    expected(index)[x]
+                } else {
+                    [0; 4]
+                };
+                assert_eq!(&output.rgba[pixel * 4..pixel * 4 + 4], &wanted);
+            }
+        }
+    }
+    for (pixel, used) in used.into_iter().enumerate() {
+        if !used {
+            assert_eq!(&output.rgba[pixel * 4..pixel * 4 + 4], &[0; 4]);
+        }
+    }
+    for encoding in character_candidates(
+        &[CharacterLayer {
+            part: CharacterPart::Head,
+            image: &output,
+        }],
+        true,
+        Strategy::Text,
+    )
+    .unwrap()
+    {
+        let stages = suffix_stages(&encoding, CharacterPart::Head);
+        for (index, frame) in frames.iter().enumerate() {
+            for x in 0..4 {
+                let address = [x as u8, frame.id, 42, 0];
+                let rendered = stages.iter().fold(address, |rgba, stage| {
+                    stage.get(&rgba).copied().unwrap_or(rgba)
+                });
+                assert_eq!(rendered, if x == 3 { address } else { expected(index)[x] });
+            }
+        }
+    }
+}
+
+#[test]
+fn transparent_emotes_copy_head_and_vanilla_normal_crop_is_identical() {
+    let mut head = base_head();
+    for (index, pixel) in head.rgba.as_chunks_mut::<4>().0.iter_mut().enumerate() {
+        pixel.copy_from_slice(&[index as u8, 43, 99, (index % 256) as u8]);
+    }
+    let mut vanilla = RgbaImage {
+        width: 86,
+        height: 215,
+        rgba: vec![231; 86 * 215 * 4],
+    };
+    for y in 0..43 {
+        let offset = (y * 86 + 43) * 4;
+        vanilla.rgba[offset..offset + 43 * 4]
+            .copy_from_slice(&head.rgba[y * 43 * 4..(y + 1) * 43 * 4]);
+    }
+    let mut emotes = blank(CharacterPart::Head);
+    // Invisible garbage even in unused cells must not leak into the result.
+    for pixel in emotes.rgba.as_chunks_mut::<4>().0 {
+        pixel.copy_from_slice(&[91, 92, 93, 0]);
+    }
+    let output = compose_character_head(&head, &emotes).unwrap();
+    assert_eq!(output, compose_character_head(&vanilla, &emotes).unwrap());
+    for frame in &character_layout(CharacterPart::Head).frames {
+        for y in 0..43 {
+            let offset = ((frame.y + y) * output.width + frame.x) * 4;
+            assert_eq!(
+                &output.rgba[offset..offset + 43 * 4],
+                &head.rgba[y * 43 * 4..(y + 1) * 43 * 4]
+            );
+        }
+    }
+}
+
+#[test]
+fn composition_rejects_wrong_dimensions_malformed_buffers_and_unused_art() {
+    let head = base_head();
+    let emotes = blank(CharacterPart::Head);
+    for (width, height, length) in [
+        (42, 43, 42 * 43 * 4),
+        (387, 344, 387 * 344 * 4),
+        (43, 43, 43 * 43 * 4 - 1),
+        (86, 215, 86 * 215 * 4 + 1),
+        (usize::MAX, usize::MAX, 0),
+    ] {
+        let bad = RgbaImage {
+            width,
+            height,
+            rgba: vec![0; length],
+        };
+        assert!(validate_character_head(&bad).is_err());
+        assert!(compose_character_head(&bad, &emotes).is_err());
+    }
+    let mut bad = blank(CharacterPart::Head);
+    bad.rgba.pop();
+    assert!(compose_character_head(&head, &bad).is_err());
+    bad = base_head();
+    assert!(compose_character_head(&head, &bad).is_err());
+    let layout = character_layout(CharacterPart::Head);
+    let (x, y) = (0..layout.height)
+        .flat_map(|y| (0..layout.width).map(move |x| (x, y)))
+        .find(|&(x, y)| {
+            !layout
+                .frames
+                .iter()
+                .any(|frame| x >= frame.x && x < frame.x + 43 && y >= frame.y && y < frame.y + 43)
+        })
+        .unwrap();
+    bad = blank(CharacterPart::Head);
+    paint(&mut bad, x, y, [0, 0, 0, 1]);
+    assert!(compose_character_head(&head, &bad).is_err());
+}
