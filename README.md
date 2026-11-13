@@ -150,7 +150,7 @@ Inspect an existing build with `cargo xtask serve --no-build --port 4201`. [depl
 
 - Based on [Silverfeelin's NgOutfitGenerator](https://github.com/Silverfeelin/Starbound-NgOutfitGenerator), retaining its MIT license, templates, and Nettle Boy's directive scheme.
 - Hatter-derived algorithms, including shared coordinate-canvas geometry, are adapted from [Starbound Hatter](https://github.com/Silverfeelin/Starbound-Hatter) under **CC BY 3.0**, not MIT.
-- Original integration code, blank layouts, and UI icons use MIT. [Silkscreen](https://github.com/googlefonts/silkscreen) uses [SIL OFL 1.1](public/assets/fonts/OFL.txt).
+- Original integration code, blank layouts, brand artwork, and mode icons use MIT. [Silkscreen](https://github.com/googlefonts/silkscreen) uses [SIL OFL 1.1](public/assets/fonts/OFL.txt).
 - Starbound preview/reference artwork belongs to **Chucklefish and/or its original rights holders**. The software licenses do not relicense it or grant additional redistribution rights.
 
 This is an unofficial tool, independent of the OpenStarbound source repository. Full notices, pinned upstream references, and community technique credits are in [LICENSE](LICENSE).
