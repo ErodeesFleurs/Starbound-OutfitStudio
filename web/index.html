@@ -17,7 +17,16 @@
       <img class="brand-mark" src="./assets/favicon.svg" width="48" height="48" alt="" aria-hidden="true">
       <div class="brand-copy"><h1>OUTFIT STUDIO</h1><p>Starbound 服装与人物重绘</p></div>
     </div>
-    <p class="header-meta">所有图像仅在此浏览器中处理，不上传。</p>
+    <div class="header-tools">
+      <p class="header-meta">所有图像仅在此浏览器中处理，不上传。</p>
+      <div class="language-control">
+        <label for="language-select">语言</label>
+        <select id="language-select" translate="no">
+          <option value="zh-CN" lang="zh-CN" selected>简体中文</option>
+          <option value="en" lang="en">English</option>
+        </select>
+      </div>
+    </div>
   </header>
   <main>
     <p id="startup" class="notice" role="status">正在载入本地 Rust / WebAssembly 像素编辑器…</p>
@@ -28,13 +37,13 @@
           <section class="card equipment-panel" aria-labelledby="equipment-title">
             <div class="panel-heading"><h2 id="equipment-title">制作类型</h2></div>
             <nav class="modes" aria-label="服装模式">
-              <button id="mode-pants" class="mode selected" type="button" aria-pressed="true" aria-controls="pants-panel" aria-label="普通裤装"><img class="pixel-icon" src="./assets/icons/pants.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>普通<wbr>裤装</span><small>387 × 258 · 动画精灵表</small></span></button>
-              <button id="mode-hidingPants" class="mode" type="button" aria-pressed="false" aria-controls="pants-panel" aria-label="隐藏身体裤装"><img class="pixel-icon" src="./assets/icons/hiding-pants.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>隐藏<wbr>身体<wbr>裤装</span><small>387 × 258 · 隐藏原角色身体</small></span></button>
-              <button id="mode-chest" class="mode" type="button" aria-pressed="false" aria-controls="chest-panel" aria-label="上衣与袖子"><img class="pixel-icon" src="./assets/icons/chest.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>上衣<wbr>与袖子</span><small>身体 / 前袖 / 后袖 · 可独立选取</small></span></button>
+              <button id="mode-pants" class="mode selected" type="button" aria-pressed="true" aria-controls="pants-panel" aria-label="普通裤装"><img class="pixel-icon" src="./assets/icons/pants.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>普通裤装</span><small>387 × 258 · 动画精灵表</small></span></button>
+              <button id="mode-hidingPants" class="mode" type="button" aria-pressed="false" aria-controls="pants-panel" aria-label="隐藏身体裤装"><img class="pixel-icon" src="./assets/icons/hiding-pants.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>隐藏身体裤装</span><small>387 × 258 · 隐藏原角色身体</small></span></button>
+              <button id="mode-chest" class="mode" type="button" aria-pressed="false" aria-controls="chest-panel" aria-label="上衣与袖子"><img class="pixel-icon" src="./assets/icons/chest.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>上衣与袖子</span><small>身体 / 前袖 / 后袖 · 可独立选取</small></span></button>
               <button id="mode-back" class="mode" type="button" aria-pressed="false" aria-controls="back-panel" aria-label="背饰"><img class="pixel-icon" src="./assets/icons/back.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>背饰</span><small>387 × 301 · 独立动画帧</small></span></button>
               <button id="mode-hat" class="mode" type="button" aria-pressed="false" aria-controls="hat-panel" aria-label="帽子"><img class="pixel-icon" src="./assets/icons/hat.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>帽子</span><small>1–256 px · 本地 Hatter</small></span></button>
-              <button id="mode-character" class="mode" type="button" aria-pressed="false" aria-controls="character-panel" aria-label="人物重绘"><img class="pixel-icon" src="./assets/icons/character.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>人物<wbr>重绘</span><small>身体 / 双臂 / 基础头 + 表情 / 头发</small></span></button>
-              <button id="mode-recolor" class="mode" type="button" aria-pressed="false" aria-controls="recolor-panel" aria-label="原版直接改色"><img class="pixel-icon" src="./assets/icons/recolor.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>原版<wbr>直接改色</span><small>原图 / 目标图配对 · 联合 RGBA 约束</small></span></button>
+              <button id="mode-character" class="mode" type="button" aria-pressed="false" aria-controls="character-panel" aria-label="人物重绘"><img class="pixel-icon" src="./assets/icons/character.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>人物重绘</span><small>身体 / 双臂 / 基础头 + 表情 / 头发</small></span></button>
+              <button id="mode-recolor" class="mode" type="button" aria-pressed="false" aria-controls="recolor-panel" aria-label="原版直接改色"><img class="pixel-icon" src="./assets/icons/recolor.svg" width="32" height="32" alt="" aria-hidden="true"><span class="mode-copy"><span>原版直接改色</span><small>原图 / 目标图配对 · 联合 RGBA 约束</small></span></button>
             </nav>
           </section>
       <details class="card settings-panel" aria-labelledby="optimization-title">
@@ -262,6 +271,8 @@
   </footer>
   <script type="module">
     import init from './pkg/outfit_web.js';
+    import { initI18n } from './assets/i18n/index.js';
+    initI18n();
     init().catch(error => {
       const status = document.getElementById('startup');
       status.className = 'notice error';

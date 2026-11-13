@@ -72,7 +72,7 @@ button.small { min-height: 44px; padding: .45rem .75rem; font-size: .875rem; }
 .skip-link:focus { top: 1rem; }
 
 .studio-header, main, .studio-footer { width: min(calc(100% - 4rem), 85rem); margin-inline: auto; }
-.studio-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 2rem; }
+.studio-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 2rem; }
 .brand { display: flex; align-items: center; gap: .9rem; min-width: 0; }
 .brand-mark { display: block; flex: none; width: 48px; height: 48px; image-rendering: pixelated; }
 .brand-copy { min-width: 0; }
@@ -83,6 +83,10 @@ h4 { margin: .85rem 0 .5rem; font-size: 1rem; }
 p { margin: .6rem 0; }
 .brand-copy > p { margin: .15rem 0 0; color: var(--muted); font-size: .875rem; }
 .header-meta { margin: 0; max-width: 21rem; color: var(--muted); font-size: .875rem; text-align: right; }
+.header-tools { display: flex; flex: 0 1 25rem; flex-direction: column; align-items: flex-end; gap: .65rem; min-width: 0; max-width: 100%; }
+.language-control { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .65rem; width: min(100%, 14rem); min-width: 0; }
+.language-control label { flex: none; margin: 0; color: var(--muted); font-size: .8125rem; font-weight: 500; }
+.language-control select { flex: 1 1 7rem; width: auto; min-height: 44px; padding-block: .4rem; font-size: .875rem; }
 .workbench { display: grid; grid-template-columns: 16.5rem minmax(0, 1fr); gap: 1.75rem; align-items: start; }
 .console-sidebar, .editor-column { min-width: 0; }
 .console-sidebar {
@@ -161,6 +165,7 @@ textarea[readonly] { background: var(--surface-alt); }
 .preview, .template-preview { display: flex; align-items: center; justify-content: center; min-width: 0; padding: 1rem; border: 1px solid var(--border); border-radius: 10px; background-color: var(--checker-b); background-image: conic-gradient(var(--checker-a) 25%, transparent 0 50%, var(--checker-a) 0 75%, transparent 0); background-size: 16px 16px; }
 .preview { min-height: 12rem; }
 .preview:has(> canvas[hidden])::before { content: "图像预览"; padding: .45rem .85rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--muted); font-size: .8125rem; }
+html[lang="en"] .preview:has(> canvas[hidden])::before { content: "Image preview"; }
 .preview canvas { display: block; max-width: 100%; max-height: 26rem; width: auto; height: auto; object-fit: contain; image-rendering: crisp-edges; image-rendering: pixelated; }
 .single-upload .upload-card { padding: 0; border: 0; background: transparent; }
 .single-upload .upload-card > button.small { padding-inline: .2rem; border-color: transparent; background: transparent; color: var(--muted); }
@@ -265,6 +270,7 @@ dd { margin: .35rem 0 0; color: var(--text); font-family: var(--mono); font-size
 
 @media (max-width: 700px) {
   .studio-header { padding-block: 1.25rem; gap: .65rem; flex-direction: column; align-items: flex-start; }
+  .header-tools { flex: none; align-items: flex-start; width: 100%; }
   .header-meta { text-align: left; max-width: 100%; font-size: .8125rem; }
   .brand-mark { width: 32px; height: 32px; }
   h1 { font-size: 1.125rem; }

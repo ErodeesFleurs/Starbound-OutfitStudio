@@ -40,6 +40,8 @@ cargo xtask serve
 
 Choose a mode, download its PNG/PDN template, draw your artwork, and upload or drop the PNG into the editor. Preserve frame positions, the 43 × 43 frame grid, and transparent background. Chest bodies and sleeves can be supplied individually or combined. Inspect the preview, then copy or download the result.
 
+Use the header's **Language** selector for **简体中文** or **English**. The initial language follows browser preferences, defaulting to English when unsupported; explicit choices are remembered when local storage is available. Switching preserves uploads, settings, user input, and generated output. Native file controls follow the browser's own language.
+
 Clipboard access requires localhost or HTTPS and browser permission. If denied, download the result or copy it manually. PNG decoding preserves 8-bit RGBA, including hidden RGB in transparent pixels; Canvas is only used for previews.
 
 ### Image sizes
@@ -127,6 +129,8 @@ Server-side `/spawnitem` requires administrator permission. Character editing to
 ## Development
 
 The workspace contains `outfit-core` (encoding), `outfit-web` (browser interaction), and `outfit-cli` (native tools). `web/` and `public/assets/` contain the page and resources; `xtask/` builds and serves the site.
+
+UI translations live in `public/assets/i18n/messages.js`. Keep named placeholders intact; filenames, identifiers, JSON, and commands are not translated.
 
 Run the [CI checks](.github/workflows/verify.yml) in the development environment:
 
