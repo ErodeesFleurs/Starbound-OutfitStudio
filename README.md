@@ -144,6 +144,8 @@ CI needs no commercial assets. Optional Linux `verify-assets` and `native-verify
 
 `cargo xtask build` produces a static site in `dist/`. Upload **only that directory**, including `pkg/`, `assets/`, and license files, to an HTTP(S) host. No encoding backend is needed. Use HTTPS for remote clipboard access; do not open the app through `file://`.
 
+For GitHub Pages, set repository **Settings → Pages → Source** to **GitHub Actions**. The [workflow](.github/workflows/verify.yml) deploys verified `dist/` builds from `main` (push or manual run) to <https://erodeesfleurs.github.io/Starbound-OutfitStudio/>; pull requests only run checks. It uses GitHub's built-in token, not VPS credentials.
+
 Inspect an existing build with `cargo xtask serve --no-build --port 4201`. [deploy/](deploy/) contains hosting examples; adapt their addresses and paths. Publish complete releases atomically and keep the previous version for rollback. Static updates should not overwrite the existing VPS's NixOS-managed services or certificate state.
 
 ## Credits and licenses

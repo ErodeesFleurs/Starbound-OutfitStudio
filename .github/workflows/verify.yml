@@ -1,8 +1,12 @@
-name: Verify Rust Outfit Studio
+name: Verify and deploy Outfit Studio
 
 on:
   push:
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -15,3 +19,29 @@ jobs:
       - run: nix develop path:./nix --command cargo clippy --workspace --all-targets --locked -- -D warnings
       - run: nix develop path:./nix --command cargo clippy --package outfit-web --target wasm32-unknown-unknown --locked -- -D warnings
       - run: nix develop path:./nix --command cargo xtask build
+      - name: Upload GitHub Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
