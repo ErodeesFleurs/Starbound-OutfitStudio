@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noEmitOnError": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [],
+    "rootDir": "web",
+    "rootDirs": ["web", ".dist-next"],
+    "outDir": ".dist-next"
+  },
+  "include": ["web/**/*.ts"]
+}

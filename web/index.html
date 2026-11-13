@@ -269,15 +269,6 @@
       <p>品牌与装备图标为原创像素图，不含游戏界面贴图；人物试戴单帧来自 Hatter，版权归原权利方。像素字体：<a href="./assets/fonts/OFL.txt" target="_blank" rel="noopener noreferrer">Silkscreen / OFL 1.1</a>。</p>
     </details>
   </footer>
-  <script type="module">
-    import init from './pkg/outfit_web.js';
-    import { initI18n } from './assets/i18n/index.js';
-    initI18n();
-    init().catch(error => {
-      const status = document.getElementById('startup');
-      status.className = 'notice error';
-      status.textContent = `无法启动 WebAssembly 编辑器：${error.message || error}。请通过 HTTP(S) 静态服务器打开完整的 dist 目录。`;
-    });
-  </script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

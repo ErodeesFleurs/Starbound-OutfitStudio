@@ -115,6 +115,11 @@ fn build(root: &Path) -> Result<()> {
     fs::copy(root.join("web/style.css"), next.join("style.css"))?;
     fs::copy(root.join("LICENSE"), next.join("LICENSE"))?;
     copy_tree(&root.join("public/assets"), &next.join("assets"))?;
+    checked(
+        Command::new("tsc")
+            .current_dir(root)
+            .args(["--project", "tsconfig.json"]),
+    )?;
     let dist = root.join("dist");
     let previous = root.join(".dist-previous");
     if previous.exists() {

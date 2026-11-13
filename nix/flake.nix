@@ -21,7 +21,7 @@
           };
         in {
           default = pkgs.mkShell {
-            packages = [ rust pkgs.wasm-bindgen-cli ];
+            packages = [ rust pkgs.wasm-bindgen-cli pkgs.typescript ];
           };
         });
     };

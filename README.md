@@ -20,17 +20,18 @@ nix develop path:./nix
 cargo xtask serve
 ```
 
-Open <http://127.0.0.1:4200>. No Node.js or frontend package manager is required.
+Open <http://127.0.0.1:4200>. No frontend package manager is required in the Nix environment.
 
 <details>
 <summary>Without Nix</summary>
 
-From the project root, install the versions pinned by [rust-toolchain.toml](rust-toolchain.toml) and [Cargo.toml](Cargo.toml):
+From the project root, install the versions pinned by [rust-toolchain.toml](rust-toolchain.toml) and [Cargo.toml](Cargo.toml), plus TypeScript 7.0.2 (`tsc` on `PATH`; the npm installation below also requires Node.js):
 
 ```sh
 rustup toolchain install 1.100.0 --profile minimal \
   --component rustfmt --component clippy --target wasm32-unknown-unknown
 cargo install wasm-bindgen-cli --version 0.2.130 --locked
+npm install --global typescript@7.0.2
 cargo xtask serve
 ```
 
@@ -128,11 +129,11 @@ Server-side `/spawnitem` requires administrator permission. Character editing to
 
 ## Development
 
-The workspace contains `outfit-core` (encoding), `outfit-web` (browser interaction), and `outfit-cli` (native tools). `web/` and `public/assets/` contain the page and resources; `xtask/` builds and serves the site.
+The workspace contains `outfit-core` (encoding), `outfit-web` (browser interaction), and `outfit-cli` (native tools). `web/` contains HTML, CSS, and TypeScript sources; `public/assets/` contains static resources. `xtask/` builds and serves the site.
 
-Development requires Rust 1.100.0 and wasm-bindgen-cli 0.2.130. Keep the Rust pins in `rust-toolchain.toml` and `nix/flake.nix` aligned; the wasm-bindgen CLI must match the exact crate version in `Cargo.toml`. CI uses the locked Nix development environment.
+Development requires Rust 1.100.0, wasm-bindgen-cli 0.2.130, and TypeScript 7.0.2. Keep the Rust pins in `rust-toolchain.toml` and `nix/flake.nix` aligned; the wasm-bindgen CLI must match the exact crate version in `Cargo.toml`. CI uses the locked Nix development environment, including the TypeScript compiler.
 
-UI translations live in `public/assets/i18n/messages.js`. Keep named placeholders intact; filenames, identifiers, JSON, and commands are not translated.
+The browser entrypoint is `web/main.ts`; UI translations live in `web/i18n/messages.ts`. Keep named placeholders intact; filenames, identifiers, JSON, and commands are not translated. `cargo xtask build` generates WASM bindings first, then type-checks TypeScript in strict mode against their generated declarations and emits browser modules into the staged distribution. Type errors prevent publishing the new `dist/`. Edit `.ts` sources, not generated `.js` files.
 
 Run the [CI checks](.github/workflows/verify.yml) in the development environment:
 
