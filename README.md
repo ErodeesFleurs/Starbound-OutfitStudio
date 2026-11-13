@@ -2,7 +2,7 @@
 
 Create Starbound clothing, hats, and character redraws from PNG artwork. Rust / WebAssembly handles image decoding and encoding locally—**PNGs are not uploaded**. Exports reference vanilla assets, so other players do not need to install your images.
 
-**[Open the web app](https://198.44.178.249:8443/)** · [Quick start](#quick-start) · [Usage](#usage) · [CLI](#cli) · [Development](#development)
+**[Open the web app](https://erodeesfleurs.github.io/Starbound-OutfitStudio/)** · [Quick start](#quick-start) · [Usage](#usage) · [CLI](#cli) · [Development](#development)
 
 | Tool | Output |
 | --- | --- |
