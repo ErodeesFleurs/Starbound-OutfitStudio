@@ -28,9 +28,9 @@ Open <http://127.0.0.1:4200>. No Node.js or frontend package manager is required
 From the project root, install the versions pinned by [rust-toolchain.toml](rust-toolchain.toml) and [Cargo.toml](Cargo.toml):
 
 ```sh
-rustup toolchain install 1.98.0 --profile minimal \
+rustup toolchain install 1.100.0 --profile minimal \
   --component rustfmt --component clippy --target wasm32-unknown-unknown
-cargo install wasm-bindgen-cli --version 0.2.129 --locked
+cargo install wasm-bindgen-cli --version 0.2.130 --locked
 cargo xtask serve
 ```
 
@@ -129,6 +129,8 @@ Server-side `/spawnitem` requires administrator permission. Character editing to
 ## Development
 
 The workspace contains `outfit-core` (encoding), `outfit-web` (browser interaction), and `outfit-cli` (native tools). `web/` and `public/assets/` contain the page and resources; `xtask/` builds and serves the site.
+
+Development requires Rust 1.100.0 and wasm-bindgen-cli 0.2.130. Keep the Rust pins in `rust-toolchain.toml` and `nix/flake.nix` aligned; the wasm-bindgen CLI must match the exact crate version in `Cargo.toml`. CI uses the locked Nix development environment.
 
 UI translations live in `public/assets/i18n/messages.js`. Keep named placeholders intact; filenames, identifiers, JSON, and commands are not translated.
 

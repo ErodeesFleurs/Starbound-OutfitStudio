@@ -92,6 +92,40 @@ fn reads_untagged_metadata_and_casefolded_explicit_assets() {
             .contains("Missing packed asset")
     );
 }
+
+#[test]
+fn packed_json_accepts_asset_syntax_and_preserves_values() {
+    let source = br#"{
+        // Starbound assets allow comments and trailing commas.
+        itemName: 'testhat',
+        directives: '?replace;ffffff=123456',
+        color: 0xff,
+        offset: [-1.5, +.5,],
+        count: 9007199254740991,
+        label: '\u5e3d\u5b50',
+    }"#;
+    let index_start = 16 + source.len() as u64;
+    let mut bytes = b"SBAsset6".to_vec();
+    bytes.extend(index_start.to_be_bytes());
+    bytes.extend(source);
+    bytes.extend(b"INDEX");
+    bytes.extend(index(
+        vec![0],
+        vec![entry("/items/test.head", 16, source.len() as u64)],
+    ));
+    let file = TempPak::raw(&bytes);
+    assert_eq!(
+        file.open().unwrap().json("/items/test.head").unwrap(),
+        serde_json::json!({
+            "itemName": "testhat",
+            "directives": "?replace;ffffff=123456",
+            "color": 255,
+            "offset": [-1.5, 0.5],
+            "count": 9007199254740991_u64,
+            "label": "帽子",
+        })
+    );
+}
 #[test]
 fn all_json_tags_preserve_big_endian_numbers_unicode_and_int64_limits() {
     let unicode = "é".repeat(70);

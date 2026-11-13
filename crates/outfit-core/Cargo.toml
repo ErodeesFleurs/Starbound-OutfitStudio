@@ -2,13 +2,13 @@
 name = "outfit-core"
 version = "0.1.0"
 edition = "2024"
-rust-version = "1.90"
+rust-version.workspace = true
 license = "MIT AND CC-BY-3.0"
 
 [dependencies]
-serde = { version = "1", features = ["derive"] }
-serde_json = { version = "1", features = ["preserve_order"] }
-indexmap = "2"
-png = "0.18"
-flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
-ryu-js = "1"
+serde.workspace = true
+serde_json.workspace = true
+indexmap = "2.14.2"
+png.workspace = true
+flate2.workspace = true
+ryu-js = "1.0.3"
